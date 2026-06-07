@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono,Playfair_Display,Inter,Space_Grotesk} from "next/font/google";
+import { ClerkProvider} from '@clerk/nextjs'
 import "./globals.css";
+import Header from "../components/Header"; 
+import Footer from "../components/Footer"
+import { cn } from "@/lib/utils";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,6 +15,19 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const spaceGrotesk = Space_Grotesk({
+  subsets:["latin"],
+  display:"swap",
+  variable:"--font-space"
+})
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'})
+
+const playfair = Playfair_Display({
+  subsets:["latin"],
+  variable:"--font-playfair"
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,9 +42,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, playfair.variable, spaceGrotesk.variable, "font-sans", geist.variable)}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+       <ClerkProvider>
+          <Header />
+          {children}
+          <Footer/>
+       </ClerkProvider>
+        
+      </body>
     </html>
   );
 }
