@@ -1,6 +1,4 @@
-import React from 'react'
-
-function Shop() {
+export default function Shop() {
   return (
     <div>
         <h2>
@@ -10,5 +8,5 @@ function Shop() {
   )
 }
 
-export default Shop
+
 
