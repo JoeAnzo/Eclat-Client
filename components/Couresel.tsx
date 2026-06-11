@@ -7,6 +7,7 @@ import { Navigation, Pagination, Autoplay, A11y } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { EffectCoverflow } from 'swiper/modules';
 
 const imageItems = [
   {
@@ -51,7 +52,8 @@ const Couresel = () => {
   return (
     <section className="w-full mx-auto relative h-[60vh]">
       <Swiper
-        modules={[Navigation, Pagination, Autoplay, A11y]}
+        modules={[Navigation, Pagination, Autoplay, A11y, EffectCoverflow]}
+        effect='coverflow'
         spaceBetween={18}
         slidesPerView={1}
         loop={true}
@@ -83,7 +85,7 @@ const Couresel = () => {
       >
         {imageItems.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="relative w-full z-10 h-[60vh] bg-slate-100">
+            <div className="relative w-full z-10 h-screen sm:h-[80vh] bg-slate-100">
               <Image
                 src={item.src}
                 alt={item.alt}

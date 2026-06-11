@@ -10,9 +10,9 @@ export default function Footer(){
                 <div>
                     <div>
                         <h3 className="text-2xl my-4 font-playfair text-(--secondary-color)">Subscribe to our daily Newsletter</h3>
-                        <div className="flex gap-2">
-                        <input className="p-2 rounded-md bg-white" type="text"  placeholder="Email"/>
-                        <Button variant="secondary" className="bg-(--secondary-color) text-white">Subscribe</Button>
+                        <div className="flex">
+                        <input className="p-2 bg-white" type="text"  placeholder="Email"/>
+                        <Button variant="secondary" className="bg-(--secondary-color) text-white h-full">Subscribe</Button>
                         </div>
                     </div>
                     <div>
@@ -46,7 +46,7 @@ export default function Footer(){
                 <div>
                     <div className="flex flex-col">
                         <h3 className="text-2xl font-playfair text-(--secondary-color) my-4">Quick Links</h3>
-                            <div className="space-y-2 flex flex-col">
+                            <div className="flex flex-col">
                                 <Link className="py-2 text-white sm:border-none hover:text-(--secondary-color)" href="/">Home</Link>
                                 <Link className="py-2 text-white sm:border-none hover:text-(--secondary-color)" href="/shop">Shop</Link>
                                 <Link className="py-2 text-white sm:border-none hover:text-(--secondary-color)" href="/how-it-works">How it works</Link>
@@ -67,7 +67,7 @@ export default function Footer(){
                 </div>
             </div>
             <div>
-                <p className="text-center text-white pt-2 border-t-1 border-gray-300 text-(--secondary-color)">copyright {new Date().getFullYear()} eclat eccense.shop.All rights reserved.<br/>
+                <p className="text-center pt-2 border-t border-gray-300 text-white">copyright {new Date().getFullYear()} eclat eccense.shop.All rights reserved.<br/>
                 Last Updated May 26, 2026
                 </p>
             </div>
