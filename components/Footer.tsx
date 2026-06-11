@@ -67,8 +67,8 @@ export default function Footer(){
                 </div>
             </div>
             <div>
-                <p className="text-center pt-2 border-t border-gray-300 text-white">copyright {new Date().getFullYear()} eclat eccense.shop.All rights reserved.<br/>
-                Last Updated May 26, 2026
+                <p className="text-center pt-2 border-t border-gray-300 text-white">© {new Date().getFullYear()} eclat eccense.shop.All rights reserved.<br/>
+                    Last Updated May 26, 2026
                 </p>
             </div>
         </footer>
