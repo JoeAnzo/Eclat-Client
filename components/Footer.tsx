@@ -12,7 +12,7 @@ export default function Footer(){
                         <h3 className="text-2xl my-4 font-playfair text-(--secondary-color)">Subscribe to our daily Newsletter</h3>
                         <div className="flex">
                         <input className="p-2 bg-white" type="text"  placeholder="Email"/>
-                        <Button variant="secondary" className="bg-(--secondary-color) text-white h-full">Subscribe</Button>
+                        <Button variant="secondary" className="bg-(--secondary-color) text-white h-auto rounded-none">Subscribe</Button>
                         </div>
                     </div>
                     <div>
