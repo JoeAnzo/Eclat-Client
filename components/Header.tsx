@@ -52,7 +52,7 @@ const Header = () => {
             <ShoppingBag className={`${hasScrolled ? '':''}`}/>
           </div>
           <div className="sm:hidden" onClick={handleClick}>
-            {openMenu ? <X className={`${hasScrolled ? '':''}`}/>:<Menu className={`${hasScrolled ? 'text-white':''}`}/>}
+            {openMenu ? <X className={`${hasScrolled ? '':''}`}/>:<Menu className={`${hasScrolled ? '':''}`}/>}
           </div>
         </div>
     </header>
