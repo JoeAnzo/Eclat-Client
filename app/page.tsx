@@ -31,10 +31,10 @@ export default function Home() {
       </section> 
       <section>
         <div className="flex flex-col justify-center items-center">
-          <h2 className="font-playfair text-2xl text-(--primary-color) text-center my-4">Best Sellers</h2>
-          <div className="h-2 bg-(--primary-color) rounded-md w-[200px]"></div>
+          <h2 className="font-playfair text-3xl text-(--primary-color) text-center my-4">Best Sellers</h2>
+          <div className="h-2 mb-4 bg-(--primary-color) rounded-md w-[200px]"></div>
         </div>
-        <p className="text-center text-(--secondary-color) my-2">Discover our most-coveted bottles and find your match.</p>
+        <p className="text-center px-2 text-(--secondary-color) my-2">Discover our most-coveted bottles and find your match.</p>
         <BestSellers/>
       </section>
       <section>
