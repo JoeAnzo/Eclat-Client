@@ -26,7 +26,7 @@ const Header = () => {
 
   },[])
   return (
-    <header className={`fixed z-10 top-0 left-0 right-0 flex justify-between items-center ${hasScrolled ? 'bg-white/30 backdrop-blur-xl backdrop-filter border-(--primary-color)':'bg-transparent'} py-4 px-2`}>
+    <header className={`fixed z-10 top-0 left-0 right-0 flex justify-between items-center ${hasScrolled ? 'bg-white/30 backdrop-blur-xl backdrop-filter border-(--primary-color)':'bg-transparent'} py-4 px-2 border border-white`}>
         <h1 className="text-xl font-bold font-playfair text-[#4A2C6D]">Eclat Essence</h1>
         <nav className={`sm:space-x-2 py-2 pl-2 right-0 space-y-2 ${ openMenu ? 'flex bg-background sm:bg-transparent':'hidden sm:flex'} flex-col sm:flex-row font-sans absolute sm:relative top-full left-0 z-500`}>
             <Link className="border-b border-gray-300 py-2 sm:border-none hover:text-(--secondary-color)" href="/">Home</Link>
@@ -52,7 +52,7 @@ const Header = () => {
             <ShoppingBag className={`${hasScrolled ? '':''}`}/>
           </div>
           <div className="sm:hidden" onClick={handleClick}>
-            {openMenu ? <X className={`${hasScrolled ? '':''}`}/>:<Menu className={`${hasScrolled ? '':''}`}/>}
+            {openMenu ? <X/>:<Menu/>}
           </div>
         </div>
     </header>
