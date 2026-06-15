@@ -1,8 +1,9 @@
 import Couresel from "../components/Couresel"
-import {ArrowRight,Play} from 'lucide-react'
+import {ArrowRight,Play,ShoppingBag} from 'lucide-react'
 import BestSellers from "@/components/BestSellers"
 import { Button } from "@/components/ui/button"
 import Animation from "@/components/Animation"
+import {type LucideIcon} from 'lucide-react'
 
 export const metadata = {
   title:"Home"
@@ -10,6 +11,19 @@ export const metadata = {
 
 
 export default function Home() {
+
+  interface howItWorks {
+    step:string;
+    desc:string;
+    icon?:LucideIcon;
+  }
+
+  const howItWorks:howItWorks[] = [
+    {
+      step:"01",
+      desc:"Browse & Add",
+    }
+  ]
   return (
     <main>
       <section className="relative h-screen sm:h-[80vh]">
@@ -23,11 +37,11 @@ export default function Home() {
           </Animation>
           <Animation variant="slideUp">
             <div className="flex gap-2 justify-start items-left">
-              <Button size="lg" variant="secondary" className="bg-(--primary-color) text-white p-2.5 flex gap-2">
+              <Button size="lg" variant="secondary" className="bg-(--primary-color) text-white p-2.5 flex gap-2 rounded-none">
                 Shop now
                 <ArrowRight/>
               </Button>
-              <Button variant="outline" size="lg" className="p-2.5 flex gap-2">
+              <Button variant="outline" size="lg" className="p-2.5 flex gap-2 rounded-none">
                 <Play />
                 How it works
               </Button>
@@ -41,7 +55,7 @@ export default function Home() {
           <Animation variant="slideRight">
               <h2 className="font-playfair text-3xl text-(--primary-color) text-center my-4">Best Sellers</h2>
           </Animation>
-          <div className="h-2 mb-4 bg-(--primary-color) rounded-md w-[200px]"></div>
+          <div className="h-2 mb-4 bg-(--primary-color) rounded-md w-50"></div>
         </div>
         <Animation variant="slideUp">
           <p className="text-center px-2 text-(--secondary-color) my-2">Discover our most-coveted bottles and find your match.</p>
@@ -53,18 +67,21 @@ export default function Home() {
           <Animation variant="slideRight">
             <h2 className="font-playfair text-3xl text-(--primary-color) text-center my-4">How it works</h2>
           </Animation>
-          <div className="h-2 mb-4 bg-(--primary-color) rounded-md w-[200px]"></div>
+          <div className="h-2 mb-4 bg-(--primary-color) rounded-md w-50"></div>
         </div>
         <Animation variant="slideUp">
           <p className="px-2  text-(--secondary-color) text-center my-4">Three taps, one delivery</p>
         </Animation>
+        <div>
+         
+        </div>
       </section>
       <section>
         <div className="flex flex-col justify-center items-center">
           <Animation variant="slideRight">
             <h2 className="font-playfair text-3xl text-(--primary-color) text-center my-4">Testimonials</h2>
           </Animation>
-          <div className="h-2 mb-4 bg-(--primary-color) rounded-md w-[200px]"></div>
+          <div className="h-2 mb-4 bg-(--primary-color) rounded-md w-50"></div>
         </div>
         <Animation variant="slideUp">
           <p className="text-center px-2 text-(--secondary-color) my-2">What Our Customers have to say</p>

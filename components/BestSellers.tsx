@@ -1,30 +1,40 @@
-import axios from 'axios'
+import { Product } from '@/app/Interfaces/product.interface'
 import ProductCard from './ProductCard'
 
 async function BestSellers() {
 
-  try {
-    const response = await axios.get('https://api.fragella.com/api/v1/fragrances',{
-      params:{
-        search:'Chanel',
-        limit:4
-      },
-      headers:{
-        'x-api-key': process.env.FRAGELLA_API_KEY,
-        'Accept':'application/json'
-      }
-    })
-    const products = await response.data
-    console.log('Fetched products:', products)
 
-  } catch (error){
-    console.error('Error fetching perfumes', error)
-    return []
-  }
+  const bestSellers:Product[] = [
+    {
+      id:1,
+      name:'Bleu De Chanel',
+      url:'/images/BestSellers/Blue.jpg',
+      price:'UGX 25,000'
+    },{
+      id:2,
+      name:'coco-mademoiselle',
+      url:'/images/BestSellers/coco.jpg',
+      price:'UGX 30,000'
+    },{
+      id:3,
+      name:'Miss Dior',
+      url:'/images/BestSellers/Dior.jpg',
+      price:'UGX 45,000'
+    },{
+      id:4,
+      name:'Urban-Woman-Paradise',
+      url:'/images/BestSellers/Urban-Women-Paradise.jpg',
+      price:'UGX 65000'
+    }
+  ]
 
   return (
-    <div>
-
+    <div className="p-4 space-y-8">
+      {
+        bestSellers.map((product) => {
+          return <ProductCard key={product.id} price={product.price} name={product.name} url={product.url} />
+        })
+      }
     </div>
   )
 }

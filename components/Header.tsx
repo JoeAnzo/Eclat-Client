@@ -1,11 +1,19 @@
 'use client'
-import {Show, SignInButton, SignUpButton, UserButton} from "@clerk/nextjs"
+import {Show, SignInButton, SignUpButton, UserButton,useAuth} from "@clerk/nextjs"
 import Link from 'next/link' 
 import {ShoppingBag,Menu,X,UserRound} from 'lucide-react'
 import {useState,useEffect} from 'react'
 const Header = () => {
   const [openMenu,setCloseMenu] = useState(false)
   const [hasScrolled,setHasScrolled] = useState(false)
+  const [isAuthenticated,setIsAuthenticated] = useState(false)
+
+  const {isLoaded,isSignedIn} = useAuth()
+
+  if (isLoaded && isSignedIn) {
+    setIsAuthenticated(true)
+  }
+
   const handleClick = () => {
     console.log('clicked')
     setCloseMenu((prev) => !prev)
@@ -42,13 +50,16 @@ const Header = () => {
                 </button>
               </SignUpButton>
             </Show>
-            <Show when="signed-in">
-              <UserButton />
-            </Show>
         </nav>
         <div className='flex gap-2'>
           <div className="flex gap-2">
-            <UserRound className={`${hasScrolled ? '':''}`}/>
+            {
+              isAuthenticated ? (
+                <UserButton/>
+              ):(
+                <UserRound className={`${hasScrolled ? '':''}`}/>
+              )
+            }
             <ShoppingBag className={`${hasScrolled ? '':''}`}/>
           </div>
           <div className="sm:hidden" onClick={handleClick}>
