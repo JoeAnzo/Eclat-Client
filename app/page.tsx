@@ -1,9 +1,9 @@
 import Couresel from "../components/Couresel"
-import {ArrowRight,Play,ShoppingBag} from 'lucide-react'
+import {ArrowRight,Play,ShoppingBag,Truck,HandCoins} from 'lucide-react'
 import BestSellers from "@/components/BestSellers"
 import { Button } from "@/components/ui/button"
+import HowItWorksCard from "@/components/HowItWorksCard"
 import Animation from "@/components/Animation"
-import {type LucideIcon} from 'lucide-react'
 
 export const metadata = {
   title:"Home"
@@ -12,16 +12,24 @@ export const metadata = {
 
 export default function Home() {
 
-  interface howItWorks {
-    step:string;
-    desc:string;
-    icon?:LucideIcon;
-  }
 
-  const howItWorks:howItWorks[] = [
+  const howItWorks = [
     {
+      id:1,
       step:"01",
-      desc:"Browse & Add",
+      title:"Browse & Add",
+      icon:<ShoppingBag/>
+    },
+    {
+      id:2,
+      step:"02",
+      title:"Choose Payment",
+      icon:<HandCoins/>
+    },{
+      id:3,
+      step:"03",
+      title:"Get Your Scent Delivered",
+      icon:<Truck/>
     }
   ]
   return (
@@ -53,24 +61,31 @@ export default function Home() {
       <section>
         <div className="flex flex-col justify-center items-center">
           <Animation variant="slideRight">
-              <h2 className="font-playfair text-3xl text-(--primary-color) text-center my-4">Best Sellers</h2>
+              <p className="text-(--text) text-center my-4">Best Sellers</p>
           </Animation>
-          <div className="h-2 mb-4 bg-(--primary-color) rounded-md w-50"></div>
+          <div className="h-1 bg-(--secondary-color) rounded-md w-20"></div>
         </div>
         <Animation variant="slideUp">
-          <p className="text-center px-2 text-(--secondary-color) my-2">Discover our most-coveted bottles and find your match.</p>
+          <h2 className="text-center font-playfair px-2 text-(--text) my-2 text-3xl">Discover our most-coveted bottles and find your match.</h2>
         </Animation>
         <BestSellers/>
       </section>
       <section>
         <div className="flex flex-col justify-center items-center">
           <Animation variant="slideRight">
-            <h2 className="font-playfair text-3xl text-(--primary-color) text-center my-4">How it works</h2>
+            <p className="font-playfair text-3xl text-(--primary-color) text-center my-4">How it works</p>
           </Animation>
-          <div className="h-2 mb-4 bg-(--primary-color) rounded-md w-50"></div>
+          <div className="h-1 mb-4 bg-(--secondary-color) rounded-md w-20"></div>
         </div>
         <Animation variant="slideUp">
-          <p className="px-2  text-(--secondary-color) text-center my-4">Three taps, one delivery</p>
+          <h2 font-playfair className="px-2  text-(--text) text-3xl text-center my-4">Three taps, one delivery</h2>
+          <div>
+              {
+                howItWorks.map((item) => {
+                    return <HowItWorksCard step={item.step} title={item.title} icon={item.icon}/>
+                }) 
+              }
+          </div>
         </Animation>
         <div>
          
@@ -79,12 +94,12 @@ export default function Home() {
       <section>
         <div className="flex flex-col justify-center items-center">
           <Animation variant="slideRight">
-            <h2 className="font-playfair text-3xl text-(--primary-color) text-center my-4">Testimonials</h2>
+            <h2 className="text-(--text) text-center my-4">Testimonials</h2>
           </Animation>
-          <div className="h-2 mb-4 bg-(--primary-color) rounded-md w-50"></div>
+          <div className="h-1 mb-4 bg-(--secondary-color) rounded-md w-20"></div>
         </div>
         <Animation variant="slideUp">
-          <p className="text-center px-2 text-(--secondary-color) my-2">What Our Customers have to say</p>
+          <h2 className="font-playfair text-center px-2 text-(--text) my-2">What Our Customers have to say</h2>
         </Animation>
         
       </section>

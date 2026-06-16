@@ -1,4 +1,4 @@
-
+import { LucideIcon } from "lucide-react";
 export interface Product {
     id?:number;
     name:string;
@@ -6,3 +6,4 @@ export interface Product {
     price:string;
 
   }
+

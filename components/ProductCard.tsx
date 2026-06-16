@@ -15,7 +15,7 @@ function ProductCard({name,url,price}:Product) {
         <Animation variant="slideUp">
           <div className="p-4">
             <p className="py-2 font-bold font-playfair">{name}</p>
-            <p className="pb-2">{price}</p>
+            <p className="pb-2 font-space">{price}</p>
             <Button variant="default" className="rounded-none bg-(--primary-color) px-4 py-2 flex gap-2 w-25">ADD <ShoppingBag color="white"/></Button>
           </div>
         </Animation>

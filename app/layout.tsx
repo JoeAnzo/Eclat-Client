@@ -19,7 +19,13 @@ const geistMono = Geist_Mono({
 const spaceGrotesk = Space_Grotesk({
   subsets:["latin"],
   display:"swap",
-  variable:"--font-space"
+  variable:"--font-space",
+})
+
+const inter = Inter({
+  subsets:['latin'],
+  variable:'--font-inter',
+  display:'swap'
 })
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'})
@@ -42,7 +48,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, playfair.variable, spaceGrotesk.variable, "font-sans", geist.variable)}
+      className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, playfair.variable, spaceGrotesk.variable, "font-sans", geist.variable, inter.variable)}
     >
       <body className="min-h-full flex flex-col">
        <ClerkProvider>

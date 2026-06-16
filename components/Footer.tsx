@@ -35,11 +35,11 @@ export default function Footer(){
                         <h3 className="text-2xl font-playfair text-(--secondary-color) my-4">Reach Out To Us</h3>
                         <div className="flex gap-2 items-center text-white">
                             <PhoneCall/>
-                            <p>0754242865</p>
+                            <p className="font-inter">0754242865</p>
                         </div>
                         <div className="flex gap-2 items-center text-white">
                             <Mail/>
-                            <p>reply@eclatessence.shop</p>
+                            <p className="font-inter">reply@eclatessence.shop</p>
                             </div>
                         </div>
                 </div>
@@ -47,27 +47,27 @@ export default function Footer(){
                     <div className="flex flex-col">
                         <h3 className="text-2xl font-playfair text-(--secondary-color) my-4">Quick Links</h3>
                             <div className="flex flex-col">
-                                <Link className="py-2 text-white sm:border-none hover:text-(--secondary-color)" href="/">Home</Link>
-                                <Link className="py-2 text-white sm:border-none hover:text-(--secondary-color)" href="/shop">Shop</Link>
-                                <Link className="py-2 text-white sm:border-none hover:text-(--secondary-color)" href="/how-it-works">How it works</Link>
-                                <Link className="py-2 text-white sm:border-none hover:text-(--secondary-color)" href="/about-us">About</Link>
-                                <Link className="py-2 text-white sm:border-none hover:text-(--secondary-color)" href="/contact-us">Contact and FAQs</Link>
+                                <Link className="py-2 text-white sm:border-none font-inter hover:text-(--secondary-color)" href="/">Home</Link>
+                                <Link className="py-2 text-white sm:border-none font-inter hover:text-(--secondary-color)" href="/shop">Shop</Link>
+                                <Link className="py-2 text-white sm:border-none font-inter hover:text-(--secondary-color)" href="/how-it-works">How it works</Link>
+                                <Link className="py-2 text-white sm:border-none font-inter hover:text-(--secondary-color)" href="/about-us">About</Link>
+                                <Link className="py-2 text-white sm:border-none font-inter hover:text-(--secondary-color)" href="/contact-us">Contact and FAQs</Link>
                             </div>
                     </div>
                 </div>
                 <div>
                     <div>
                         <h3 className="text-2xl font-playfair text-(--secondary-color) my-4">Brands We Deal In</h3>
-                        <p className="text-white mb-2">Dior</p>
-                        <p className="text-white mb-2">Chanel</p>
-                        <p className="text-white mb-2">Yves Saint Laurent</p>
-                        <p className="text-white mb-2">Giorgio Armani</p>
-                        <p className="text-white mb-2">Carolina Herrera</p>
+                        <p className="text-white mb-2 font-inter">Dior</p>
+                        <p className="text-white mb-2 font-inter">Chanel</p>
+                        <p className="text-white mb-2 font-inter">Yves Saint Laurent</p>
+                        <p className="text-white mb-2 font-inter">Giorgio Armani</p>
+                        <p className="text-white mb-2 font-inter">Carolina Herrera</p>
                     </div>
                 </div>
             </div>
             <div>
-                <p className="text-center pt-2 border-t border-gray-300 text-white">© copyright {new Date().getFullYear()} eclat eccense.shop.All rights reserved.<br/>
+                <p className="text-center pt-2 border-t font-inter border-gray-300 text-white">© copyright {new Date().getFullYear()} eclat eccense.shop.All rights reserved.<br/>
                     Last Updated May 26, 2026
                 </p>
             </div>
