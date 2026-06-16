@@ -78,8 +78,8 @@ export default function Home() {
           <div className="h-1 mb-4 bg-(--secondary-color) rounded-md w-20"></div>
         </div>
         <Animation variant="slideUp">
-          <h2 font-playfair className="px-2  text-(--text) text-3xl text-center my-4">Three taps, one delivery</h2>
-          <div className="space-x-4">
+          <h2 className="px-2 font-playfair text-(--text) text-3xl text-center my-4">Three taps, one delivery</h2>
+          <div className="space-y-4 px-4">
               {
                 howItWorks.map((item) => {
                     return <HowItWorksCard step={item.step} title={item.title} icon={item.icon}/>
