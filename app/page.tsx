@@ -61,7 +61,7 @@ export default function Home() {
       <section>
         <div className="flex flex-col justify-center items-center">
           <Animation variant="slideRight">
-              <p className="text-(--text) text-center my-4">Best Sellers</p>
+              <p className="text-(--text) font-inter text-center my-4">Best Sellers</p>
           </Animation>
           <div className="h-1 bg-(--secondary-color) rounded-md w-20"></div>
         </div>
@@ -73,13 +73,13 @@ export default function Home() {
       <section>
         <div className="flex flex-col justify-center items-center">
           <Animation variant="slideRight">
-            <p className="font-playfair text-3xl text-(--primary-color) text-center my-4">How it works</p>
+            <p className="font-inter text-(--text) text-center my-4">How it works</p>
           </Animation>
           <div className="h-1 mb-4 bg-(--secondary-color) rounded-md w-20"></div>
         </div>
         <Animation variant="slideUp">
           <h2 font-playfair className="px-2  text-(--text) text-3xl text-center my-4">Three taps, one delivery</h2>
-          <div>
+          <div className="space-x-4">
               {
                 howItWorks.map((item) => {
                     return <HowItWorksCard step={item.step} title={item.title} icon={item.icon}/>
