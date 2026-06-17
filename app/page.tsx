@@ -4,6 +4,7 @@ import BestSellers from "@/components/BestSellers"
 import { Button } from "@/components/ui/button"
 import HowItWorksCard from "@/components/HowItWorksCard"
 import Animation from "@/components/Animation"
+import LogoCarousel from "@/components/LogoCarousel"
 
 export const metadata = {
   title:"Home"
@@ -18,18 +19,18 @@ export default function Home() {
       id:1,
       step:"01",
       title:"Browse & Add",
-      icon:<ShoppingBag/>
+      icon:<ShoppingBag color="white"/>
     },
     {
       id:2,
       step:"02",
       title:"Choose Payment",
-      icon:<HandCoins/>
+      icon:<HandCoins color="white"/>
     },{
       id:3,
       step:"03",
       title:"Get Your Scent Delivered",
-      icon:<Truck/>
+      icon:<Truck color="white"/>
     }
   ]
   return (
@@ -45,11 +46,11 @@ export default function Home() {
           </Animation>
           <Animation variant="slideUp">
             <div className="flex gap-2 justify-start items-left">
-              <Button size="lg" variant="secondary" className="bg-(--primary-color) text-white p-2.5 flex gap-2 rounded-none">
+              <Button size="lg" variant="default" className="bg-(--primary-color) h-12 px-8 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 rounded-none">
                 Shop now
                 <ArrowRight/>
               </Button>
-              <Button variant="outline" size="lg" className="p-2.5 flex gap-2 rounded-none">
+              <Button variant="outline" size="lg" className="px-8 font-semibold text-lg shadow-lg tracking-wide  flex gap-2 rounded-none">
                 <Play />
                 How it works
               </Button>
@@ -99,9 +100,22 @@ export default function Home() {
           <div className="h-1 mb-4 bg-(--secondary-color) rounded-md w-20"></div>
         </div>
         <Animation variant="slideUp">
-          <h2 className="font-playfair text-center px-2 text-(--text) my-2">What Our Customers have to say</h2>
+          <h2 className="px-2 font-playfair text-(--text) text-3xl text-center my-4">What Our Customers have to say</h2>
         </Animation>
-        
+      </section>
+      <section>
+        <div className="flex flex-col justify-center items-center">
+          <Animation variant="slideRight">
+            <h2 className="text-(--text) text-center my-4">Brands</h2>
+          </Animation>
+          <div className="h-1 mb-4 bg-(--secondary-color) rounded-md w-20"></div>
+        </div>
+        <Animation variant="slideUp">
+          <h2 className="px-2 font-playfair text-(--text) text-3xl text-center my-4">We Deal In</h2>
+        </Animation>
+        <Animation variant="slideUp">
+          <LogoCarousel/>
+        </Animation>
       </section>
     </main>
   )

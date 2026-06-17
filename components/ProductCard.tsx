@@ -10,7 +10,7 @@ function ProductCard({name,url,price}:Product) {
     <Animation variant="slideUp">
       <div className="border border-(--secondary-color)  rounded-md bg-white/30 backdrop-blur-xl backdrop-filter">
         <div className="relative h-80 w-full overflow-hidden">
-          <Image src={url} alt={name} fill sizes="(max-width:768px) 100vw, 320px" className="max-w-full h-auto object-cover"/>
+          <Image src={url} alt={name} fill sizes="(max-width:768px) 100vw, 320px" className="max-w-full border-b border-(--secondary-color) h-auto object-cover"/>
         </div>
         <Animation variant="slideUp">
           <div className="p-4">

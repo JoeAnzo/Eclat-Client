@@ -45,7 +45,7 @@ const Header = () => {
             </Show>
             <Show when="signed-out">
               <SignInButton mode="modal">
-                <Button variant="outline">
+                <Button variant="outline" className="rounded-full">
                   <UserRound/>
                 </Button>
               </SignInButton>

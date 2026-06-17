@@ -43,7 +43,7 @@ export default function Footer(){
                 </div>
                 <div>
                         <div className="space-y-2">
-                            <Animation variant="slideRight">
+                            <Animation variant="none">
                                 <h3 className="text-2xl font-playfair text-(--secondary-color) my-4">Reach Out To Us</h3>
                             </Animation>
 
@@ -75,7 +75,7 @@ export default function Footer(){
                 </div>
                 <div>
                     <div>
-                        <Animation variant="slideRight">
+                        <Animation variant="none">
                             <h3 className="text-2xl font-playfair text-(--secondary-color) my-4">Brands We Deal In</h3>
                         </Animation>
                         <Animation variant="none">
