@@ -16,7 +16,7 @@ function ProductCard({name,url,price}:Product) {
           <div className="p-4">
             <p className="py-2 font-bold font-playfair">{name}</p>
             <p className="pb-2 font-space">{price}</p>
-            <Button variant="default" className="rounded-none bg-(--primary-color) px-4 py-2 flex gap-2 w-25">ADD <ShoppingBag color="white"/></Button>
+            <Button variant="default" className="rounded-none bg-(--primary-color) h-12 px-8 font-semibold  flex gap-2">ADD <ShoppingBag color="white"/></Button>
           </div>
         </Animation>
       </div>

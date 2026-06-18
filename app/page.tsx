@@ -42,17 +42,17 @@ export default function Home() {
             <h2 className="sm:text-4xl text-5xl font-semibold font-playfair text-(--primary-color) my-4">Your Essence, Your Signature</h2>
           </Animation>
           <Animation variant="slideUp">
-            <p className="text-white text-md sm:text-2xl font-sans prose mb-4">Find the scent that speaks your language and defines your everyday moments </p>
+            <p className="text-white text-md sm:text-2xl font-inter prose mb-4">Find the scent that speaks your language and defines your everyday moments </p>
           </Animation>
           <Animation variant="slideUp">
-            <div className="flex gap-2 justify-start items-left">
+            <div className="flex flex-col sm:flex-row gap-2 justify-start items-left">
               <Button size="lg" variant="default" className="bg-(--primary-color) h-12 px-8 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 rounded-none">
                 Shop now
                 <ArrowRight/>
               </Button>
-              <Button variant="outline" size="lg" className="px-8 font-semibold text-lg shadow-lg tracking-wide  flex gap-2 rounded-none">
-                <Play />
+              <Button variant="outline" size="lg" className="px-8 font-semibold text-lg shadow-lg tracking-wide h-12  flex gap-2 rounded-none">
                 How it works
+                <Play/>
               </Button>
             </div>
           </Animation>
@@ -82,8 +82,8 @@ export default function Home() {
           <h2 className="px-2 font-playfair text-(--text) text-3xl text-center my-4">Three taps, one delivery</h2>
           <div className="space-y-4 px-4">
               {
-                howItWorks.map((item) => {
-                    return <HowItWorksCard step={item.step} title={item.title} icon={item.icon}/>
+                howItWorks.map((item,index) => {
+                    return <HowItWorksCard key={index} step={item.step} title={item.title} icon={item.icon}/>
                 }) 
               }
           </div>
