@@ -1,4 +1,5 @@
 import Couresel from "../components/Couresel"
+import TestimonialCarousel from "../components/TestimonialCarousel"
 import {ArrowRight,Play,ShoppingBag,Truck,HandCoins} from 'lucide-react'
 import BestSellers from "@/components/BestSellers"
 import { Button } from "@/components/ui/button"
@@ -116,6 +117,7 @@ export default function Home() {
         <Animation variant="slideUp">
           <h2 className="px-2 font-playfair text-(--text) text-3xl text-center my-4">What Our Customers have to say</h2>
         </Animation>
+        <TestimonialCarousel/>
       </section>
     </main>
   )
