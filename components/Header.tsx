@@ -52,7 +52,9 @@ const Header = () => {
                 </button>
               </SignInButton>
             </Show>
-            <ShoppingBag/>
+            <Link href="/cart">
+              <ShoppingBag/>
+            </Link>
           </div>
           <div className="sm:hidden" onClick={handleClick}>
             {openMenu ? <X/>:<Menu/>}

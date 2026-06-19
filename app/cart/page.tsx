@@ -1,9 +1,9 @@
 
 export default function Cart() {
   return (
-    <div>
-        <h1>Cart Items here</h1>
-    </div>
+    <section className="min-h-screen">
+      <h2>Cart Items here</h2>
+    </section>
   )
 }
 
