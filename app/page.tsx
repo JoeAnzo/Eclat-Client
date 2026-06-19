@@ -127,11 +127,11 @@ export default function Home() {
           <h2 className="px-2 font-playfair text-(--text) text-left text-3xl text-center my-4">Get In Touch</h2>
           <div className="h-1 mb-4 bg-(--secondary-color) rounded-md w-20"></div>
           <form className="flex flex-col gap-4 p-2 border border-(--secondary-color) rounded-md">
-            <label htmlFor="name" className="sr-only text-(--text)">Name</label>
+            <label htmlFor="name" className="sr-only text-(--text) mt-2">Name</label>
             <input type="text" id="name" placeholder="Your Name" required className="rounded-md h-12 border border-(--secondary-color)"/>
-            <label htmlFor="email" className="sr-only text-(--text)">Email</label>
+            <label htmlFor="email" className="sr-only text-(--text) my-2">Email</label>
             <input type="email" id="email" placeholder="Your Email" required className="h-12 rounded-md border border-(--secondary-color)"/>
-            <label htmlFor="subject" className="sr-only text-(--text)">Subject</label>
+            <label htmlFor="subject" className="text-(--text)">Subject</label>
             <select id="subject" className="h-12 rounded-md border border-(--secondary-color)">
               <option value="">Select a Subject</option>
               <option value="general">General Inquiry</option>
