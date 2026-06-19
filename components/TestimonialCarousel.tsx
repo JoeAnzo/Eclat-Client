@@ -64,7 +64,6 @@ export default function TestimonialCarousel() {
             640: {slidesPerView: 1},
             768: {slidesPerView:2},
         }}
-        }}
         className="relative pb-12 !className"
       >
         {reviews.map((item) => (
@@ -72,7 +71,7 @@ export default function TestimonialCarousel() {
             <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between h-full min-h-[220px]">
                 <div className="relative w-16 h-16 over-flow-hidden rounded-full flex-shrink-0 bg-gray-100 ">
                     <Image
-                    src={item.Picture}
+                    src={item.userPicture}
                     alt={item.userName}
                     fill
                     sizes="64px"
