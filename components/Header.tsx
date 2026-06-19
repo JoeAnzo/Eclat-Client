@@ -1,10 +1,9 @@
 'use client'
-import {SignInButton,UserButton,Show} from "@clerk/nextjs"
+import {SignInButton,SignOutButton,UserButton,Show,useAuth} from "@clerk/nextjs"
 import Link from 'next/link' 
 import {ShoppingBag,Menu,X,UserRound} from 'lucide-react'
-import { Button } from "./ui/button"
 import {useState,useEffect} from 'react'
-import Animation from "@/components/Animation"
+
 
 const Header = () => {
   const [openMenu,setCloseMenu] = useState(false)

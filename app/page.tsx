@@ -60,7 +60,7 @@ export default function Home() {
            
         </div>
       </section> 
-      <section>
+      <section className="py-12">
         <div className="flex flex-col justify-center items-center">
           <Animation variant="slideRight">
               <p className="text-(--text) font-inter text-center my-4">Best Sellers</p>
@@ -93,7 +93,7 @@ export default function Home() {
          
         </div>
       </section>
-      <section>
+      <section className="py-12">
         <div className="flex flex-col justify-center items-center">
           <Animation variant="slideRight">
             <h2 className="text-(--text) text-center my-4">Brands</h2>
@@ -107,7 +107,7 @@ export default function Home() {
           <LogoCarousel/>
         </Animation>
       </section>
-      <section>
+      <section className="py-12">
         <div className="flex flex-col justify-center items-center">
           <Animation variant="slideRight">
             <h2 className="text-(--text) text-center my-4">Testimonials</h2>

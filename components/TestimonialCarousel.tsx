@@ -11,35 +11,35 @@ const reviews = [
     {
         id:1,
         userName:"Elena R",
-        userPicture:"/images/Testimonials/bg-1.jpg",
+        userPicture:"/images/Testimonials/pic1.jpg",
         review:"Lam absolutely in love! The scent is captivating, unique, and lasts all day without being overpowering.",
         rating:5
     },
     {
         id:2,
         userName:"Jovia K",
-        userPicture:"/images/Testimonials/bg-2.jpg",
+        userPicture:"/images/Testimonials/pic2.jpg",
         review:"A masterpiece in a bottle. I was hesitant to buy fragrance online, but the detailed scent notes helped me find exactly what I was looking for.",
         rating:5
     },
     {
         id:3,
         userName:"Aisha M",
-        userPicture:"/images/Testimonials/bg-4.jpg",
+        userPicture:"/images/Testimonials/pic3.jpg",
         review:"Top-tier customer service and fast delivery! This perfume is magical - it settles into warm, inviting aroma that evolves beautifully on the skin.",
         rating:5
     },
     {
         id:4,
         userName:"Elena R",
-        userPicture:"/images/Testimonials/bg-5.jpg",
+        userPicture:"/images/Testimonials/pic4.jpg",
         review:"Lam absolutely in love! The scent is captivating, unique, and lasts all day without being overpowering",
         rating:5
     },
     {
         id:5,
         userName:"Sarah M",
-        userPicture:"/images/Testimonials/bg-6.jpg",
+        userPicture:"/images/Testimonials/pic5.jpg",
         review:"Beautiful presentation and an even more beautiful fragrance! The bottlle looks gorgeous on my vanity, and the scent lasts from morning well into the evening",
         rating:5
     }
@@ -68,7 +68,7 @@ export default function TestimonialCarousel() {
       >
         {reviews.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between h-full min-h-[220px]">
+            <div className="bg-white p-6 rounded-2xl border border-(--secondary-color) shadow-sm flex flex-col justify-between h-full min-h-[220px]">
                 <div className="relative w-16 h-16 over-flow-hidden rounded-full flex-shrink-0 bg-gray-100 ">
                     <Image
                     src={item.userPicture}
