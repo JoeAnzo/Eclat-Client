@@ -117,7 +117,10 @@ export default function Home() {
         <Animation variant="slideUp">
           <h2 className="px-2 font-playfair text-(--text) text-3xl text-center my-4">What Our Customers have to say</h2>
         </Animation>
-        <TestimonialCarousel/>
+        <Animation variant="slideDown">
+          <TestimonialCarousel/>
+        </Animation>
+        
       </section>
     </main>
   )
