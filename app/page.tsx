@@ -124,20 +124,20 @@ export default function Home() {
       <section className="py-12">
         <div>
           <Animation variant="slideRight">
-          <form>
+          <form className="flex flex-col gap-4 p-2 border border-(--secondary-color) rounded-md">
             <h2 className="px-2 font-playfair text-(--text) text-3xl text-center my-4">Get In Touch</h2>
-            <label htmlFor="name" className="sr-only">Name</label>
+            <label htmlFor="name" className="sr-only text-(--text)">Name</label>
             <input type="text" id="name" placeholder="Your Name" required className="rounded-md border border-(--secondary-color)"/>
-            <label htmlFor="email" className="sr-only">Email</label>
+            <label htmlFor="email" className="sr-only text-(--text)">Email</label>
             <input type="email" id="email" placeholder="Your Email" required className="rounded-md border border-(--secondary-color)"/>
-            <label htmlFor="subject" className="sr-only">Subject</label>
+            <label htmlFor="subject" className="sr-only text-(--text)">Subject</label>
             <select id="subject" className="rounded-md border border-(--secondary-color)">
               <option value="">Select a Subject</option>
               <option value="general">General Inquiry</option>
               <option value="support">Support</option>
               <option value="feedback">Feedback</option>
             </select>
-            <label htmlFor="message" className="sr-only">Message</label>
+            <label htmlFor="message" className="sr-only text-(--text)">Message</label>
             <textarea id="message" placeholder="Your Message" required className="rounded-md border border-(--secondary-color)"></textarea>
               <Button size="lg" type="submit" variant="default" className="bg-(--primary-color) h-12 px-8 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 rounded-none">
                 Send Message
