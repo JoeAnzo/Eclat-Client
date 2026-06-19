@@ -12,14 +12,12 @@ function ProductCard({name,url,price}:Product) {
         <div className="relative h-80 w-full overflow-hidden">
           <Image src={url} alt={name} fill sizes="(max-width:768px) 100vw, 320px" className="max-w-full border-b border-(--secondary-color) h-auto object-cover"/>
         </div>
-        <Animation variant="slideUp">
-          <div className="relative bg-(--background)">
+        <Animation variant="slideDown">
             <div className="p-4 absolute top-0 bottom-0 left-0 right-0 bg-white/30 backdrop-blur-xl backdrop-filter">
-            <p className="py-2 font-bold font-playfair">{name}</p>
-            <p className="pb-2 font-space">{price}</p>
-            <Button variant="default" className="rounded-none bg-(--primary-color) h-12 px-8 font-semibold  flex gap-2">ADD TO CART <ShoppingBag color="white"/></Button>
+              <p className="py-2 font-bold font-playfair">{name}</p>
+              <p className="pb-2 font-space">{price}</p>
+              <Button variant="default" className="rounded-none bg-(--primary-color) h-12 px-8 font-semibold  flex gap-2">ADD TO CART <ShoppingBag color="white"/></Button>
             </div>
-          </div>
         </Animation>
       </div>
     </Animation>

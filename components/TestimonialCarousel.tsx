@@ -75,10 +75,10 @@ export default function TestimonialCarousel() {
                     alt={item.userName}
                     fill
                     sizes="64px"
-                    className="object-cover"
+                    className="object-cover rounded-full"
                     />
                 </div>
-                <p className="text-(--text) italic text-sm leading-relaxed mb-6">
+                <p className="text-(--text) italic text-md leading-relaxed my-6">
                     {
                         item.review
                     }
