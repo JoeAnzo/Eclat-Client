@@ -125,14 +125,14 @@ export default function Home() {
         <div>
           <Animation variant="slideRight">
           <div className="flex flex-col justify-center items-left">
-            <h2 className="px-2 font-playfair text-(--text) text-left text-3xl text-center my-4">Get In Touch</h2>
+            <h2 className="px-2 font-playfair text-(--text) text-left text-3xl text-center my-6">Get In Touch</h2>
             <div className="h-1 mb-4 bg-(--secondary-color) rounded-md w-20"></div>
           </div>
           <Animation variant="slideUp">
           <form className="flex flex-col gap-4 p-2 border border-(--secondary-color) rounded-md">
-            <label htmlFor="name" className="text-(--text) mt-2">Name</label>
+            <label htmlFor="name" className="text-(--text) mt-1">Name</label>
             <input type="text" id="name" placeholder="Your Name" required className="rounded-md h-12 border border-(--secondary-color)"/>
-            <label htmlFor="email" className="text-(--text) my-2">Email</label>
+            <label htmlFor="email" className="text-(--text) my-1">Email</label>
             <input type="email" id="email" placeholder="Your Email" required className="h-12 rounded-md border border-(--secondary-color)"/>
             <label htmlFor="subject" className="text-(--text)">Subject</label>
             <select id="subject" className="h-12 rounded-md border border-(--secondary-color)">
