@@ -40,7 +40,7 @@ const Header = () => {
               <Link className="border-b text-(--text) border-gray-300 py-2 sm:border-none hover:text-(--secondary-color)" href="/about-us">About</Link>
               <Link className="text-(--text) py-2 sm:border-none hover:text-(--secondary-color)" href="/contact-us">Contact</Link>
               {
-                sessionId ? <SignOutButton>Sign Out</SignOutButton> : <SignInButton mode="modal">Sign In </SignInButton>
+                sessionId ? <SignOutButton><button>Sign Out</button></SignOutButton> : <SignInButton mode="modal"><button>Sign In</button></SignInButton>
               }
           </nav>
         <div className='flex gap-2'>
