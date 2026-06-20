@@ -72,7 +72,7 @@ export default function Home() {
         </Animation>
         <BestSellers/>
       </section>
-      <section>
+      <section id="how-it-works" className="py-12">
         <div className="flex flex-col justify-center items-center">
           <Animation variant="slideRight">
             <p className="font-inter text-(--text) text-center my-4">How it works</p>
@@ -121,7 +121,7 @@ export default function Home() {
           <TestimonialCarousel/>
         </Animation>
       </section>
-      <section className="py-12 p-2">
+      <section id="contact" className="py-12 p-2">
         <div>
           <Animation variant="slideRight">
           <div className="flex flex-col justify-center items-left">
