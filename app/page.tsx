@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import HowItWorksCard from "@/components/HowItWorksCard"
 import Animation from "@/components/Animation"
 import LogoCarousel from "@/components/LogoCarousel"
+import Link from "next/link"
 
 export const metadata = {
   title:"Home"
@@ -47,14 +48,17 @@ export default function Home() {
           </Animation>
           <Animation variant="slideUp">
             <div className="flex flex-col sm:flex-row gap-4 justify-start items-left">
+              
               <Button size="lg" variant="default" className="bg-(--primary-color) h-12 px-8 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 rounded-none">
                 Shop now
                 <ArrowRight/>
               </Button>
-              <Button variant="outline" size="lg" className="px-8 font-semibold text-lg shadow-lg tracking-wide h-12  flex gap-2 rounded-none">
-                How it works
-                <Play/>
-              </Button>
+              <Link href="/how-it-works">
+                <Button variant="outline" size="lg" className="px-8 font-semibold text-lg shadow-lg tracking-wide h-12  flex gap-2 rounded-none">
+                  How it works
+                  <Play/>
+                </Button>
+              </Link>
             </div>
           </Animation>
            
@@ -96,12 +100,12 @@ export default function Home() {
       <section className="py-12">
         <div className="flex flex-col justify-center items-center">
           <Animation variant="slideRight">
-            <h2 className="text-(--text) text-center my-4">Brands</h2>
+            <p className="text-(--text) text-center my-4">Brands</p>
           </Animation>
           <div className="h-1 mb-4 bg-(--secondary-color) rounded-md w-20"></div>
         </div>
         <Animation variant="slideUp">
-          <h2 className="px-2 font-playfair text-(--text) text-3xl text-center my-4">We Deal In</h2>
+          <h2 className="px-2 font-playfair text-(--text) text-3xl text-center my-4">The Fragrance Collection</h2>
         </Animation>
         <Animation variant="slideUp">
           <LogoCarousel/>
@@ -124,26 +128,31 @@ export default function Home() {
       <section id="contact" className="py-12 p-2">
         <div>
           <Animation variant="slideRight">
-          <div className="flex flex-col justify-center items-left">
-            <h2 className="px-2 font-playfair text-(--text) text-left text-3xl text-center my-6">Get In Touch</h2>
+          <div className="flex flex-col justify-center items-center">
+            <Animation variant="slideRight">
+              <p className="text-(--text) text-center my-4">Get In Touch</p>
+            </Animation>
             <div className="h-1 mb-4 bg-(--secondary-color) rounded-md w-20"></div>
           </div>
           <Animation variant="slideUp">
+            <h2 className="px-2 font-playfair text-(--text) text-3xl text-center my-4">Let's Talk Fragrance</h2>
+          </Animation>
+          <Animation variant="slideUp">
           <form className="flex flex-col gap-4 p-2 border border-(--secondary-color) rounded-md">
-            <label htmlFor="name" className="text-(--text) mt-1">Name</label>
-            <input type="text" id="name" placeholder="Your Name" required className="rounded-md h-12 border border-(--secondary-color)"/>
-            <label htmlFor="email" className="text-(--text) my-1">Email</label>
-            <input type="email" id="email" placeholder="Your Email" required className="h-12 rounded-md border border-(--secondary-color)"/>
+            <label htmlFor="name" className="text-(--text) ">Name</label>
+            <input type="text" id="name" placeholder="Your Name" required className="rounded-md h-10 border border-(--secondary-color)"/>
+            <label htmlFor="email" className="text-(--text)">Email</label>
+            <input type="email" id="email" placeholder="Your Email" required className="h-10 rounded-md border border-(--secondary-color)"/>
             <label htmlFor="subject" className="text-(--text)">Subject</label>
-            <select id="subject" className="h-12 rounded-md border border-(--secondary-color)">
+            <select id="subject" className="h-10 rounded-md border border-(--secondary-color)">
               <option value="">Select a Subject</option>
               <option value="general">General Inquiry</option>
               <option value="support">Support</option>
               <option value="feedback">Feedback</option>
             </select>
             <label htmlFor="message" className="text-(--text)">Message</label>
-            <textarea id="message" placeholder="Your Message" required className="rounded-md border border-(--secondary-color) h-[300px]"></textarea>
-              <Button size="lg" type="submit" variant="default" className="bg-(--primary-color) h-12 px-8 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 rounded-none">
+            <textarea id="message" placeholder="Your Message" required className="rounded-md border border-(--secondary-color) h-[250px]"></textarea>
+              <Button size="lg" type="submit" variant="default" className="bg-(--primary-color) h-10 px-8 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 rounded-none">
                 Send Message
               </Button>
           </form>

@@ -11,10 +11,10 @@ export default function HowItWorksCard({step,title,icon}:howItWorksProps){
     return(
         <Animation variant="slideUp">
             <div className="bg-(--primary-color) rounded-md flex flex-col items-center">
-                    <div className="h-20 w-20 my-2  flex items-center justify-center rounded-full">
+                    <h2 className="font-playfair text-2xl my-2 text-center text-white flex">{step}</h2>
+                    <div className="h-20 w-20 my-2 bg-(--secondary-color)  flex items-center justify-center rounded-full">
                         {icon}
                     </div>
-                    <h2 className="font-playfair text-2xl my-2 text-center text-white flex">{step}</h2>
                     <h2 className="font-playfair text-2xl my-2 text-center text-white flex">{title}</h2>
             </div>
         </Animation>
