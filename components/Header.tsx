@@ -33,7 +33,7 @@ const Header = () => {
         <Link href="/">
           <h1 className="text-xl font-bold font-playfair text-[#4A2C6D]">Eclat Essence</h1>
         </Link>
-        <Animation variant={`${openMenu ? 'slideDown' : 'none'}`}>
+
           <nav className={`sm:space-x-2 py-2 pl-2 right-0 space-y-2 ${ openMenu ? 'flex bg-(--background) border border-(--secondary-color) sm:border-none sm:bg-transparent':'hidden sm:flex'} flex-col sm:flex-row font-sans absolute sm:relative top-full left-0 z-500`}>
               <Link className="border-b text-(--text) border-gray-300 py-2 sm:border-none hover:text-(--secondary-color)" href="/">Home</Link>
               <Link className="border-b text-(--text) border-gray-300 py-2 sm:border-none hover:text-(--secondary-color)" href="/shop">Shop</Link>
@@ -44,7 +44,7 @@ const Header = () => {
                 sessionId ? <SignOutButton><button>Sign Out</button></SignOutButton> : <SignInButton mode="modal"><button>Sign In</button></SignInButton>
               }
           </nav>
-        </Animation>
+   
           <nav className={`sm:space-x-2 py-2 pl-2 right-0 space-y-2 ${ openMenu ? 'flex bg-(--background) border border-(--secondary-color) sm:border-none sm:bg-transparent':'hidden sm:flex'} flex-col sm:flex-row font-sans absolute sm:relative top-full left-0 z-500`}>
               <Link className="border-b text-(--text) border-gray-300 py-2 sm:border-none hover:text-(--secondary-color)" href="/">Home</Link>
               <Link className="border-b text-(--text) border-gray-300 py-2 sm:border-none hover:text-(--secondary-color)" href="/shop">Shop</Link>
