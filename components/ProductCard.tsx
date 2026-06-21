@@ -13,10 +13,10 @@ function ProductCard({name,url,price}:Product) {
           <Image src={url} alt={name} fill sizes="(max-width:768px) 100vw, 320px" className="max-w-full border-b border-(--secondary-color) h-auto object-cover"/>
         </div>
         <Animation variant="slideDown">
-            <div className="p-4 bg-white/30 backdrop-blur-xl backdrop-filter">
+            <div className="bg-[#F5F5F5] backdrop-blur-xl backdrop-filter flex flex-col items-center">
               <p className="py-2 font-bold font-playfair">{name}</p>
               <p className="pb-2 font-space">{price}</p>
-              <Button variant="default" className="rounded-none bg-(--primary-color) h-12 px-8 font-semibold  flex gap-2">ADD TO CART <ShoppingBag color="white"/></Button>
+              <Button variant="default" className="rounded-md bg-(--primary-color) h-12 px-8 font-semibold  flex gap-2">Add to cart <ShoppingBag color="white"/></Button>
             </div>
         </Animation>
       </div>
