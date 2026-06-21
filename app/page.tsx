@@ -72,14 +72,14 @@ export default function Home() {
           <div className="h-1 bg-(--primary-color) rounded-md w-20"></div>
         </div>
         <Animation variant="slideUp">
-          <h2 className="text-center font-playfair px-2 text-text-[#F5F5F5] my-5 text-3xl">Discover our most-coveted bottles and find your match.</h2>
+          <h2 className="text-center font-playfair px-2 text-[#F5F5F5] my-5 text-3xl">Discover our most-coveted bottles and find your match.</h2>
         </Animation>
         <BestSellers/>
       </section>
       <section id="how-it-works" className="py-12">
         <div className="flex flex-col justify-center items-center">
           <Animation variant="slideRight">
-            <p className="font-inter text-text-[#F5F5F5] text-center my-4">How it works</p>
+            <p className="font-inter text-[#F5F5F5] text-center my-4">How it works</p>
           </Animation>
           <div className="h-1 mb-4 bg-(--primary-color) rounded-md w-20"></div>
         </div>
@@ -138,20 +138,20 @@ export default function Home() {
             <h2 className="px-2 font-playfair text-[#F5F5F5] text-3xl text-center my-4">Let's Talk Fragrance</h2>
           </Animation>
           <Animation variant="slideUp">
-          <form className="flex flex-col gap-4 p-2 border border-(--secondary-color) rounded-md">
+          <form className="flex flex-col gap-4 p-2 border border-(--primary-color) rounded-md">
             <label htmlFor="name" className="text-[#F5F5F5] ">Name</label>
-            <input type="text" id="name" placeholder="Your Name" required className="rounded-md h-10 border border-(--secondary-color)"/>
+            <input type="text" id="name" placeholder="Your Name" required className="rounded-md h-10 border border-(--primary-color) bg-[#F5F5F5]"/>
             <label htmlFor="email" className="text-[#F5F5F5]">Email</label>
-            <input type="email" id="email" placeholder="Your Email" required className="h-10 rounded-md border border-(--secondary-color)"/>
+            <input type="email" id="email" placeholder="Your Email" required className="h-10 rounded-md border border-(--primary-color) bg-[#F5F5F5]"/>
             <label htmlFor="subject" className="text-[#F5F5F5]">Subject</label>
-            <select id="subject" className="h-10 rounded-md border border-(--secondary-color)">
+            <select id="subject" className="h-10 rounded-md border border-(--primary-color) bg-[#F5F5F5]">
               <option value="">Select a Subject</option>
               <option value="general">General Inquiry</option>
               <option value="support">Support</option>
               <option value="feedback">Feedback</option>
             </select>
             <label htmlFor="message" className="text-[#F5F5F5]">Message</label>
-            <textarea id="message" placeholder="Your Message" required className="rounded-md border border-(--secondary-color) h-[250px]"></textarea>
+            <textarea id="message" placeholder="Your Message" required className="rounded-md border border-(--primary-color) h-62.5 bg-[#F5F5F5]"></textarea>
               <Button size="lg" type="submit" variant="default" className="bg-(--primary-color) h-10 px-8 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 rounded-none">
                 Send Message
               </Button>

@@ -11,7 +11,7 @@ export default function Footer(){
                 <div>
                     <div>
                         <Animation variant="none">
-                            <h3 className="text-2xl my-4 font-playfair text-(--secondary-color)">Subscribe to our daily Newsletter</h3>
+                            <h3 className="text-2xl my-4 font-playfair text-[#F5F5F5]">Subscribe to our daily Newsletter</h3>
                         </Animation>
                         <Animation variant="none">
                             <div className="flex">
@@ -23,7 +23,7 @@ export default function Footer(){
                     </div>
                     <div>
                             <Animation variant="none">
-                                <h3 className="text-2xl font-playfair text-(--secondary-color) my-4">Follow Us</h3>
+                                <h3 className="text-2xl font-playfair text-[#F5F5F5] my-4">Follow Us</h3>
                             </Animation>
                             <Animation variant="none">
                                 <div className="flex gap-2">
@@ -44,7 +44,7 @@ export default function Footer(){
                 <div>
                         <div className="space-y-2">
                             <Animation variant="none">
-                                <h3 className="text-2xl font-playfair text-(--secondary-color) my-4">Reach Out To Us</h3>
+                                <h3 className="text-2xl font-playfair text-[#F5F5F5] my-4">Reach Out To Us</h3>
                             </Animation>
 
                         <div className="flex gap-2 items-center text-white">
@@ -60,7 +60,7 @@ export default function Footer(){
                 <div>
                     <div className="flex flex-col">
                         <Animation variant="none">
-                            <h3 className="text-2xl font-playfair text-(--secondary-color) my-4">Quick Links</h3>
+                            <h3 className="text-2xl font-playfair text-[#F5F5F5] my-4">Quick Links</h3>
                         </Animation>
                         <Animation variant="none">
                             <div className="flex flex-col">
@@ -76,7 +76,7 @@ export default function Footer(){
                 <div>
                     <div>
                         <Animation variant="none">
-                            <h3 className="text-2xl font-playfair text-(--secondary-color) my-4">Brands We Deal In</h3>
+                            <h3 className="text-2xl font-playfair text-[#F5F5F5] my-4">Brands We Deal In</h3>
                         </Animation>
                         <Animation variant="none">
                             <p className="text-white mb-2 font-inter">Dior</p>
