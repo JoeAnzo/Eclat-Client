@@ -2,9 +2,6 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-body {
-  background:#0F0F0F;
-}
 
 @custom-variant dark (&:is(.dark *));
 
@@ -15,7 +12,7 @@ body {
 }
 
 :root{
-    --primary-color:#D4AF88;
+    --primary-color:#4A2C6D;
     --secondary-color:#D4AF37;
     --text:#2D2D2D;
     --call-to-action:#C88A7C;

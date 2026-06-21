@@ -12,7 +12,7 @@ const reviews = [
         id:1,
         userName:"Elena R",
         userPicture:"/images/Testimonials/pic1.jpg",
-        review:"Lam absolutely in love! The scent is captivating, unique, and lasts all day without being overpowering.",
+        review:"Iam absolutely in love! The scent is captivating, unique, and lasts all day without being overpowering.",
         rating:5
     },
     {
@@ -31,9 +31,9 @@ const reviews = [
     },
     {
         id:4,
-        userName:"Elena R",
+        userName:"Martha K",
         userPicture:"/images/Testimonials/pic4.jpg",
-        review:"Lam absolutely in love! The scent is captivating, unique, and lasts all day without being overpowering",
+        review:"Iam absolutely in love! The scent is captivating, unique, and lasts all day without being overpowering",
         rating:5
     },
     {
@@ -68,7 +68,7 @@ export default function TestimonialCarousel() {
       >
         {reviews.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="bg-[#F5F5F5] relative p-6 rounded-2xl border border-(--secondary-color) shadow-sm flex flex-col justify-between h-full min-h-[220px]">
+            <div className="bg-[#F5F5F5] relative p-6 rounded-2xl border border-(--secondary-color) shadow-sm flex flex-col justify-between h-full min-h-55">
                 <div className='absolute left-8 top-8'>
                   <Quote className="text-(--primary-color)"/>
                 </div>

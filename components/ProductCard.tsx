@@ -8,12 +8,12 @@ import Animation from "./Animation"
 function ProductCard({name,url,price}:Product) {
   return (
     <Animation variant="slideUp">
-      <div className="rounded-lg pb-2">
+      <div className="rounded-lg">
         <div className="relative h-80 w-full overflow-hidden">
           <Image src={url} alt={name} fill sizes="(max-width:768px) 100vw, 320px" className="max-w-full rounded-t-lg h-auto object-cover"/>
         </div>
         <Animation variant="slideDown">
-            <div className="bg-[#F5F5F5] rounded-b-lg backdrop-blur-xl backdrop-filter flex flex-col items-center">
+            <div className="bg-[#F5F5F5] pb-4 rounded-b-lg flex flex-col items-center">
               <p className="py-2 font-bold font-playfair">{name}</p>
               <p className="pb-2 font-space">{price}</p>
               <Button variant="default" className="rounded-lg bg-(--primary-color) h-12 px-8 font-semibold  flex gap-2">Add to cart <ShoppingBag color="white"/></Button>
