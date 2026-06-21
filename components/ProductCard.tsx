@@ -8,7 +8,7 @@ import Animation from "./Animation"
 function ProductCard({name,url,price}:Product) {
   return (
     <Animation variant="slideUp">
-      <div className="rounded-lg">
+      <div className="rounded-lg shadow-md border-(--secondary-color)">
         <div className="relative h-80 w-full overflow-hidden">
           <Image src={url} alt={name} fill sizes="(max-width:768px) 100vw, 320px" className="max-w-full rounded-t-lg h-auto object-cover"/>
         </div>
