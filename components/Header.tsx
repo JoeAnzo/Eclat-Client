@@ -29,7 +29,7 @@ const Header = () => {
 
   },[])
   return (
-    <header className={`fixed z-10 top-0 left-0 right-0 flex justify-between items-center ${hasScrolled ? 'bg-white/30 backdrop-blur-xl backdrop-filter':'bg-transparent'} py-4 px-2 border border-(--primary-color)`}>
+    <header className={`fixed z-10 top-0 left-0 right-0 flex justify-between items-center ${hasScrolled ? 'bg-white/30 backdrop-blur-xl backdrop-filter':'bg-transparent'} py-4 px-2 border border-(--secondary-color)`}>
         <Link href="/">
           <h1 className="text-xl font-bold font-playfair text-(--primary-color)">Eclat Essence</h1>
         </Link>
