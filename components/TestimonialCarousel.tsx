@@ -1,6 +1,6 @@
 "use client";
 import Image from 'next/image';
-import { useRef, useEffect } from 'react';
+import {Quote} from 'lucide-react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay, A11y } from 'swiper/modules';
 import 'swiper/css';
@@ -68,8 +68,11 @@ export default function TestimonialCarousel() {
       >
         {reviews.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="bg-white p-6 rounded-2xl border border-(--secondary-color) shadow-sm flex flex-col justify-between h-full min-h-[220px]">
-                <div className="relative w-16 h-16 over-flow-hidden rounded-full flex-shrink-0 bg-gray-100 ">
+            <div className="bg-[#F5F5F5] relative p-6 rounded-2xl border border-(--secondary-color) shadow-sm flex flex-col justify-between h-full min-h-[220px]">
+                <div className='absolute left-8 top-8'>
+                  <Quote className="text-(--primary-color)"/>
+                </div>
+                <div className="relative w-16 h-16 over-flow-hidden rounded-full shrink-0 ">
                     <Image
                     src={item.userPicture}
                     alt={item.userName}
@@ -109,7 +112,7 @@ export default function TestimonialCarousel() {
           opacity: 1;
         }
         .swiper-pagination-bullet-active {
-          background: #4A266D;
+          background: var(--primary-color);
         }
       `}</style>
     </section> 

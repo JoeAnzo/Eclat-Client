@@ -114,7 +114,7 @@ const Couresel = () => {
           opacity: 1;
         }
         .swiper-pagination-bullet-active {
-          background: #4A266D;
+          background: var(--primary-color);
         }
       `}</style>
     </section>
