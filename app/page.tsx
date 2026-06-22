@@ -151,8 +151,8 @@ export default function Home() {
               <option value="feedback">Feedback</option>
             </select>
             <label htmlFor="message" className="text-(--text)">Message</label>
-            <textarea id="message" placeholder="Your Message" required className="rounded-md border border-(--primary-color) h-62.5 bg-[#F5F5F5]"></textarea>
-              <Button size="lg" type="submit" variant="default" className="bg-(--primary-color) h-10 px-8 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 rounded-none">
+            <textarea id="message" placeholder="Your Message" required className="rounded-md border border-(--secondary-color) h-62.5 bg-[#F5F5F5]"></textarea>
+              <Button size="lg" type="submit" variant="default" className="bg-(--secondary-color) h-10 px-8 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 rounded-none">
                 Send Message
               </Button>
           </form>
