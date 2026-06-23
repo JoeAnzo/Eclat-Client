@@ -73,8 +73,8 @@ export default function Footer(){
                                 <Link className="py-2 text-white sm:border-none font-inter hover:text-(--secondary-color)" href="/about-us">About</Link>
                                 <Link className="py-2 text-white sm:border-none font-inter hover:text-(--secondary-color)" href="/contact-us">Contact and FAQs</Link>
                                 <Link className="py-2 text-white sm:border-none font-inter hover:text-(--secondary-color)" href="/terms-and-conditions">Terms and Conditions</Link>
-                                <Link className="py-2 text-white sm:border-none font-inter hover:text-(--secondary-color)" href="/refund-and-return">Refund and Return Policy</Link>
                                 <Link className="py-2 text-white sm:border-none font-inter hover:text-(--secondary-color)" href="/privacy-policy">Privacy Policy</Link>
+                                <Link className="py-2 text-white sm:border-none font-inter hover:text-(--secondary-color)" href="/refund-and-return">Shipping and Return Policy</Link>
                             </div>
                         </Animation>        
                     </div>

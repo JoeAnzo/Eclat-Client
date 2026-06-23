@@ -36,7 +36,7 @@ const Header = () => {
 
    
    
-          <nav className={`sm:space-x-2 py-2 pl-2 right-0 space-y-2 ${ openMenu ? 'flex bg-background border border-(--secondary-color) sm:border-none translate-y-0 duration-300 ease-in-out sm:bg-transparent':'hidden -translate-y-7.5 sm:flex'} flex-col sm:flex-row font-sans absolute sm:relative top-full left-0 z-500`}>
+          <nav className={`sm:space-x-2 py-2 pl-2 right-0 space-y-2 flex-col sm:flex-row font-sans absolute sm:relative top-full left-0 w-full z-50 overflow-hidden transition-all duration-300 ease-in-out ${openMenu ? 'flex max-h-[520px] opacity-100 translate-y-0 pointer-events-auto bg-background border border-(--secondary-color) sm:bg-transparent sm:border-none' : 'hidden max-h-0 opacity-0 -translate-y-5 pointer-events-none sm:flex sm:max-h-none sm:opacity-100 sm:translate-y-0 sm:pointer-events-auto sm:bg-transparent sm:border-none'}`}>
               <Link className="border-b text-(--text) border-gray-300 py-2 sm:border-none hover:text-(--primary-color)" href="/">Home</Link>
               <Link className="border-b text-(--text) border-gray-300 py-2 sm:border-none hover:text-(--primary-color)" href="/shop">Shop</Link>
               <Link className="border-b text-(--text) border-gray-300 py-2 sm:border-none hover:text-(--primary-color)" href="/#how-it-works">How it works</Link>
