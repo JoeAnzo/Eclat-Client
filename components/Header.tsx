@@ -29,13 +29,10 @@ const Header = () => {
 
   },[])
   return (
-    <header className={`fixed z-10 top-0 left-0 right-0 flex justify-between items-center ${hasScrolled ? 'bg-white/30 backdrop-blur-xl backdrop-filter':'bg-transparent'} py-4 px-2 border border-(--primary-color)`}>
+    <header className={`fixed z-10 top-0 left-0 right-0 flex justify-between items-center ${hasScrolled ? 'bg-white/30 backdrop-blur-xl backdrop-filter':'bg-transparent'} py-4 px-2 border border-(--secondary-color)`}>
         <Link href="/">
           <h1 className="text-xl font-bold font-playfair text-(--primary-color)">Eclat Essence</h1>
         </Link>
-
-   
-   
           <nav className={`sm:space-x-2 py-2 pl-2 right-0 space-y-2 flex-col sm:flex-row font-sans absolute sm:relative top-full left-0 w-full z-50 overflow-hidden transition-all duration-300 ease-in-out ${openMenu ? 'flex max-h-[520px] opacity-100 translate-y-0 pointer-events-auto bg-background border border-(--secondary-color) sm:bg-transparent sm:border-none' : 'hidden max-h-0 opacity-0 -translate-y-5 pointer-events-none sm:flex sm:max-h-none sm:opacity-100 sm:translate-y-0 sm:pointer-events-auto sm:bg-transparent sm:border-none'}`}>
               <Link className="border-b text-(--text) border-gray-300 py-2 sm:border-none hover:text-(--primary-color)" href="/">Home</Link>
               <Link className="border-b text-(--text) border-gray-300 py-2 sm:border-none hover:text-(--primary-color)" href="/shop">Shop</Link>
