@@ -63,17 +63,13 @@ export default function Footer(){
                 <div>
                     <div className="flex flex-col">
                         <Animation variant="none">
-                            <h3 className="text-2xl font-playfair text-(--secondary-color) my-4">Quick Links</h3>
+                            <h3 className="text-2xl font-playfair text-(--secondary-color) my-4">Legal</h3>
                         </Animation>
                         <Animation variant="none">
                             <div className="flex flex-col">
-                                <Link className="py-2 text-white sm:border-none font-inter hover:text-(--secondary-color)" href="/">Home</Link>
-                                <Link className="py-2 text-white sm:border-none font-inter hover:text-(--secondary-color)" href="/shop">Shop</Link>
-                                <Link className="py-2 text-white sm:border-none font-inter hover:text-(--secondary-color)" href="/how-it-works">How it works</Link>
-                                <Link className="py-2 text-white sm:border-none font-inter hover:text-(--secondary-color)" href="/about-us">About</Link>
+                                <Link className="py-2 text-white sm:border-none font-inter hover:text-(--secondary-color)" href="/privacy-policy">Privacy Policy</Link>
                                 <Link className="py-2 text-white sm:border-none font-inter hover:text-(--secondary-color)" href="/contact-us">Contact and FAQs</Link>
                                 <Link className="py-2 text-white sm:border-none font-inter hover:text-(--secondary-color)" href="/terms-and-conditions">Terms and Conditions</Link>
-                                <Link className="py-2 text-white sm:border-none font-inter hover:text-(--secondary-color)" href="/privacy-policy">Privacy Policy</Link>
                                 <Link className="py-2 text-white sm:border-none font-inter hover:text-(--secondary-color)" href="/refund-and-return">Shipping and Return Policy</Link>
                             </div>
                         </Animation>        
