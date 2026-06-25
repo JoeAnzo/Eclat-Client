@@ -128,7 +128,7 @@ export default function Home() {
           <TestimonialCarousel/>
         </Animation>
       </section>
-            <section className="py-12">
+      <section className="py-12 flex flex-col gap-2 items-center justify-center">
         <div className="flex flex-col justify-center items-center">
           <Animation variant="slideRight">
             <h2 className="text-(--text) text-center my-4">Quiz</h2>
@@ -136,7 +136,7 @@ export default function Home() {
           <div className="h-1 mb-4 bg-(--secondary-color) rounded-md w-20"></div>
         </div>
         <Animation variant="slideDown">
-          <Image src="/images/quiz.jpg" width={100} height={300} alt="girl holding perfume"/>
+          <Image src="/images/quiz.jpg" width={1200} height={800} sizes="100vw" style={{width:'100%',height:'auto'}} alt="girl holding perfume"/>
         </Animation>
         <Animation variant="slideUp">
           <h2 className="px-2 font-playfair text-(--text) text-3xl text-center my-4">Take A Quiz To Find Your Signature Scent</h2>
