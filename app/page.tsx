@@ -1,6 +1,8 @@
 import Couresel from "../components/Couresel"
 import TestimonialCarousel from "../components/TestimonialCarousel"
 import {ArrowRight,Play,ShoppingBag,Truck,HandCoins} from 'lucide-react'
+import {GiTakeMyMoney} from "react-icons/gi"
+import {CiDeliveryTruck} from "react-icons/ci"
 import BestSellers from "@/components/BestSellers"
 import { Button } from "@/components/ui/button"
 import HowItWorksCard from "@/components/HowItWorksCard"
@@ -21,18 +23,18 @@ export default function Home() {
       id:1,
       step:"01",
       title:"Browse & Add",
-      icon:<ShoppingBag color="white"/>
+      icon:<ShoppingBag className="text-(--secondary-color)"/>
     },
     {
       id:2,
       step:"02",
       title:"Choose Payment",
-      icon:<HandCoins color="white"/>
+      icon:<GiTakeMyMoney className="text-(--secondary-color)"/>
     },{
       id:3,
       step:"03",
       title:"Get Your Scent Delivered",
-      icon:<Truck color="white"/>
+      icon:<CiDeliveryTruck className="text-(--secondary-color)"/>
     }
   ]
   return (
