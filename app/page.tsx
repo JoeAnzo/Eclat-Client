@@ -140,13 +140,13 @@ export default function Home() {
             <h2 className="px-2 font-playfair text-(--text) text-3xl text-center my-4">Let's Talk Fragrance</h2>
           </Animation>
           <Animation variant="slideUp">
-          <form className="flex flex-col max-w-[320px]">
+          <form className="flex flex-col gap-2 sm:max-w-[320px]">
             <label htmlFor="name" className="text-(--text) ">Name</label>
-            <input type="text" id="name" placeholder="Your Name" required className="rounded-md h-10 border border-(--secondary-color) bg-[#F5F5F5]"/>
+            <input type="text" id="name" placeholder="Your Name" required className="rounded-md h-10 border border-(--secondary-color)"/>
             <label htmlFor="email" className="text-(--text)">Email</label>
-            <input type="email" id="email" placeholder="Your Email" required className="h-10 rounded-md border border-(--secondary-color) bg-[#F5F5F5]"/>
+            <input type="email" id="email" placeholder="Your Email" required className="h-10 rounded-md border border-(--secondary-color)"/>
             <label htmlFor="subject" className="text-(--text)">Subject</label>
-            <select id="subject" className="h-10 rounded-md border border-(--secondary-color) bg-[#F5F5F5]">
+            <select id="subject" className="h-10 rounded-md border border-(--secondary-color)">
               <option value="">Select a Subject</option>
               <option value="general">General Inquiry</option>
               <option value="support">Support</option>

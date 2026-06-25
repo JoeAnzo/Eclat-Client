@@ -9,14 +9,12 @@ export default function Cart() {
       {
         cart.length === 0 ? 
         <div className="h-full flex items-center justify-center">
-          <div className="flex flex-col gap-2">
             <ShoppingBag/>
             <h2>Your Cart is empty</h2>
               <Button size="lg" variant="default" className="bg-(--primary-color) h-12 px-8 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 rounded-none">
                 Shop now
                 <ArrowRight/>
               </Button>
-          </div>
         </div>:
         <div>
 
