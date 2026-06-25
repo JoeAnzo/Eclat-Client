@@ -29,12 +29,12 @@ export default function Home() {
       id:2,
       step:"02",
       title:"Choose Payment",
-      icon:<GiTakeMyMoney className="text-(--secondary-color)"/>
+      icon:<GiTakeMyMoney size={24} className="text-(--secondary-color)"/>
     },{
       id:3,
       step:"03",
       title:"Get Your Scent Delivered",
-      icon:<CiDeliveryTruck className="text-(--secondary-color)"/>
+      icon:<CiDeliveryTruck size={24} className="text-(--secondary-color)"/>
     }
   ]
   return (
