@@ -107,7 +107,7 @@ export default function Home() {
           <div className="h-1 mb-4 bg-(--secondary-color) rounded-md w-20"></div>
         </div>
         <Animation variant="slideUp">
-          <h2 className="px-2 font-playfair text-(--text) text-3xl text-center my-4">The Fragrance Collection</h2>
+          <h2 className="px-2 font-playfair text-(--text) text-3xl text-center my-4">Check Out Our Fragrance Collection</h2>
         </Animation>
         <Animation variant="slideUp">
           <LogoCarousel/>
@@ -140,7 +140,7 @@ export default function Home() {
             <h2 className="px-2 font-playfair text-(--text) text-3xl text-center my-4">Let's Talk Fragrance</h2>
           </Animation>
           <Animation variant="slideUp">
-          <form className="flex flex-col gap-4 p-2 border border-(--secondary-color) rounded-md">
+          <form className="flex flex-col max-w-[320px]">
             <label htmlFor="name" className="text-(--text) ">Name</label>
             <input type="text" id="name" placeholder="Your Name" required className="rounded-md h-10 border border-(--secondary-color) bg-[#F5F5F5]"/>
             <label htmlFor="email" className="text-(--text)">Email</label>

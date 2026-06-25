@@ -21,7 +21,7 @@ const parsePrice = (price: string) => {
   return Number(numericString) || 0
 }
 
-export const useCartState = create<CartState>()(
+export const useCartStore = create<CartState>()(
     persist(
         (set,get) => ({
             cart:[],
