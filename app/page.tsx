@@ -67,7 +67,7 @@ export default function Home() {
            
         </div>
       </section> 
-      <section className="py-12">
+      <section className="py-8">
         <div className="flex flex-col justify-center items-center">
           <Animation variant="slideRight">
               <p className="text-(--text) font-inter text-center my-4">Best Sellers</p>
@@ -79,7 +79,7 @@ export default function Home() {
         </Animation>
         <BestSellers/>
       </section>
-      <section id="how-it-works" className="py-12">
+      <section id="how-it-works" className="py-8">
         <div className="flex flex-col justify-center items-center">
           <Animation variant="slideRight">
             <p className="font-inter text-(--text) text-center my-4">How it works</p>
@@ -100,7 +100,7 @@ export default function Home() {
          
         </div>
       </section>
-      <section className="py-12">
+      <section className="py-8">
         <div className="flex flex-col justify-center items-center">
           <Animation variant="slideRight">
             <p className="text-(--text) text-center my-4">Brands</p>
@@ -114,7 +114,7 @@ export default function Home() {
           <LogoCarousel/>
         </Animation>
       </section>
-      <section className="py-12">
+      <section className="py-8">
         <div className="flex flex-col justify-center items-center">
           <Animation variant="slideRight">
             <h2 className="text-(--text) text-center my-4">Testimonials</h2>
@@ -128,7 +128,7 @@ export default function Home() {
           <TestimonialCarousel/>
         </Animation>
       </section>
-      <section className="py-12 flex flex-col gap-2 items-center justify-center">
+      <section className="py-8 flex flex-col gap-2 items-center justify-center">
         <div className="flex flex-col justify-center items-center">
           <Animation variant="slideRight">
             <h2 className="text-(--text) text-center my-4">Quiz</h2>
@@ -146,7 +146,7 @@ export default function Home() {
           <ArrowRight/>
         </Button>
       </section>
-      <section id="contact" className="py-12 p-4">
+      <section id="contact" className="py-8 p-4">
         <div>
           <Animation variant="slideRight">
           <div className="flex flex-col justify-center items-center">
@@ -172,7 +172,7 @@ export default function Home() {
               <option value="feedback">Feedback</option>
             </select>
             <label htmlFor="message" className="text-(--text)">Message</label>
-            <textarea id="message" placeholder="Your Message" required className="rounded-md border border-(--secondary-color) h-62.5"></textarea>
+            <textarea id="message" placeholder="Your Message" required className="rounded-md border border-(--secondary-color) h-40.5"></textarea>
               <Button size="lg" type="submit" variant="default" className="bg-(--secondary-color) h-10 px-8 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 rounded-none">
                 Send Message
               </Button>
