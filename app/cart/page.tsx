@@ -8,7 +8,7 @@ export default function Cart() {
     <section className="min-h-screen">
       {
         cart.length === 0 ? 
-        <div className="h-screen flex flex-col gap-2 items-center justify-cente">
+        <div className="h-screen flex flex-col gap-2 items-center justify-center">
             <ShoppingBag size={40}/>
             <h2 className="font-bold text-xl font-inter">Your vanity is empty!</h2>
             <p className="italic">Don't leave your perfume tray lonely. Grab your favourites before they sell out.</p>
