@@ -68,7 +68,7 @@ export default function TestimonialCarousel() {
       >
         {reviews.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="bg-[#F5F5F5] relative p-6 rounded-2xl border border-(--secondary-color) shadow-sm flex flex-col justify-between h-full min-h-55">
+            <div className="relative p-6 rounded-2xl border border-(--secondary-color) shadow-sm flex flex-col justify-between h-full min-h-55">
                 <div className='absolute right-8 top-8'>
                   <Quote size={30} className="text-(--secondary-color)"/>
                 </div>

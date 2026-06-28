@@ -2,34 +2,23 @@
 import {SignInButton,SignOutButton,UserButton,Show,useAuth} from "@clerk/nextjs"
 import Link from 'next/link' 
 import {ShoppingBag,Menu,X,UserRound} from 'lucide-react'
-import {useState,useEffect} from 'react'
-import Animation from "./Animation"
+import {useState} from 'react'
 
 const Header = () => {
+
   const [openMenu,setCloseMenu] = useState(false)
-  const [hasScrolled,setHasScrolled] = useState(false)
+
   const {sessionId} = useAuth()
   const handleClick = () => {
     console.log('clicked')
     setCloseMenu((prev) => !prev)
   }
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50){
-        setHasScrolled(true)
-      } else {
-        setHasScrolled(false)
-      }
-    }
-    window.addEventListener('scroll',handleScroll)
 
-    return () => {
-      window.removeEventListener('scroll',handleScroll)
-    }
-
-  },[])
   return (
-    <header className={`fixed z-10 top-0 left-0 right-0 flex justify-between items-center ${hasScrolled ? 'bg-white/30 backdrop-blur-xl backdrop-filter':'bg-transparent'} py-4 px-2 border border-(--secondary-color)`}>
+    <header className={`fixed z-10 top-0 left-0 right-0 flex justify-between items-center bg-white/30 backdrop-blur-xl backdrop-filter py-4 px-2 border border-(--secondary-color)`}>
+          <div className="sm:hidden" onClick={handleClick}>
+            {openMenu ? <X/>:<Menu/>}
+          </div>
         <Link href="/">
           <h1 className="text-xl font-bold font-playfair text-(--primary-color)">Eclat Essence</h1>
         </Link>
@@ -60,9 +49,6 @@ const Header = () => {
             <Link href="/cart">
               <ShoppingBag/>
             </Link>
-          </div>
-          <div className="sm:hidden" onClick={handleClick}>
-            {openMenu ? <X/>:<Menu/>}
           </div>
         </div>
     </header>

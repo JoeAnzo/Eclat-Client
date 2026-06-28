@@ -11,7 +11,7 @@ export default function Cart() {
         <div className="h-screen flex flex-col gap-2 items-center justify-center">
             <ShoppingBag size={40}/>
             <h2 className="font-bold text-xl font-inter">Your vanity is empty!</h2>
-            <p className="italic px-2">Don't leave your perfume tray lonely. Grab your favourites before they sell out.</p>
+            <p className="italic px-4">Don't leave your perfume tray lonely. Grab your favourites before they sell out.</p>
               <Button size="lg" variant="default" className="bg-(--primary-color) h-12 px-8 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 rounded-none">
                 Start Shopping
                 <ArrowRight/>

@@ -10,12 +10,13 @@ type howItWorksProps = {
 export default function HowItWorksCard({step,title,icon}:howItWorksProps){
     return(
         <Animation variant="slideUp">
-            <div className="bg-(--primary-color) rounded-md flex flex-col items-center">
-                    <h2 className="font-playfair text-2xl my-2 text-center text-white flex">{step}</h2>
-                    <div className="h-20 w-20 my-2 bg-(--primary-color)/30 border border-(--secondary-color)  flex items-center justify-center rounded-full">
-                        {icon}
-                    </div>
-                    <h2 className="font-playfair text-2xl my-2 text-center text-white flex">{title}</h2>
+            <div className="border border-(--secondary-color) rounded-md flex gap-2">
+                <div className="flex flex-col">
+                    <h2 className="font-playfair text-(--secondary-color) text-2xl my-2 text-center text-white flex">{step}</h2>
+                    <div>
+                    </div>                       
+                </div>
+                <h2 className="font-playfair text-(--secondary-color) text-md my-2 text-center text-white flex">{title}</h2>
             </div>
         </Animation>
 

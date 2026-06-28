@@ -24,12 +24,12 @@ async function BestSellers() {
       id:4,
       name:'Urban-Woman-Paradise',
       url:'/images/BestSellers/Urban-Women-Paradise.jpg',
-      price:'UGX 65000'
+      price:'UGX 65,000'
     }
   ]
 
   return (
-    <div className="p-4 space-y-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div className="p-4 space-y-8 grid grid-cols-1 sm:grid-cols-2 items-center gap-4">
       {
         bestSellers.map((product) => {
           return <ProductCard key={product.id} price={product.price} name={product.name} url={product.url} />
