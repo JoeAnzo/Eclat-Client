@@ -34,7 +34,7 @@ const LOGOS = [
 export default function LogoCarousel() {
 
 
-    const duplicatedLogos = [...LOGOS,...LOGOS]
+    const duplicatedLogos = [...LOGOS]
 
   return (
     <div className="relative w-full overflow-hidden bg-background py-12">

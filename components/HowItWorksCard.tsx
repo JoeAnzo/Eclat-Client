@@ -12,11 +12,11 @@ export default function HowItWorksCard({step,title,icon}:howItWorksProps){
         <Animation variant="slideUp">
             <div className="border border-(--secondary-color) rounded-md flex gap-2">
                 <div className="flex flex-col">
-                    <h2 className="font-playfair text-(--secondary-color) text-2xl my-2 text-center text-white flex">{step}</h2>
+                    <h2 className="font-playfair text-(--secondary-color) text-md my-2 text-center flex">{step}</h2>
                     <div>
                     </div>                       
                 </div>
-                <h2 className="font-playfair text-(--secondary-color) text-md my-2 text-center text-white flex">{title}</h2>
+                <h2 className="font-playfair text-(--secondary-color) text-md my-2 text-center flex">{title}</h2>
             </div>
         </Animation>
 
