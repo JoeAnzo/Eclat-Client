@@ -5,7 +5,7 @@ import "./globals.css";
 import Header from "../components/Header"; 
 import Footer from "../components/Footer"
 import { cn } from "@/lib/utils";
-
+import { TooltipProvider } from "@/components/ui/tooltip";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -53,7 +53,9 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
        <ClerkProvider>
           <Header />
-          {children}
+          <TooltipProvider>
+            {children}
+          </TooltipProvider>
           <Footer/>
        </ClerkProvider>
         
