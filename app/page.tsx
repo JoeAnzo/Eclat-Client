@@ -114,15 +114,15 @@ export default function Home() {
           <LogoCarousel/>
         </Animation>
       </section>
-      <section className="py-8">
+      <section className="py-8 bg-(--primary-color)">
         <div className="flex flex-col justify-center items-center">
           <Animation variant="slideRight">
-            <h2 className="text-(--text) text-center my-4">Testimonials</h2>
+            <h2 className="text-white text-center my-4">Testimonials</h2>
           </Animation>
-          <div className="h-1 mb-4 bg-(--secondary-color) rounded-md w-20"></div>
+          <div className="h-1 mb-4 bg-white rounded-md w-20"></div>
         </div>
         <Animation variant="slideUp">
-          <h2 className="px-2 font-playfair text-(--text) text-3xl text-center my-4">What Our Customers have to say</h2>
+          <h2 className="px-2 font-playfair text-white text-3xl text-center my-4">What Our Customers have to say</h2>
         </Animation>
         <Animation variant="slideDown">
           <TestimonialCarousel/>
