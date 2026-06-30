@@ -53,8 +53,8 @@ export function LoginForm({
                 <Input id="password" type="password" required />
               </Field>
               <Field>
-                <Button type="submit">Login</Button>
-                <Button variant="outline" type="button">
+                <Button type="submit" className="bg-(--primary-color) rounded-none">Login</Button>
+                <Button variant="outline" className="rounded-none" type="button">
                   Login with Google
                 </Button>
                 <FieldDescription className="text-center">
