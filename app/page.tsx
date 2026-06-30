@@ -44,10 +44,10 @@ export default function Home() {
         <Couresel/>
         <div className="absolute left-[50%] top-[50%] translate-y-[-50%] translate-x-[-50%] space-y-5  z-5">
           <Animation variant="slideRight">
-            <h2 className="sm:text-4xl text-5xl font-semibold font-playfair text-(--primary-color) my-5">Your Essence, Your Signature</h2>
+            <h2 className="sm:text-4xl text-5xl font-semibold font-playfair text-(--primary-color) my-5">Your Essence, <br/> Your Signature</h2>
           </Animation>
           <Animation variant="slideUp">
-            <p className="text-white text-md sm:text-2xl font-inter prose mb-5">Find the scent that speaks your language and defines your everyday moments </p>
+            <p className="text-white text-md sm:text-2xl font-inter leading-relaxed  max-w-prose mb-5">Find the scent that speaks your language and defines your everyday moments </p>
           </Animation>
           <Animation variant="slideUp">
             <div className="flex flex-col sm:flex-row gap-4 justify-start items-left">
