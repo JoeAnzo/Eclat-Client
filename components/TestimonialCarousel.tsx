@@ -2,49 +2,54 @@
 import Image from 'next/image';
 import {Quote} from 'lucide-react'
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useState } from 'react';
 import { Navigation, Pagination, Autoplay, A11y } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import { Button } from './ui/button';
 import 'swiper/css/pagination';
+import StarRating from './star-rating';
 import { EffectCoverflow } from 'swiper/modules';
+
 const reviews = [
     {
         id:1,
         userName:"Elena R",
         userPicture:"/images/Testimonials/pic1.jpg",
         review:"Iam absolutely in love! The scent is captivating, unique, and lasts all day without being overpowering.",
-        rating:5
+        rating:3
     },
     {
         id:2,
         userName:"Jovia K",
         userPicture:"/images/Testimonials/pic2.jpg",
         review:"A masterpiece in a bottle. I was hesitant to buy fragrance online, but the detailed scent notes helped me find exactly what I was looking for.",
-        rating:5
+        rating:4.5
     },
     {
-        id:3,
+        id:5,
         userName:"Aisha M",
         userPicture:"/images/Testimonials/pic3.jpg",
         review:"Top-tier customer service and fast delivery! This perfume is magical - it settles into warm, inviting aroma that evolves beautifully on the skin.",
-        rating:5
+        rating:4.5
     },
     {
         id:4,
         userName:"Martha K",
         userPicture:"/images/Testimonials/pic4.jpg",
         review:"Iam absolutely in love! The scent is captivating, unique, and lasts all day without being overpowering",
-        rating:5
+        rating:3.5
     },
     {
         id:5,
         userName:"Sarah M",
         userPicture:"/images/Testimonials/pic5.jpg",
         review:"Beautiful presentation and an even more beautiful fragrance! The bottlle looks gorgeous on my vanity, and the scent lasts from morning well into the evening",
-        rating:5
+        rating:4.5
     }
 ]
 export default function TestimonialCarousel() {
+  const [isExpanded,setIsExpanded] = useState(false);
   return (
     <section className="w-full mx-auto max-w-4xl py-auto py-12 px-4">
       <Swiper
@@ -81,16 +86,21 @@ export default function TestimonialCarousel() {
                     className="object-cover rounded-full"
                     />
                 </div>
-                <p className="text-(--text) italic text-md leading-relaxed my-6">
-                    {
-                        item.review
-                    }
-                </p>
                 <h4 className="font-semibold text-(--text) text-sm">
                     {
                         item.userName
                     }
                 </h4>
+                <StarRating rating={item.rating}/>
+                
+                <p className={`text-(--text) italic text-base transition-all duration-300 leading-relaxed my-6 ${isExpanded ? '':'line-clamp-3'}`}>
+                    "{
+                        item.review
+                    }"
+                </p>
+                <Button onClick={() => setIsExpanded(!isExpanded)} size="lg" variant="default" className="bg-(--primary-color) h-12 px-8 font-semibold text-sm focus:outline-none text-white mb-6 rounded-none">
+                    {isExpanded ? 'Read Less':'Read More'}
+                </Button>
             </div>
           </SwiperSlide>
         ))}
