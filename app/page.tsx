@@ -23,18 +23,18 @@ export default function Home() {
     {
       id:1,
       step:"01",
-      title:"Browse & Add",
+      title:"Browse your scent & Add to cart",
       icon:<ShoppingBag className="text-(--secondary-color)"/>
     },
     {
       id:2,
       step:"02",
-      title:"Choose Payment",
+      title:"Choose preferred payment method",
       icon:<GiTakeMyMoney size={24} className="text-(--secondary-color)"/>
     },{
       id:3,
       step:"03",
-      title:"Get Your Scent Delivered",
+      title:"Get Your Scent Delivered to you",
       icon:<CiDeliveryTruck size={24} className="text-(--secondary-color)"/>
     }
   ]

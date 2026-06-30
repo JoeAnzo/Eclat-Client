@@ -2,6 +2,7 @@
 import {SignInButton,SignOutButton,UserButton,Show,useAuth} from "@clerk/nextjs"
 import Link from 'next/link' 
 import {ShoppingBag,Menu,X,UserRound} from 'lucide-react'
+import {LuUserRoundCheck} from 'react-icons/lu'
 import {useState} from 'react'
 
 const Header = () => {
@@ -22,7 +23,7 @@ const Header = () => {
         <Link href="/">
           <h1 className="text-xl font-bold font-playfair text-(--primary-color)">Eclat Essence</h1>
         </Link>
-          <nav className={`sm:space-x-2 py-2 pl-2 right-0 space-y-2 flex-col sm:flex-row font-sans absolute sm:relative top-full left-0 w-full z-50 overflow-hidden transition-all duration-300 ease-in-out ${openMenu ? 'flex max-h-130 opacity-100 translate-y-0 pointer-events-auto bg-background border border-(--secondary-color) sm:bg-transparent sm:border-none' : 'hidden max-h-0 opacity-0 -translate-y-5 pointer-events-none sm:flex sm:opacity-100 sm:translate-y-0 sm:pointer-events-auto sm:bg-transparent sm:border-none'}`}>
+          <nav className={`sm:space-x-2 py-2 pl-2 right-0 space-y-2 flex-col sm:flex-row font-sans absolute sm:relative top-full left-0 w-full z-50 overflow-hidden transition-all duration-300 ease-in-out ${openMenu ? 'flex opacity-100 translate-y-0 bg-background border border-(--secondary-color)' : 'hidden -translate-y-[200px]'}`}>
               <Link className="border-b text-(--text) border-gray-300 py-2 sm:border-none hover:text-(--primary-color)" href="/">Home</Link>
               <Link className="border-b text-(--text) border-gray-300 py-2 sm:border-none hover:text-(--primary-color)" href="/shop">Shop</Link>
               <Link className="border-b text-(--text) border-gray-300 py-2 sm:border-none hover:text-(--primary-color)" href="/#how-it-works">How it works</Link>
@@ -36,7 +37,7 @@ const Header = () => {
           <div className="flex gap-2">
             <Show when="signed-in">
               <button>
-                <UserButton/>
+                <LuUserRoundCheck/>
               </button>
             </Show>
             <Show when="signed-out">
