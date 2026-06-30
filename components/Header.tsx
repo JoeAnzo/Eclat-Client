@@ -23,7 +23,7 @@ const Header = () => {
         <Link href="/">
           <h1 className="text-xl font-bold font-playfair text-(--primary-color)">Eclat Essence</h1>
         </Link>
-          <nav className={`sm:space-x-2 py-2 pl-2 right-0 space-y-2 flex-col sm:flex-row font-sans absolute sm:relative top-full left-0 w-full z-50 overflow-hidden transition-all duration-300 ease-in-out ${openMenu ? 'flex opacity-100 translate-y-0 bg-background border border-(--secondary-color)' : 'hidden sm:flex -translate-y-[200px] sm:translate-y-0'}`}>
+          <nav className={`sm:space-x-2 py-2 pl-2 right-0 space-y-2 flex-col sm:flex-row font-sans absolute sm:relative top-full left-0 w-full z-50 overflow-hidden transition-all duration-300 ease-in-out ${openMenu ? 'flex opacity-100 translate-y-0 bg-background border border-(--secondary-color)' : 'hidden sm:flex -translate-y-[200px] w-full bg-red-300 sm:translate-y-0'}`}>
               <Link className="border-b text-(--text) border-gray-300 py-2 sm:border-none hover:text-(--primary-color)" href="/">Home</Link>
               <Link className="border-b text-(--text) border-gray-300 py-2 sm:border-none hover:text-(--primary-color)" href="/shop">Shop</Link>
               <Link className="border-b text-(--text) border-gray-300 py-2 sm:border-none hover:text-(--primary-color)" href="/#how-it-works">How it works</Link>

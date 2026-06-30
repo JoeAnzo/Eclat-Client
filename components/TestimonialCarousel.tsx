@@ -73,7 +73,7 @@ export default function TestimonialCarousel() {
       >
         {reviews.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="relative p-6 rounded-2xl border border-(--secondary-color) h-[400px] overflow-hidden shadow-sm flex flex-col justify-between h-full min-h-55">
+            <div className="relative p-6 rounded-2xl border border-(--secondary-color) h-[400px] overflow-hidden shadow-sm flex flex-col justify-between bg-white h-full min-h-55">
                 <div className='absolute right-8 top-8'>
                   <Quote size={30} className="text-(--secondary-color)"/>
                 </div>
@@ -92,7 +92,7 @@ export default function TestimonialCarousel() {
                     }
                 </h4>
                 <StarRating rating={item.rating}/>
-                
+
                 <p className={`text-(--text) italic text-base transition-all duration-300 leading-relaxed my-6 ${isExpanded ? '':'line-clamp-3'}`}>
                     "{
                         item.review
