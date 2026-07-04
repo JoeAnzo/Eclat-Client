@@ -19,7 +19,7 @@ const Header = () => {
   useEffect(() => {
     const handleClickOutSide = (event:MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setCloseMenu(true)
+        setCloseMenu(false)
       }
     }
 
