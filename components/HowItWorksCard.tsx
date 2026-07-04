@@ -17,7 +17,7 @@ export default function HowItWorksCard({step,title,text,icon}:howItWorksProps){
                     {icon}
                 </div>                       
                 <h2 className="font-sans font-bold text-(--text) text-xl my-2 text-center flex">{title}</h2>
-                <p className="font-sans py-2">{text}</p>
+                <p className="font-sans px-2">{text}</p>
             </div>
         </Animation>
 
