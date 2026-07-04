@@ -1,5 +1,5 @@
 'use client'
-import {SignInButton,SignOutButton,UserButton,Show,useAuth} from "@clerk/nextjs"
+import {SignInButton,SignOutButton,Show,useAuth} from "@clerk/nextjs"
 import Link from 'next/link' 
 import {ShoppingBag,Menu,X,UserRound,ChevronDown,ChevronRight} from 'lucide-react'
 import {LuUserRoundCheck} from 'react-icons/lu'
@@ -19,7 +19,7 @@ const Header = () => {
   useEffect(() => {
     const handleClickOutSide = (event:MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setCloseMenu(true)
+        setCloseMenu(false)
       }
     }
 

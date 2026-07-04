@@ -24,16 +24,19 @@ export default function Home() {
       id:1,
       step:"01",
       title:"Browse & Add",
+      text:"Browse through our fragrance collection and find the scent that matches you.",
       icon:<ShoppingBag color="white" size={24}/>
     },
     {
       id:2,
       step:"02",
+      text:"Choose your preferred payment method from MTN momo, Credit Card or Bank Transfer",
       title:"Choose Payment method",
       icon:<GiTakeMyMoney color="white" size={24}/>
     },{
       id:3,
       step:"03",
+      text:"We deliver your scent to you with in a time period of 24 hours",
       title:"Get Your Scent Delivered",
       icon:<CiDeliveryTruck color="white" size={24}/>
     }
@@ -91,7 +94,7 @@ export default function Home() {
           <div className="space-y-4 px-4 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8">
               {
                 howItWorks.map((item,index) => {
-                    return <HowItWorksCard key={index} step={item.step} title={item.title} icon={item.icon}/>
+                    return <HowItWorksCard key={index} step={item.step} title={item.title} icon={item.icon} text={item.text}/>
                 }) 
               }
           </div>
