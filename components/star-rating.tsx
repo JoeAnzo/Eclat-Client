@@ -7,7 +7,7 @@ interface starRatingProps {
 
 export default function StarRating({rating}:starRatingProps) {
   return (
-    <div className="flex items-center gap-0.5" aria-label={`Rating: ${rating} out of 5 stars`}>
+    <div className="flex items-center gap-0.5 py-1.5" aria-label={`Rating: ${rating} out of 5 stars`}>
         {[1,2,3,4,5].map((index) => {
             const isFullStar = index <= rating;
 

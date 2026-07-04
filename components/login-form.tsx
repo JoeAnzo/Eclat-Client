@@ -1,3 +1,6 @@
+"use client"
+import { FormEvent, useState } from "react"
+import { useRouter } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import {
@@ -19,6 +22,28 @@ export function LoginForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [error, setError] = useState("")
+
+  const router = useRouter()
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    setError("")
+
+    if (!email || !password) {
+      setError("Please enter both email and password")
+      return
+    }
+
+    try {
+      console.log("Login attempt", { email, password })
+      router.push("/")
+    } catch (err: unknown) {
+      setError("Something went wrong")
+    }
+  }
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card className="border-(--secondary-color)">
@@ -29,7 +54,7 @@ export function LoginForm({
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <form>
+          <form onSubmit={handleSubmit}>
             <FieldGroup>
               <Field>
                 <FieldLabel htmlFor="email">Email</FieldLabel>
@@ -38,6 +63,9 @@ export function LoginForm({
                   type="email"
                   placeholder="m@example.com"
                   required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="rounded-none h-8"
                 />
               </Field>
               <Field>
@@ -50,13 +78,23 @@ export function LoginForm({
                     Forgot your password?
                   </a>
                 </div>
-                <Input id="password" type="password" required />
+                <Input
+                  id="password"
+                  type="password"
+                  required
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="rounded-none h-8"
+                />
               </Field>
               <Field>
-                <Button type="submit" className="bg-(--primary-color) rounded-none">Login</Button>
-                <Button variant="outline" className="rounded-none" type="button">
+                <Button size="lg" type="submit" className="bg-(--primary-color) h-12 rounded-none">
+                  Login
+                </Button>
+                <Button size="lg" variant="outline" className="rounded-none h-12" type="button">
                   Login with Google
                 </Button>
+                {error ? <p className="text-sm text-red-500">{error}</p> : null}
                 <FieldDescription className="text-center">
                   Don&apos;t have an account? <a href="#">Sign up</a>
                 </FieldDescription>

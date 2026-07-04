@@ -23,19 +23,19 @@ export default function Home() {
     {
       id:1,
       step:"01",
-      title:"Browse your scent & Add to cart",
-      icon:<ShoppingBag size={24}/>
+      title:"Browse & Add",
+      icon:<ShoppingBag color="white" size={24}/>
     },
     {
       id:2,
       step:"02",
-      title:"Choose preferred payment method",
-      icon:<GiTakeMyMoney size={24}/>
+      title:"Choose Payment method",
+      icon:<GiTakeMyMoney color="white" size={24}/>
     },{
       id:3,
       step:"03",
-      title:"Get Your Scent Delivered to you",
-      icon:<CiDeliveryTruck size={24}/>
+      title:"Get Your Scent Delivered",
+      icon:<CiDeliveryTruck color="white" size={24}/>
     }
   ]
   return (
