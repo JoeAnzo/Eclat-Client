@@ -1,6 +1,10 @@
 "use client"
-import { FormEvent, useState } from "react"
+import { useState } from "react"
 import { useRouter } from "next/navigation"
+import { useForm } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { z } from "zod"
+import { useSignIn } from "@clerk/nextjs"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import {
@@ -18,43 +22,71 @@ import {
 } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
 
+const loginSchema = z.object({
+  email: z.string().trim().email("Please enter a valid email address"),
+  password: z.string().min(1, "Password is required"),
+})
+
+type LoginFormValues = z.infer<typeof loginSchema>
+
 export function LoginForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
   const [error, setError] = useState("")
-
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const router = useRouter()
+  const { signIn } = useSignIn()
 
-  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault()
-    setError("")
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<LoginFormValues>({
+    resolver: zodResolver(loginSchema),
+    mode: "onBlur",
+  })
 
-    if (!email || !password) {
-      setError("Please enter both email and password")
+  async function onSubmit(values: LoginFormValues) {
+    if (!signIn) {
+      setError("Authentication is not ready yet")
       return
     }
 
+    setError("")
+    setIsSubmitting(true)
+
     try {
-      console.log("Login attempt", { email, password })
+      const result = await signIn.create({
+        identifier: values.email,
+        password: values.password,
+      })
+
+      if (result.error) {
+        setError(result.error.message || "Invalid email or password")
+        return
+      }
+
       router.push("/")
     } catch (err: unknown) {
-      setError("Something went wrong")
+      console.error(err)
+      setError("Invalid email or password")
+    } finally {
+      setIsSubmitting(false)
     }
   }
+
   return (
-    <div className={cn("flex flex-col gap-6", className)} {...props}>
-      <Card className="border-(--secondary-color)">
+    <div className={cn("flex flex-col gap-6 border-none", className)} {...props}>
+      <Card className="">
         <CardHeader>
           <CardTitle>Login to your account</CardTitle>
           <CardDescription>
-            Enter your email below to login to your account
+            Enter your email and password to continue.
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <FieldGroup>
               <Field>
                 <FieldLabel htmlFor="email">Email</FieldLabel>
@@ -62,12 +94,14 @@ export function LoginForm({
                   id="email"
                   type="email"
                   placeholder="m@example.com"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
                   className="rounded-none h-8"
+                  {...register("email")}
                 />
+                {errors.email ? (
+                  <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>
+                ) : null}
               </Field>
+
               <Field>
                 <div className="flex items-center">
                   <FieldLabel htmlFor="password">Password</FieldLabel>
@@ -81,22 +115,26 @@ export function LoginForm({
                 <Input
                   id="password"
                   type="password"
-                  required
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
                   className="rounded-none h-8"
+                  {...register("password")}
                 />
+                {errors.password ? (
+                  <p className="mt-1 text-sm text-red-500">{errors.password.message}</p>
+                ) : null}
               </Field>
+
               <Field>
-                <Button size="lg" type="submit" className="bg-(--primary-color) h-12 rounded-none">
-                  Login
+                <Button
+                  size="lg"
+                  type="submit"
+                  className="bg-(--primary-color) h-12 rounded-none"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Signing in..." : "Login"}
                 </Button>
-                <Button size="lg" variant="outline" className="rounded-none h-12" type="button">
-                  Login with Google
-                </Button>
-                {error ? <p className="text-sm text-red-500">{error}</p> : null}
-                <FieldDescription className="text-center">
-                  Don&apos;t have an account? <a href="#">Sign up</a>
+                {error ? <p className="mt-2 text-sm text-red-500">{error}</p> : null}
+                <FieldDescription className="text-center mt-3">
+                  Don&apos;t have an account? <a href="/sign-up">Sign up</a>
                 </FieldDescription>
               </Field>
             </FieldGroup>
