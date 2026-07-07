@@ -23,8 +23,8 @@ import {
 import { Input } from "@/components/ui/input"
 
 const loginSchema = z.object({
-  email: z.string().trim().email("Please enter a valid email address"),
-  password: z.string().min(1, "Password is required"),
+  email: z.string().min(1, "Email is required").trim().email("Please enter a valid email address"),
+  password: z.string().min(6, "Password is required"),
 })
 
 type LoginFormValues = z.infer<typeof loginSchema>
@@ -33,29 +33,30 @@ export function LoginForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
-  const [error, setError] = useState("")
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [globalError, setGlobalError] = useState("")
   const router = useRouter()
   const { signIn } = useSignIn()
 
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors,isSubmitting },
   } = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema),
     mode: "onBlur",
+    defaultValues:{
+      email:'',
+      password:''
+    }
   })
 
   async function onSubmit(values: LoginFormValues) {
     if (!signIn) {
-      setError("Authentication is not ready yet")
+      setGlobalError("Authentication is not ready yet")
       return
     }
 
-    setError("")
-    setIsSubmitting(true)
-
+    setGlobalError("")
     try {
       const result = await signIn.create({
         identifier: values.email,
@@ -63,16 +64,27 @@ export function LoginForm({
       })
 
       if (result.error) {
-        setError(result.error.message || "Invalid email or password")
+        setGlobalError(result.error.message || "Invalid email or password")
         return
       }
 
       router.push("/")
     } catch (err: unknown) {
       console.error(err)
-      setError("Invalid email or password")
-    } finally {
-      setIsSubmitting(false)
+      setGlobalError("Invalid email or password")
+    } 
+  }
+
+  async function handleGoogleSignIn() {
+    setGlobalError("")
+    try {
+      await signIn.sso({
+        strategy:'oauth_google',
+        redirectUrl:'/sign-in/sso-call ',
+        redirectCallbackUrl:'/'
+      })
+    } catch (error:any) {
+      setGlobalError(error.errors?.[0]?.longMessage || "An error occurred during Google sign-in")
     }
   }
 
@@ -93,8 +105,8 @@ export function LoginForm({
                 <Input
                   id="email"
                   type="email"
-                  placeholder="m@example.com"
-                  className="rounded-none h-8"
+                  placeholder="Alex@example.com"
+                  className="rounded-none h-12"
                   {...register("email")}
                 />
                 {errors.email ? (
@@ -115,7 +127,7 @@ export function LoginForm({
                 <Input
                   id="password"
                   type="password"
-                  className="rounded-none h-8"
+                  className="rounded-none h-12"
                   {...register("password")}
                 />
                 {errors.password ? (
@@ -132,7 +144,16 @@ export function LoginForm({
                 >
                   {isSubmitting ? "Signing in..." : "Login"}
                 </Button>
-                {error ? <p className="mt-2 text-sm text-red-500">{error}</p> : null}
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="bg-(--primary-color) h-12 rounded-none"
+                  disabled={isSubmitting}
+                  onClick={handleGoogleSignIn}
+                >
+                 Continue with Google
+                </Button>
+                {globalError ? <p className="mt-2 text-sm text-red-500">{globalError}</p> : null}
                 <FieldDescription className="text-center mt-3">
                   Don&apos;t have an account? <a href="/sign-up">Sign up</a>
                 </FieldDescription>

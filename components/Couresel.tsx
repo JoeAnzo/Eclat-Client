@@ -53,7 +53,7 @@ const Couresel = () => {
     <section className="w-full mx-auto relative h-[60vh]">
       <Swiper
         modules={[Navigation, Pagination, Autoplay, A11y, EffectCoverflow]}
-        effect='coverflow'
+        effect='default'
         spaceBetween={18}
         slidesPerView={1}
         loop={true}

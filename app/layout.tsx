@@ -50,6 +50,9 @@ export default function RootLayout({
       lang="en"
       className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, playfair.variable, spaceGrotesk.variable, "font-sans", geist.variable, inter.variable)}
     >
+      <head>
+        <meta name="apple-mobile-web-app-title" content="Eclat Essence" />
+      </head>
       <body className="min-h-full flex flex-col">
        <ClerkProvider>
           <Header />
