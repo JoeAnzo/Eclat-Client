@@ -54,7 +54,7 @@ const Couresel = () => {
       <Swiper
         modules={[Navigation, Pagination, Autoplay, A11y, EffectCoverflow]}
         effect='default'
-        spaceBetween={18}
+        spaceBetween={0}
         slidesPerView={1}
         loop={true}
         // navigation={{ enabled: true }}

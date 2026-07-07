@@ -1,6 +1,6 @@
 import Couresel from "../components/Couresel"
 import TestimonialCarousel from "../components/TestimonialCarousel"
-import {ArrowRight,Play,ShoppingBag,Truck,HandCoins} from 'lucide-react'
+import {ArrowRight,Play,ShoppingBag} from 'lucide-react'
 import {GiTakeMyMoney} from "react-icons/gi"
 import {CiDeliveryTruck} from "react-icons/ci"
 import BestSellers from "@/components/BestSellers"
@@ -10,10 +10,19 @@ import Animation from "@/components/Animation"
 import LogoCarousel from "@/components/LogoCarousel"
 import Link from "next/link"
 import Image from "next/image"
+import type { Metadata } from "next"
 
-export const metadata = {
-  title:"Home"
-}
+
+export const metadata:Metadata = {
+  title: "Authentic Perfumes & Fragrances in Uganda | Eclat Essence",
+  description: "Buy authentic designer perfumes in Uganda at [YourBrandName]. Shop long-lasting premium fragrances, colognes, and luxury scents in Kampala with fast, reliable delivery.",
+  keywords: ["perfumes Uganda", "buy cologne Kampala", "original perfumes Kampala", "designer fragrances Uganda"],
+  openGraph: {
+    title: "Authentic Perfumes & Fragrances in Uganda | Eclat Essence",
+    description: "Shop long-lasting premium designer fragrances and colognes in Kampala with fast delivery.",
+    type: "website",
+  },
+};
 
 
 export default function Home() {

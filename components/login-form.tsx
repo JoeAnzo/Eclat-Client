@@ -51,42 +51,47 @@ export function LoginForm({
   })
 
   async function onSubmit(values: LoginFormValues) {
-    if (!signIn) {
-      setGlobalError("Authentication is not ready yet")
-      return
-    }
+    if (!signIn) return
+  setGlobalError("")
 
-    setGlobalError("")
-    try {
-      const result = await signIn.create({
-        identifier: values.email,
-        password: values.password,
-      })
+  // Clerk v7 uses direct methods that return an error object instead of throwing exceptions
+  const result = await signIn.password({
+    identifier: values.email,
+    password: values.password,
+  })
 
-      if (result.error) {
-        setGlobalError(result.error.message || "Invalid email or password")
-        return
-      }
-
-      router.push("/")
-    } catch (err: unknown) {
-      console.error(err)
-      setGlobalError("Invalid email or password")
-    } 
+  // Check the returned error property directly
+  if (result.error) {
+    console.error(result.error)
+    setGlobalError(result.error.message || "Invalid email or password")
+    return
+  }
+  if (signIn.status === "complete") {
+    await signIn.finalize() // Commits the session
+    router.push("/")
+  } else {
+    setGlobalError("Additional verification steps are required.")
+  }
   }
 
-  async function handleGoogleSignIn() {
-    setGlobalError("")
-    try {
-      await signIn.sso({
-        strategy:'oauth_google',
-        redirectUrl:'/sign-in/sso-call ',
-        redirectCallbackUrl:'/'
-      })
-    } catch (error:any) {
-      setGlobalError(error.errors?.[0]?.longMessage || "An error occurred during Google sign-in")
-    }
+ async function handleGoogleSignIn() {
+  if (!signIn) return
+  
+  setGlobalError("")
+
+  // Clerk v7 uses .sso() for OAuth providers and returns error object directly
+  const result = await signIn.sso({
+    strategy: 'oauth_google',
+    redirectUrl: '/', // Route where your callback component is rendered
+    redirectCallbackUrl: '/sign-in/sso-call',         // Fallback/Final route if additional steps are needed
+  })
+
+  // Check the return object for execution errors instead of catching exceptions
+  if (result?.error) {
+    console.error(result.error)
+    setGlobalError(result.error.message || "An error occurred during Google sign-in")
   }
+}
 
   return (
     <div className={cn("flex flex-col gap-6 border-none", className)} {...props}>
@@ -147,7 +152,7 @@ export function LoginForm({
                 <Button
                   size="lg"
                   variant="outline"
-                  className="bg-(--primary-color) h-12 rounded-none"
+                  className="h-12 rounded-none"
                   disabled={isSubmitting}
                   onClick={handleGoogleSignIn}
                 >
