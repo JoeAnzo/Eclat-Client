@@ -9,7 +9,7 @@ function ProductCard({name,url,price}:Product) {
   return (
     <Animation variant="slideUp">
       <div className="rounded-lg shadow-md border max-w-85  border-(--secondary-color) relative">
-        <div className="absolute right-10 top-10 bg-[F5F5F5] h-8 w-8 rounded-full">
+        <div className="absolute z-100 right-10 top-10 bg-[#F5F5F5] h-8 w-8 rounded-full">
           <HeartIcon/>
         </div>
         <div className="relative h-80 w-full overflow-hidden">

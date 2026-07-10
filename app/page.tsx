@@ -53,7 +53,7 @@ export default function Home() {
   ]
   return (
     <main className="relative">
-      <div className="fixed bottom-8 right-8 h-10 w-10 rounded-full bg-[#25D366]">
+      <div className="fixed bottom-8 right-8 h-10 w-10 rounded-full bg-[#25D366] flex items-center justify-center z-150">
         <FaWhatsapp color="white" size={24}/>
       </div>
       <section className="relative h-screen sm:h-[80vh]">
@@ -179,19 +179,19 @@ export default function Home() {
           <form className="flex flex-col gap-2 sm:max-w-[320px]">
             <h2 className="px-2 font-playfair text-(--text) text-3xl text-left my-4">SEND US A MESSAGE</h2>
             <label htmlFor="name" className="text-(--text) ">Name</label>
-            <input type="text" id="name" placeholder="Your Name" required className="h-10"/>
+            <input type="text" id="name" placeholder="Your Name" required className="h-10 bg-[#F5F5F5]"/>
             <label htmlFor="email" className="text-(--text)">Email</label>
-            <input type="email" id="email" placeholder="Your Email" required className="h-10"/>
+            <input type="email" id="email" placeholder="Your Email" required className="h-10 bg-[#F5F5F5]"/>
             <label htmlFor="subject" className="text-(--text)">Subject</label>
-            <select id="subject" className="h-10">
+            <select id="subject" className="h-10 bg-[#F5F5F5]">
               <option value="">Select a Subject</option>
               <option value="general">General Inquiry</option>
               <option value="support">Support</option>
               <option value="feedback">Feedback</option>
             </select>
             <label htmlFor="message" className="text-(--text)">Message</label>
-            <textarea id="message" placeholder="Your Message" required className="h-40.5"></textarea>
-              <Button size="lg" type="submit" variant="default" className="h-10 px-8 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 rounded-none">
+            <textarea id="message" placeholder="Your Message" required className="h-40.5 bg-[#F5F5F5]"></textarea>
+              <Button size="lg" type="submit" variant="default" className="h-10 px-8 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 bg-(--primary-color) rounded-none">
                 Send Message
               </Button>
           </form>
