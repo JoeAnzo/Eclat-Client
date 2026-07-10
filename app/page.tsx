@@ -10,6 +10,7 @@ import HowItWorksCard from "@/components/HowItWorksCard"
 import Animation from "@/components/Animation"
 import LogoCarousel from "@/components/LogoCarousel"
 import Link from "next/link"
+import Location from "@/components/Location"
 import Image from "next/image"
 import type { Metadata } from "next"
 
@@ -53,8 +54,8 @@ export default function Home() {
   ]
   return (
     <main className="relative">
-      <div className="fixed bottom-8 right-8 h-10 w-10 rounded-full bg-[#25D366] flex items-center justify-center z-150">
-        <FaWhatsapp color="white" size={24}/>
+      <div className="fixed bottom-8 right-8 h-15 w-15 rounded-full bg-[#25D366] flex items-center justify-center z-150">
+        <FaWhatsapp color="white" size={30}/>
       </div>
       <section className="relative h-screen sm:h-[80vh]">
         <Couresel/>
@@ -91,7 +92,9 @@ export default function Home() {
           <div className="h-1 bg-(--secondary-color) rounded-md w-20"></div>
         </div>
         <Animation variant="slideUp">
-          <h2 className="text-center font-playfair px-2 text-(--text) my-5 text-3xl">Discover our most-coveted bottles and find your match.</h2>
+          <div className="max-w-[720px] mx-auto text-center px-4">
+            <h2 className="text-center font-playfair px-2 text-(--text) my-5 text-xl md:text-2xl">Discover our most-coveted bottles and find your match.</h2>
+          </div>
         </Animation>
         <BestSellers/>
       </section>
@@ -172,8 +175,22 @@ export default function Home() {
             <div className="h-1 mb-4 bg-(--secondary-color) rounded-md w-20"></div>
           </div>
           <Animation variant="slideUp">
-            <h2 className="px-2 font-playfair text-(--text) text-3xl text-center my-4">OUR ADDRESS</h2>
-
+            <h2 className="px-2 font-playfair text-(--text) text-3xl text-left my-4">OUR ADDRESS</h2>
+            <Animation variant="slideUp">
+              <div>
+                <h2 className="px-2 font-sans text-(--text) text-2xl text-left my-4">Equator Digital Agency</h2>
+                <h2 className="px-2 font-sans text-(--text) text-xl text-left my-4">Plot 14, Ntinda-Nakawa Road</h2>
+                <h2 className="px-2 font-sans text-(--text) text-xl text-left my-4">Capital Shoppers Complex, 2nd Floor</h2>
+                <h2 className="px-2 font-sans text-(--text) text-xl text-left my-4">P.O. Box 24901</h2>
+                <h2 className="px-2 font-sans text-(--text) text-xl text-left my-4">Kampala, Uganda</h2>
+              </div>
+            </Animation>
+            <div>
+              <h2 className="px-2 font-playfair text-(--text) text-3xl text-left my-4">OUR LOCATION</h2>
+              <div>
+                <Location />
+              </div>
+            </div>
           </Animation>
           <Animation variant="slideUp">
           <form className="flex flex-col gap-2 sm:max-w-[320px]">
@@ -191,7 +208,7 @@ export default function Home() {
             </select>
             <label htmlFor="message" className="text-(--text)">Message</label>
             <textarea id="message" placeholder="Your Message" required className="h-40.5 bg-[#F5F5F5]"></textarea>
-              <Button size="lg" type="submit" variant="default" className="h-10 px-8 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 bg-(--primary-color) rounded-none">
+              <Button size="lg" type="submit" variant="default" className="h-10 px-8 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 bg-(--secondary-color) rounded-none">
                 Send Message
               </Button>
           </form>
