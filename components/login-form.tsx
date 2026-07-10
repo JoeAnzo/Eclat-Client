@@ -7,6 +7,7 @@ import { z } from "zod"
 import { useSignIn } from "@clerk/nextjs"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
+import {FaGoogle} from "react-icons/fa"
 import {
   Card,
   CardContent,
@@ -111,7 +112,7 @@ export function LoginForm({
                   id="email"
                   type="email"
                   placeholder="Alex@example.com"
-                  className="rounded-none h-12"
+                  className="rounded-none h-10"
                   {...register("email")}
                 />
                 {errors.email ? (
@@ -132,7 +133,7 @@ export function LoginForm({
                 <Input
                   id="password"
                   type="password"
-                  className="rounded-none h-12"
+                  className="rounded-none h-10"
                   {...register("password")}
                 />
                 {errors.password ? (
@@ -152,10 +153,12 @@ export function LoginForm({
                 <Button
                   size="lg"
                   variant="outline"
-                  className="h-12 rounded-none"
+                  className="h-10 rounded-none flex gap-2"
                   disabled={isSubmitting}
                   onClick={handleGoogleSignIn}
+                  
                 >
+                 <FaGoogle/>
                  Continue with Google
                 </Button>
                 {globalError ? <p className="mt-2 text-sm text-red-500">{globalError}</p> : null}
