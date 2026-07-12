@@ -54,7 +54,7 @@ export default function Home() {
   ]
   return (
     <main className="relative">
-      <div className="fixed bottom-8 right-8 h-15 w-15 rounded-full bg-[#25D366] flex items-center justify-center z-150">
+      <div className="fixed bottom-5 right-5 h-15 w-15 rounded-full bg-[#25D366] flex items-center justify-center z-150">
         <FaWhatsapp color="white" size={30}/>
       </div>
       <section className="relative h-screen sm:h-[80vh]">
@@ -178,15 +178,15 @@ export default function Home() {
             <h2 className="px-2 font-playfair text-(--text) text-3xl text-left my-4">OUR ADDRESS</h2>
             <Animation variant="slideUp">
               <div>
-                <h2 className="px-2 font-sans text-(--text) text-2xl text-left my-4">Equator Digital Agency</h2>
-                <h2 className="px-2 font-sans text-(--text) text-xl text-left my-4">Plot 14, Ntinda-Nakawa Road</h2>
-                <h2 className="px-2 font-sans text-(--text) text-xl text-left my-4">Capital Shoppers Complex, 2nd Floor</h2>
-                <h2 className="px-2 font-sans text-(--text) text-xl text-left my-4">P.O. Box 24901</h2>
-                <h2 className="px-2 font-sans text-(--text) text-xl text-left my-4">Kampala, Uganda</h2>
+                <p className="">Equator Digital Agency</p>
+                <p className="">Plot 14, Ntinda-Nakawa Road</p>
+                <p className="">Capital Shoppers Complex, 2nd Floor</p>
+                <p className="">P.O. Box 24901</p>
+                <p className="">Kampala, Uganda</p>
               </div>
             </Animation>
             <div>
-              <h2 className="px-2 font-playfair text-(--text) text-3xl text-left my-4">OUR LOCATION</h2>
+              <h2 className="5">OUR LOCATION</h2>
               <div>
                 <Location />
               </div>
@@ -194,7 +194,7 @@ export default function Home() {
           </Animation>
           <Animation variant="slideUp">
           <form className="flex flex-col gap-2 sm:max-w-[320px]">
-            <h2 className="px-2 font-playfair text-(--text) text-3xl text-left my-4">SEND US A MESSAGE</h2>
+            <h2 className="px-2 font-playfair text-(--text) text-3xl text-left my-5">SEND US A MESSAGE</h2>
             <label htmlFor="name" className="text-(--text) ">Name</label>
             <input type="text" id="name" placeholder="Your Name" required className="h-10 bg-[#F5F5F5]"/>
             <label htmlFor="email" className="text-(--text)">Email</label>
