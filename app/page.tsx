@@ -93,7 +93,7 @@ export default function Home() {
         </div>
         <Animation variant="slideUp">
           <div className="max-w-[720px] mx-auto text-center px-4">
-            <h2 className="text-center font-playfair px-2 text-(--text) my-5 text-xl md:text-2xl">Discover our most-coveted bottles and find your match.</h2>
+            <h2 className="text-center font-playfair px-2 text-(--text) my-5 text-3xl">Discover our most-coveted bottles and find your match.</h2>
           </div>
         </Animation>
         <BestSellers/>
@@ -186,7 +186,6 @@ export default function Home() {
               </div>
             </Animation>
             <div>
-              <h2 className="5">OUR LOCATION</h2>
               <div>
                 <Location />
               </div>

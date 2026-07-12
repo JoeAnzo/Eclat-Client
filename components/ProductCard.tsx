@@ -16,11 +16,13 @@ function ProductCard({name,url,price}:Product) {
           <Image src={url} alt={name} fill sizes="(max-width:768px) 100vw, 320px" className="max-w-full rounded-t-lg h-auto object-cover"/>
         </div>
         <Animation variant="none">
+          <div className="flex w-full items-center justify-center">
             <div className="pb-4 rounded-b-lg flex flex-col items-start">
               <p className="py-2 font-bold font-playfair">{name}</p>
               <p className="pb-2 font-space">{price}</p>
               <Button variant="default" className="bg-(--primary-color) rounded-none h-12  px-8 font-semibold  flex gap-2">Add to cart <ShoppingBag color="white"/></Button>
             </div>
+          </div>
         </Animation>
       </div>
     </Animation>
