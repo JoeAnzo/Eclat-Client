@@ -46,7 +46,7 @@ const Header = () => {
               <Link onClick={() => setCloseMenu(false)} className="flex gap-2 border-b text-(--text) border-gray-300 py-2 sm:border-none hover:text-(--secondary-color)" href="/my-account"><UserRound/>My Account <ChevronRight className="text-(--text) sm:hidden"/><ChevronDown className="text-(--text) hidden sm:inline"/></Link>
               <Link onClick={() => setCloseMenu(false)} className="flex gap-2 text-(--text) py-2 sm:border-none hover:text-(--primary-color)" href="/#contact"><Headset/>Contact Us</Link>
               {
-                sessionId ? <SignOutButton><button onClick={() => setCloseMenu(false)} className="bg-(--primary-color) px-4 py-2 text-white rounded-md sm:px-5 sm:py-2.5">Sign Out</button></SignOutButton> : <Link href="/login"><button onClick={() => setCloseMenu(false)} className="bg-(--primary-color) px-4 py-2 text-white rounded-md sm:px-5 sm:py-2.5">Sign In</button></Link>
+                sessionId ? <SignOutButton><button onClick={() => setCloseMenu(false)} className="bg-(--primary-color) px-4 py-2 text-white rounded-md sm:px-5 sm:py-2.5">Sign Out</button></SignOutButton> : <Link href="/login"><button onClick={() => setCloseMenu(false)} className="bg-(--primary-color) px-4 py-2 text-white rounded-md sm:px-5 sm:py-2.5 w-full">Sign In</button></Link>
               }
           </nav>
         <div className='flex gap-2'>
