@@ -8,7 +8,7 @@ import Animation from "./Animation"
 function ProductCard({name,url,price}:Product) {
   return (
     <Animation variant="slideUp">
-      <div className="rounded-lg shadow-md border max-w-85  border-(--secondary-color) relative">
+      <div className="rounded-lg shadow-md max-w-85  relative">
         <div className="absolute z-100 right-8 top-8 flex items-center justify-center bg-[#F5F5F5] h-8 w-8 rounded-full">
           <HeartIcon/>
         </div>

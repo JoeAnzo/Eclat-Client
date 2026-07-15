@@ -60,7 +60,7 @@ export default function Home() {
       <section className="relative h-screen sm:h-[80vh]">
         <Couresel/>
         <div className="absolute left-[50%] top-[50%] translate-y-[-50%] translate-x-[-50%] space-y-5  z-5">
-          <Animation variant="slideRight">
+          <Animation variant="slideUp">
             <h2 className="sm:text-4xl text-5xl font-semibold font-playfair text-(--primary-color) my-5">Your Essence, <br/> Your Signature</h2>
           </Animation>
           <Animation variant="slideUp">
