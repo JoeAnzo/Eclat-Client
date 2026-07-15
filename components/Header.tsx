@@ -47,7 +47,7 @@ const Header = () => {
               <Link onClick={() => setCloseMenu(false)} className="flex gap-2 text-(--text) py-2 sm:border-none hover:text-(--primary-color)" href="/#contact"><Headset/>Contact Us</Link>
               
               {
-                sessionId ? <SignOutButton><button onClick={() => setCloseMenu(false)} className="bg-(--primary-color) px-4 py-2 text-white rounded-md sm:px-5 sm:py-2.5">Sign Out</button></SignOutButton> : <Link href="/login"><SignInButton><button onClick={() => setCloseMenu(false)} className="bg-(--primary-color) px-4 py-2 text-white rounded-md sm:px-5 sm:py-2.5">Sign In</button></SignInButton></Link>
+                sessionId ? <SignOutButton><button onClick={() => setCloseMenu(false)} className="bg-(--primary-color) px-4 py-2 text-white rounded-md sm:px-5 sm:py-2.5">Sign Out</button></SignOutButton> : <Link href="/login"><SignInButton><button onClick={() => setCloseMenu(false)} className="bg-(--primary-color) px-4 py-2 text-white rounded-md sm:px-5 sm:py-2.5 self-stretch">Sign In</button></SignInButton></Link>
               }
           </nav>
         <div className='flex gap-2'>
