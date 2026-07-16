@@ -37,7 +37,7 @@ const Header = () => {
         <Link href="/">
           <h1 className="text-xl font-bold font-playfair text-(--primary-color) whitespace-nowrap">Eclat Essence</h1>
         </Link>
-          <nav ref={dropdownRef} className={`sm:space-x-4 md:max-w-[1200px] py-2 pl-2 right-0 space-y-2 flex-col sm:flex-row font-sans absolute sm:relative sm:hidden md:flex top-full left-0 w-full z-50 overflow-hidden transition-all duration-300 ease-in-out ${openMenu ? 'flex opacity-100 translate-y-0 bg-background' : 'hidden sm:flex -translate-y-50 justify-center items-center sm:translate-y-0'}`}>
+          <nav ref={dropdownRef} className={`sm:space-x-4 md:max-w-[1200px] py-2 pl-[32px] sm:pl-2 right-0 space-y-2 flex-col sm:flex-row font-sans absolute sm:relative sm:hidden md:flex top-full left-0 w-full z-50 overflow-hidden transition-all duration-300 ease-in-out ${openMenu ? 'flex opacity-100 translate-y-0 bg-background px-[32px]' : 'hidden sm:flex -translate-y-50 justify-center items-center sm:translate-y-0'}`}>
               <Link onClick={() => setCloseMenu(false)} className="flex gap-2 border-b text-(--text) border-gray-300 py-2 sm:border-none hover:text-(--secondary-color)" href="/shop"><ShoppingBag/>Shop</Link>
               <Link onClick={() => setCloseMenu(false)} className="flex gap-2 border-b text-(--text) border-gray-300 py-2 sm:border-none hover:text-(--secondary-color)" href="/#how-it-works"><Play/>How it works</Link>
               <Link onClick={() => setCloseMenu(false)} className="flex gap-2 border-b text-(--text) border-gray-300 py-2 sm:border-none hover:text-(--secondary-color)" href="/about-us"><BookOpenText/>Our Story</Link>
