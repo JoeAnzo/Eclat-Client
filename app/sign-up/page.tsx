@@ -78,7 +78,7 @@ export default function SignUpForm() {
   }
 
   return (
-    <section className="h-screen flex items-center justify-center">
+    <section className="h-screen flex flex-col items-center justify-center">
     <h2 className="text-center font-playfair my-4 text-2xl">Welcome to <span className="text-(--primary-color)">Eclat Essense</span></h2>
     <Card className="mx-auto max-w-sm">
       <CardHeader>
@@ -92,7 +92,6 @@ export default function SignUpForm() {
           <div className="space-y-4 mb-4">
             <div className="relative flex items-center justify-center my-4">
               <span className="absolute inset-x-0 h-px bg-muted"></span>
-              <span className="relative bg-background px-2 text-xs text-muted-foreground uppercase">Or use email</span>
             </div>
           </div>
         )}
