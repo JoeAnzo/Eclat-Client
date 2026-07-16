@@ -37,23 +37,35 @@ export default function LogoCarousel() {
     const duplicatedLogos = [...LOGOS]
 
   return (
-    <div className="relative px-2 w-full bg-background md:max-w-[760px] my-6  h-40 overflow-x-hidden">
-        <div className="absolute inset-y-0 left-0 z-10 w-20 bg-linear-to-r from-background to-transparent pointer-events-none"/>
-        <div className="absolute inset-y-0 left-0 z-10 w-20 bg-linear-to-r from-background to-transparent pointer-events-none"/>
-        <div className="flex w-max items-center gap-16 animate-scroll hover:paused]">
-            {duplicatedLogos.map((logo,index) => (
-                <div key={index} className="flex items-center justify-center w-32 h-12 gray-scale opacity-70 hover:gray-scale-0 hover:opacity-100 transition-all duration-300">
+
+<div className="w-full flex justify-center items-center my-6 md:my-12">
+    
+    {/* 2. Constrained Ticker Wrapper: Enforces maximum size and hides overflowing elements */}
+    <div className="relative w-full max-w-full md:max-w-[760px] px-2 h-40 overflow-hidden bg-background">
+        
+        {/* Left-side fade layer */}
+        <div className="absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-background to-transparent pointer-events-none" />
+        
+        {/* Right-side fade layer */}
+        <div className="absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-background to-transparent pointer-events-none" />
+        
+        {/* Infinite scrolling strip */}
+        <div className="flex w-max items-center gap-16 animate-scroll hover:[animation-play-state:paused]">
+            {duplicatedLogos.map((logo, index) => (
+                <div key={index} className="flex items-center justify-center w-32 h-12 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
                     <Image
-                    src={logo.url}
-                    alt={`${logo.name} logo`}
-                    width={140}
-                    height={40}
-                    className="object-contain"
+                        src={logo.url}
+                        alt={`${logo.name} logo`}
+                        width={140}
+                        height={40}
+                        className="object-contain"
                     />
                 </div>
             ))}
         </div>
+        
     </div>
+</div>
   )
 }
 
