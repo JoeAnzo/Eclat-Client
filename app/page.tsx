@@ -107,11 +107,11 @@ export default function Home() {
         </div>
         <Animation variant="slideUp">
           <h2 className="px-2 font-playfair text-(--text) text-3xl text-center my-5">Three taps, one delivery</h2>
-          <div className="space-y-4 px-4 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8">
+          <div className="space-y-4 px-[32px] items-stretch grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8">
               {
                 howItWorks.map((item,index) => {
                     return <HowItWorksCard key={index} step={item.step} title={item.title} icon={item.icon} text={item.text}/>
-                }) 
+                })
               }
           </div>
         </Animation>
