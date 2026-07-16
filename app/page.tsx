@@ -119,7 +119,7 @@ export default function Home() {
          
         </div>
       </section>
-      <section className="py-8 flex flex-col items-center justify-center bg-red-100">
+      <section className="py-12 flex flex-col items-center justify-center">
         <div className="flex flex-col justify-center items-center">
           <Animation variant="slideRight">
             <p className="text-(--text) text-center my-2">Brands</p>
