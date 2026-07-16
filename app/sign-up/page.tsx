@@ -78,6 +78,8 @@ export default function SignUpForm() {
   }
 
   return (
+    <section className="h-screen flex items-center justify-center">
+    <h2 className="text-center font-playfair my-4 text-2xl">Welcome to <span className="text-(--primary-color)">Eclat Essense</span></h2>
     <Card className="mx-auto max-w-sm">
       <CardHeader>
         <CardTitle>{verifying ? "Verify Email" : "Create Account"}</CardTitle>
@@ -88,19 +90,6 @@ export default function SignUpForm() {
       <CardContent>
         {!verifying && (
           <div className="space-y-4 mb-4">
-            <Button 
-              type="button" 
-              variant="outline" 
-              className="w-full flex items-center justify-center gap-2" 
-              onClick={handleGoogleOAuth}
-              disabled={loading}
-            >
-              <svg className="h-4 w-4" aria-hidden="true" viewBox="0 0 488 512">
-                <path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path>
-              </svg>
-              Continue with Google
-            </Button>
-            
             <div className="relative flex items-center justify-center my-4">
               <span className="absolute inset-x-0 h-px bg-muted"></span>
               <span className="relative bg-background px-2 text-xs text-muted-foreground uppercase">Or use email</span>
@@ -119,7 +108,7 @@ export default function SignUpForm() {
                 render={({ field }) => (
                   <Field data-invalid={!!errors.email}>
                     <FieldLabel>Email</FieldLabel>
-                    <Input placeholder="name@example.com" {...field} />
+                    <Input placeholder="username@example.com" {...field} className="h-12 rounded-none"/>
                     <FieldError>{errors.email?.message}</FieldError>
                   </Field>
                 )}
@@ -132,7 +121,7 @@ export default function SignUpForm() {
                 render={({ field }) => (
                   <Field data-invalid={!!errors.password}>
                     <FieldLabel>Password</FieldLabel>
-                    <Input type="password" {...field} />
+                    <Input type="password" {...field} className="h-12 rounded-none"/>
                     <FieldError>{errors.password?.message}</FieldError>
                   </Field>
                 )}
@@ -146,7 +135,7 @@ export default function SignUpForm() {
               render={({ field }) => (
                 <Field data-invalid={!!errors.code}>
                   <FieldLabel>Verification Code</FieldLabel>
-                  <Input placeholder="123456" {...field} />
+                  <Input placeholder="123456" {...field} className="h-12 rounded-none"/>
                   <FieldError>{errors.code?.message}</FieldError>
                 </Field>
               )}
@@ -157,11 +146,24 @@ export default function SignUpForm() {
             <p className="text-sm font-medium text-destructive">{errors.root.message}</p>
           )}
 
-          <Button type="submit" className="w-full" disabled={loading}>
+          <Button type="submit" className="w-full bg-(--primary-color) h-12 rounded-none" disabled={loading}>
             {loading ? "Processing..." : verifying ? "Verify Code" : "Sign Up"}
           </Button>
+          <Button 
+            type="button" 
+            variant="outline" 
+            className="w-full flex items-center justify-center h-12 rounded-none" 
+            onClick={handleGoogleOAuth}
+            disabled={loading}
+            >
+              <svg className="h-4 w-4" aria-hidden="true" viewBox="0 0 488 512">
+                <path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path>
+              </svg>
+              Continue with Google
+            </Button>
         </form>
       </CardContent>
     </Card>
+    </section>
   );
 }

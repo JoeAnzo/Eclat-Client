@@ -87,13 +87,13 @@ export default function Home() {
       <section className="py-8 bg-[#F5F5F5]">
         <div className="flex flex-col justify-center items-center">
           <Animation variant="slideRight">
-              <p className="text-(--text) font-inter text-center my-4">Best Sellers</p>
+              <p className="text-(--text) font-inter text-center my-2">Best Sellers</p>
           </Animation>
           <div className="h-1 bg-(--secondary-color) rounded-md w-20"></div>
         </div>
         <Animation variant="slideUp">
           <div className="max-w-[720px] mx-auto text-center px-4">
-            <h2 className="text-center font-playfair px-2 text-(--text) my-8 text-3xl">Discover our most-coveted bottles and find your match.</h2>
+            <h2 className="text-center font-playfair px-2 text-(--text) my-6 text-3xl">Discover our most-coveted bottles and find your match.</h2>
           </div>
         </Animation>
         <BestSellers/>
@@ -122,12 +122,12 @@ export default function Home() {
       <section className="py-8">
         <div className="flex flex-col justify-center items-center">
           <Animation variant="slideRight">
-            <p className="text-(--text) text-center my-4">Brands</p>
+            <p className="text-(--text) text-center my-2">Brands</p>
           </Animation>
-          <div className="h-1 mb-4 bg-(--secondary-color) rounded-md w-20"></div>
+          <div className="h-1 mb-2 bg-(--secondary-color) rounded-md w-20"></div>
         </div>
         <Animation variant="slideUp">
-          <h2 className="px-2 font-playfair text-(--text) text-3xl text-center my-4">Check Out Our Fragrance Collection</h2>
+          <h2 className="px-2 font-playfair text-(--text) text-3xl text-center my-6">Check Out Our Fragrance Collection</h2>
         </Animation>
         <Animation variant="slideUp">
           <LogoCarousel/>
@@ -136,12 +136,12 @@ export default function Home() {
       <section className="py-8 bg-(--primary-color)">
         <div className="flex flex-col justify-center items-center">
           <Animation variant="slideRight">
-            <h2 className="text-white text-center my-4">Testimonials</h2>
+            <h2 className="text-white text-center my-2">Testimonials</h2>
           </Animation>
-          <div className="h-1 mb-4 bg-white rounded-md w-20"></div>
+          <div className="h-1 mb-2 bg-white rounded-md w-20"></div>
         </div>
         <Animation variant="slideUp">
-          <h2 className="px-2 font-playfair text-white text-3xl text-center my-4">What Our Customers have to say</h2>
+          <h2 className="px-2 font-playfair text-white text-3xl text-center my-6">What Our Customers have to say</h2>
         </Animation>
         <Animation variant="slideDown">
           <TestimonialCarousel/>
@@ -150,15 +150,15 @@ export default function Home() {
       <section className="py-8 flex flex-col gap-2 items-center justify-center">
         <div className="flex flex-col justify-center items-center">
           <Animation variant="slideRight">
-            <h2 className="text-(--text) text-center my-4">Quiz</h2>
+            <h2 className="text-(--text) text-center my-2">Quiz</h2>
           </Animation>
-          <div className="h-1 mb-4 bg-(--secondary-color) rounded-md w-20"></div>
+          <div className="h-1 mb-2 bg-(--secondary-color) rounded-md w-20"></div>
         </div>
         <Animation variant="slideDown">
           <Image src="/images/quiz.jpg" width={1200} height={800} sizes="100vw" style={{width:'100%',height:'auto'}} alt="girl holding perfume"/>
         </Animation>
         <Animation variant="slideUp">
-          <h2 className="px-2 font-playfair text-(--text) text-3xl text-center my-4">Take A Quiz To Find Your Signature Scent</h2>
+          <h2 className="px-2 font-playfair text-(--text) text-3xl text-center my-6">Take A Quiz To Find Your Signature Scent</h2>
         </Animation>
         <Button size="lg" variant="default" className="bg-(--primary-color) h-12 px-8 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 rounded-none">
           Take Quiz
@@ -170,9 +170,9 @@ export default function Home() {
           <Animation variant="slideRight">
           <div className="flex flex-col justify-center items-center">
             <Animation variant="slideRight">
-              <p className="text-(--text) text-center my-4">Get In Touch</p>
+              <p className="text-(--text) text-center my-6">Get In Touch</p>
             </Animation>
-            <div className="h-1 mb-4 bg-(--secondary-color) rounded-md w-20"></div>
+            <div className="h-1 mb-2 bg-(--secondary-color) rounded-md w-20"></div>
           </div>
           <Animation variant="slideUp">
           <form className="flex flex-col gap-2 sm:max-w-[320px]">
