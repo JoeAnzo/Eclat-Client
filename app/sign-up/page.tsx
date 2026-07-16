@@ -13,7 +13,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 // Import the new layout primitives from Shadcn
 import { Field, FieldLabel, FieldDescription, FieldError } from "@/components/ui/field";
 
-export function SignUpForm() {
+export default function SignUpForm() {
   const { signUp } = useSignUp();
   const { signIn } = useSignIn();
   const router = useRouter();
