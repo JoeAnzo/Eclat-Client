@@ -84,7 +84,7 @@ export default function Home() {
            
         </div>
       </section> 
-      <section className="py-8">
+      <section className="py-8 bg-[#F5F5F5]">
         <div className="flex flex-col justify-center items-center">
           <Animation variant="slideRight">
               <p className="text-(--text) font-inter text-center my-4">Best Sellers</p>
@@ -93,7 +93,7 @@ export default function Home() {
         </div>
         <Animation variant="slideUp">
           <div className="max-w-[720px] mx-auto text-center px-4">
-            <h2 className="text-center font-playfair px-2 text-(--text) my-5 text-3xl">Discover our most-coveted bottles and find your match.</h2>
+            <h2 className="text-center font-playfair px-2 text-(--text) my-8 text-3xl">Discover our most-coveted bottles and find your match.</h2>
           </div>
         </Animation>
         <BestSellers/>
@@ -174,23 +174,6 @@ export default function Home() {
             </Animation>
             <div className="h-1 mb-4 bg-(--secondary-color) rounded-md w-20"></div>
           </div>
-          <Animation variant="slideUp">
-            <h2 className="px-2 font-playfair text-(--text) text-3xl text-left my-4">OUR ADDRESS</h2>
-            <Animation variant="slideUp">
-              <div>
-                <p className="">Equator Digital Agency</p>
-                <p className="">Plot 14, Ntinda-Nakawa Road</p>
-                <p className="">Capital Shoppers Complex, 2nd Floor</p>
-                <p className="">P.O. Box 24901</p>
-                <p className="">Kampala, Uganda</p>
-              </div>
-            </Animation>
-            <div>
-              <div>
-                <Location />
-              </div>
-            </div>
-          </Animation>
           <Animation variant="slideUp">
           <form className="flex flex-col gap-2 sm:max-w-[320px]">
             <h2 className="px-2 font-playfair text-(--text) text-3xl text-left my-5">SEND US A MESSAGE</h2>
