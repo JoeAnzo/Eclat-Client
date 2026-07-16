@@ -37,7 +37,7 @@ export default function LogoCarousel() {
     const duplicatedLogos = [...LOGOS]
 
   return (
-    <div className="relative overflow-hidden w-full bg-background md:max-w-[760px] py-6">
+    <div className="relative overflow-hidden px-2 w-full bg-background md:max-w-[760px]">
         <div className="absolute inset-y-0 left-0 z-10 w-20 bg-linear-to-r from-background to-transparent pointer-events-none"/>
         <div className="absolute inset-y-0 left-0 z-10 w-20 bg-linear-to-r from-background to-transparent pointer-events-none"/>
         <div className="flex w-max items-center gap-16 animate-scroll hover:paused]">

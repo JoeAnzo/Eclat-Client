@@ -119,7 +119,7 @@ export default function Home() {
          
         </div>
       </section>
-      <section className="py-12 flex flex-col items-center justify-center px-[32px] border border-green-200">
+      <section className="py-12 flex flex-col items-center justify-center overflow-hidden">
         <div className="flex flex-col justify-center items-center">
           <Animation variant="slideRight">
             <p className="text-(--text) text-center my-2">Brands</p>
