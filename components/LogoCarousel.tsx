@@ -40,7 +40,7 @@ export default function LogoCarousel() {
 <div className="w-full flex justify-center items-center my-6 md:my-12">
     
     {/* 2. Constrained Ticker Wrapper: Enforces maximum size and hides overflowing elements */}
-    <div className="relative w-full max-w-full md:max-w-[760px] px-2 h-40 overflow-hidden bg-background">
+    <div className="relative w-full max-w-full md:max-w-[760px] px-2 min-h-32 flex items-center overflow-hidden bg-background">
         
         {/* Left-side fade layer */}
         <div className="absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-background to-transparent pointer-events-none" />
