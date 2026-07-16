@@ -37,7 +37,6 @@ export default function LogoCarousel() {
     const duplicatedLogos = [...LOGOS]
 
   return (
-
 <div className="w-full flex justify-center items-center my-6 md:my-12">
     
     {/* 2. Constrained Ticker Wrapper: Enforces maximum size and hides overflowing elements */}
