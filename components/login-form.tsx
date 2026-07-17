@@ -96,9 +96,9 @@ export function LoginForm({
 
   return (
     <div className={cn("flex flex-col gap-6 border-none", className)} {...props}>
-      <Card className="">
+      <Card className="border-none">
         <CardHeader>
-          <CardTitle>Login to your account</CardTitle>
+          <CardTitle className="text-center text-lg">Login to your account</CardTitle>
           <CardDescription>
             Enter your email and password to continue.
           </CardDescription>
@@ -111,7 +111,7 @@ export function LoginForm({
                 <Input
                   id="email"
                   type="email"
-                  placeholder="Alex@example.com"
+                  placeholder="alex@example.com"
                   className="rounded-none h-10"
                   {...register("email")}
                 />
