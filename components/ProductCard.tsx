@@ -5,7 +5,7 @@ import { ShoppingBag,HeartIcon } from "lucide-react"
 import Animation from "./Animation"
 
 
-function ProductCard({name,url,price}:Product) {
+function ProductCard({name,thumbnailUrl,price}:Product) {
   return (
     <Animation variant="slideUp">
       <div className="rounded-lg shadow-md max-w-85  relative">
@@ -13,7 +13,7 @@ function ProductCard({name,url,price}:Product) {
           <HeartIcon/>
         </div>
         <div className="relative h-80 w-full overflow-hidden">
-          <Image src={url} alt={name} fill sizes="(max-width:768px) 100vw, 320px" className="max-w-full rounded-t-lg h-auto object-cover"/>
+          <Image src={thumbnailUrl} alt={name} fill sizes="(max-width:768px) 100vw, 320px" className="max-w-full rounded-t-lg h-auto object-cover"/>
         </div>
         <Animation variant="none">
           <div className="flex w-full items-center justify-center">

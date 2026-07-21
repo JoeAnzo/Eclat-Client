@@ -1,38 +1,22 @@
 import { Product } from '@/app/Interfaces/product.interface'
+import { fragranceService } from '@/app/services/fragrance.service'
 import ProductCard from './ProductCard'
 
 async function BestSellers() {
 
 
-  const bestSellers:Product[] = [
-    {
-      id:1,
-      name:'Bleu De Chanel',
-      url:'/images/BestSellers/Blue.jpg',
-      price:'UGX 25,000'
-    },{
-      id:2,
-      name:'coco-mademoiselle',
-      url:'/images/BestSellers/coco.jpg',
-      price:'UGX 30,000'
-    },{
-      id:3,
-      name:'Miss Dior',
-      url:'/images/BestSellers/Dior.jpg',
-      price:'UGX 45,000'
-    },{
-      id:4,
-      name:'Urban-Woman-Paradise',
-      url:'/images/BestSellers/Urban-Women-Paradise.jpg',
-      price:'UGX 65,000'
-    }
-  ]
+  const response = await fragranceService.getFragrances({
+    page:1,
+    limit:4
+  })
+
+  const bestSellers = response.data
 
   return (
     <div className="px-4 grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-[720px] mx-auto">
       {
-        bestSellers.map((product) => {
-          return <ProductCard key={product.id} price={product.price} name={product.name} url={product.url} />
+        bestSellers.map((product:Product) => {
+          return <ProductCard key={product.id} price={product.price} name={product.name} thumbnailUrl={product.thumbnailUrl} />
         })
       }
     </div>

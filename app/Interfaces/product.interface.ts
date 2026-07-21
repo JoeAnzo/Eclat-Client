@@ -1,7 +1,12 @@
 export interface Product {
-    id?: number;
+    id?: string;
     name: string;
-    url: string;
+    slug?:string;
+    description?: string;
+    isAvailable?:boolean;
+    inventory?:number;
+    scentFamily?:string;
+    thumbnailUrl: string;
     price: string;
 }
 
