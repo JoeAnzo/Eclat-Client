@@ -20,7 +20,7 @@ function ProductCard({name,thumbnailUrl,price}:Product) {
             <div className="pb-4 rounded-b-lg flex flex-col items-start">
               <p className="py-2 font-bold font-playfair">{name}</p>
               <p className="pb-2 font-space">{price}</p>
-              <Button variant="default" className="bg-(--primary-color) rounded-none h-12  px-8 font-semibold  flex gap-2">Add to cart <ShoppingBag color="white"/></Button>
+              <Button variant="default" className="bg-(--primary-color) rounded-none  px-2 py-2 font-semibold  flex gap-2">Add to cart <ShoppingBag color="white"/></Button>
             </div>
           </div>
         </Animation>
