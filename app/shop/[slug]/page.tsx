@@ -10,7 +10,9 @@ export default async function fragranceDetailsPage({ params }: pageProps) {
     const { slug } = await params
 
     const response = await fragranceService.getFragranceBySlug(slug)
-    const product = response?.fragrance
+    const product = response.fragrance
+
+    console.log(product)
 
     if (!product) {
         notFound() 
