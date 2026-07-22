@@ -19,7 +19,7 @@ export default async function fragranceDetailsPage({ params }: pageProps) {
     }
 
     return (
-        <section>
+        <section className="min-h-screen">
             <div>
                 
                 <div className="relative w-full h-[400px]"> 
@@ -28,14 +28,17 @@ export default async function fragranceDetailsPage({ params }: pageProps) {
                         alt={product.name} 
                         fill 
                         sizes="(max-width:768px) 100vw, 320px" 
-                        className="rounded-t-lg object-cover"
+                        className="rounded-t-lg object-cover border border-1"
                         priority 
                     />
                 </div>
-                <div>
-                    <h1>{product.name}</h1>
-                    <p>{product.price}</p>
-                    <p>{product.description}</p>
+                <div className="flex flex-col gap-2 justify-center items-center">
+                    <h1 className="px-4 font-bold text-md">{product.name}</h1>
+                    <h2 className="px-4 font-bold text-sm">Brand: {product.brand}</h2>
+                    <h2 className="px-4 font-bold text-sm">Size: {product.volume}</h2>
+                    <h2 className="px-4 font-bold text-sm">Concentration: {product.concentration}</h2>
+                    <p className="px-4 font-space">Price:UGX${product.price.toLocaleString()}</p>
+                    <p className="px-4 font-sans">Description:<br/>{product.description}</p>
                 </div>
             </div>
         </section>
