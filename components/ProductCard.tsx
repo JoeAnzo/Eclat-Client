@@ -6,6 +6,7 @@ import Animation from "./Animation"
 
 
 function ProductCard({name,thumbnailUrl,price}:Product) {
+  console.log(thumbnailUrl)
   return (
     <Animation variant="slideUp">
       <div className="rounded-lg shadow-md max-w-85  relative">
