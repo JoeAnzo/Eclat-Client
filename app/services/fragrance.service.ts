@@ -8,7 +8,7 @@ export const fragranceService = {
     },
     getFragranceBySlug:async (slug:string) => {
         const response = await apiClient.get(`/v1/api/fragrances/slugs/${slug}`)
-        return response
+        return response.data
     }
 }
 
