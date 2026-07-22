@@ -6,7 +6,7 @@ import Animation from "./Animation"
 import Link from "next/link"
 
 
-function ProductCard({name,thumbnailUrl,price,slug}:Product) {
+function ProductCard({name,thumbnailUrl,price,slug,gender}:Product) {
   console.log(thumbnailUrl)
   return (
     <Animation variant="slideUp">
@@ -23,7 +23,7 @@ function ProductCard({name,thumbnailUrl,price,slug}:Product) {
             <div className="pb-4 rounded-b-lg flex flex-col items-start">
               <p className="py-2 font-bold font-playfair">{name}</p>
               <p className="pb-2 font-space">UGX {price.toLocaleString()}</p>
-              <Button variant="default" className="bg-(--primary-color) rounded-none  px-2 py-2 font-semibold  flex gap-2">Add to cart <ShoppingBag color="white"/></Button>
+              <p className="py-2 font-bold">{gender}</p>
             </div>
           </div>
         </Animation>

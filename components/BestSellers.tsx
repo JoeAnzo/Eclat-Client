@@ -16,7 +16,7 @@ async function BestSellers() {
     <div className="px-2 grid grid-cols-2 gap-2 max-w-[720px] mx-auto">
       {
         bestSellers.map((product:Product) => {
-          return <ProductCard key={product.id} price={product.price} name={product.name} thumbnailUrl={product.thumbnailUrl} slug={product.slug} />
+          return <ProductCard key={product.id} price={product.price} name={product.name} thumbnailUrl={product.thumbnailUrl} slug={product.slug} gender={product.gender}/>
         })
       }
     </div>
