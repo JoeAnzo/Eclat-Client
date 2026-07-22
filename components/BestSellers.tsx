@@ -24,5 +24,3 @@ async function BestSellers() {
 }
 
 export default BestSellers
-
-// best sellers
