@@ -22,9 +22,9 @@ export default async function fragranceDetailsPage({ params }: pageProps) {
 
     return (
         <section className="min-h-screen">
-            <div>
+            <div className="flex flex-col md:flex-row">
                 
-                <div className="relative w-full h-100"> 
+                <div className="relative max-w-200 h-100"> 
                     <Image 
                         src={product.thumbnailUrl} 
                         alt={product.name} 
@@ -37,14 +37,14 @@ export default async function fragranceDetailsPage({ params }: pageProps) {
                 <div className="flex flex-col gap-2 justify-center items-left">
                     <h1 className="px-4 font-bold font-playfair text-xl">{product.name}</h1>
                     <h2 className="px-4 text-md">Size: {product.volume}</h2>
-                    <h2 className="px-4 font-bold text-sm">Concentration: {product.concentration}</h2>
+                    <p className="px-4 font-bold text-sm">Concentration: {product.concentration}</p>
                     <p className="px-4 font-space">Price:UGX{product.price.toLocaleString()}</p>
-                    <div className="flex gap-2 sticky bottom-0">
+                    <div className="flex flex-col gap-2 sticky bottom-0">
                     <Button size="lg" variant="default" className="bg-(--primary-color) sticky bottom-0 h-12 px-8 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 rounded-none">
                         Add to cart
                         <ShoppingBag/>
                     </Button>
-                    <Button size="lg" variant="outline" className="bg-(--primary-color) h-12 px-8 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 rounded-none">
+                    <Button size="lg" variant="outline" className="h-12 px-8 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 rounded-none">
                         Add to wishlist
                         <HeartIcon/>
                     </Button>
