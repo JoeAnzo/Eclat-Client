@@ -7,8 +7,8 @@ export default async function ShopPage() {
   const response = await fragranceService.getFragrances({limit:7})
   const products = response.data
   return (
-    <section>
-    <div className="flex gap-2 pt-8">
+    <section className="pt-8">
+    <div className="flex gap-2">
       <input type="text" className="bg-[#F5F5F5]" placeholder="search brands,category"/>
       <Search/>
     </div>

@@ -1,6 +1,8 @@
 import { fragranceService } from "@/app/services/fragrance.service"
 import Image from "next/image"
 import { notFound } from "next/navigation"
+import { ShoppingBag,HeartIcon } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 interface pageProps {
     params: Promise<{ slug: string }>
@@ -32,13 +34,23 @@ export default async function fragranceDetailsPage({ params }: pageProps) {
                         priority 
                     />
                 </div>
-                <div className="flex flex-col gap-2 justify-center items-center">
-                    <h1 className="px-4 font-bold text-md">{product.name}</h1>
-                    <h2 className="px-4 font-bold text-sm">Brand: {product.brand}</h2>
-                    <h2 className="px-4 font-bold text-sm">Size: {product.volume}</h2>
+                <div className="flex flex-col gap-2 justify-center items-left">
+                    <h1 className="px-4 font-bold font-playfair text-xl">{product.name}</h1>
+                    <h2 className="px-4 text-md">Size: {product.volume}</h2>
                     <h2 className="px-4 font-bold text-sm">Concentration: {product.concentration}</h2>
-                    <p className="px-4 font-space">Price:UGX${product.price.toLocaleString()}</p>
-                    <p className="px-4 font-sans">Description:<br/>{product.description}</p>
+                    <p className="px-4 font-space">Price:UGX{product.price.toLocaleString()}</p>
+                    <div className="flex gap-2 sticky bottom-0">
+                    <Button size="lg" variant="default" className="bg-(--primary-color) sticky bottom-0 h-12 px-8 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 rounded-none">
+                        Add to cart
+                        <ShoppingBag/>
+                    </Button>
+                    <Button size="lg" variant="outline" className="bg-(--primary-color) h-12 px-8 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 rounded-none">
+                        Add to wishlist
+                        <HeartIcon/>
+                    </Button>
+                    </div>
+                    <h2 className="px-4 text-md font-bold font-sans">Product Description:</h2>
+                    <p className="px-4 font-sans">Product{product.description}</p>
                 </div>
             </div>
         </section>
