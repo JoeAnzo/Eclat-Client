@@ -20,9 +20,9 @@ export default async function fragranceDetailsPage({ params }: pageProps) {
 
     return (
         <section className="min-h-screen">
-            <div className="flex flex-col gap-2 md:flex-row">
+            <div>
                 
-                <div className="relative max-w-200 max-h-200"> 
+                <div className="relative w-full h-100"> 
                     <Image 
                         src={product.thumbnailUrl} 
                         alt={product.name} 
