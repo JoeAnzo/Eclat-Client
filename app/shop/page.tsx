@@ -8,7 +8,7 @@ export default async function ShopPage() {
   const products = response.data
   return (
     <section>
-    <div className="flex gap-2">
+    <div className="flex gap-2 pt-8">
       <input type="text" className="bg-[#F5F5F5]" placeholder="search brands,category"/>
       <Search/>
     </div>

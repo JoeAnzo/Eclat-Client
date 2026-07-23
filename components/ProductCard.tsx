@@ -7,7 +7,15 @@ import Link from "next/link"
 
 
 function ProductCard({name,thumbnailUrl,price,slug,gender}:Product) {
-  console.log(thumbnailUrl)
+  type genderFormat = 'Men' | 'Women' | 'Unisex'
+  let genderFormat:genderFormat
+  if (gender === 'MALE'){
+    genderFormat = 'Men'
+  } else if (gender === 'FEMALE'){
+    genderFormat = 'Women'
+  } else {
+    genderFormat = 'Unisex'
+  }
   return (
     <Animation variant="slideUp">
       <Link href={`/shop/${slug}`}>
@@ -23,7 +31,7 @@ function ProductCard({name,thumbnailUrl,price,slug,gender}:Product) {
             <div className="pb-4 rounded-b-lg flex flex-col items-start">
               <p className="py-2 font-bold font-playfair">{name}</p>
               <p className="pb-2 font-space">UGX {price.toLocaleString()}</p>
-              <p className="py-2 font-bold">{gender}</p>
+              <p className="py-2 font-bold">{genderFormat}</p>
             </div>
           </div>
         </Animation>
