@@ -68,11 +68,12 @@ export default function Home() {
           </Animation>
           <Animation variant="slideUp">
             <div className="flex flex-col sm:flex-row gap-4 justify-start items-left">
-              
+              <Link href='/shop'>
               <Button size="lg" variant="default" className="bg-(--primary-color) h-12 px-8 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 rounded-none">
                 Shop now
                 <ArrowRight/>
               </Button>
+              </Link>
               <Link href="/how-it-works">
                 <Button variant="outline" size="lg" className="px-8 font-semibold text-lg shadow-lg tracking-wide h-12  flex gap-2 rounded-none">
                   How it works
@@ -92,7 +93,7 @@ export default function Home() {
           <div className="h-1 bg-(--secondary-color) rounded-md w-20"></div>
         </div>
         <Animation variant="slideUp">
-          <div className="max-w-[720px] mx-auto text-center px-4">
+          <div className="max-w-180 mx-auto text-center px-4">
             <h2 className="text-center font-playfair px-2 text-(--text) my-6 text-3xl">Discover our most-coveted bottles and find your match.</h2>
           </div>
         </Animation>
@@ -107,7 +108,7 @@ export default function Home() {
         </div>
         <Animation variant="slideUp">
           <h2 className="px-2 font-playfair text-(--text) text-3xl text-center my-5">Three taps, one delivery</h2>
-          <div className="space-y-4 px-[32px] items-stretch grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8">
+          <div className="space-y-4 px-8 items-stretch grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8">
               {
                 howItWorks.map((item,index) => {
                     return <HowItWorksCard key={index} step={item.step} title={item.title} icon={item.icon} text={item.text}/>

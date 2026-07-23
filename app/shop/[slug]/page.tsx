@@ -20,15 +20,15 @@ export default async function fragranceDetailsPage({ params }: pageProps) {
 
     return (
         <section className="min-h-screen">
-            <div>
+            <div className="flex flex-col gap-2 md:flex-row">
                 
-                <div className="relative w-full h-[400px]"> 
+                <div className="relative max-w-200 max-h-200"> 
                     <Image 
                         src={product.thumbnailUrl} 
                         alt={product.name} 
                         fill 
                         sizes="(max-width:768px) 100vw, 320px" 
-                        className="rounded-t-lg object-cover border border-1"
+                        className="rounded-t-lg object-cover max-w-200 max-h-200 border"
                         priority 
                     />
                 </div>

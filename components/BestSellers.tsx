@@ -13,7 +13,7 @@ async function BestSellers() {
   const bestSellers = response.data
 
   return (
-    <div className="px-2 grid grid-cols-2 gap-2 max-w-[720px] mx-auto">
+    <div className="px-2 grid grid-cols-2 gap-2 max-w-180 mx-auto">
       {
         bestSellers.map((product:Product) => {
           return <ProductCard key={product.id} price={product.price} name={product.name} thumbnailUrl={product.thumbnailUrl} slug={product.slug} gender={product.gender}/>
