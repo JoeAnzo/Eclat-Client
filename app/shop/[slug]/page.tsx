@@ -1,8 +1,7 @@
 import { fragranceService } from "@/app/services/fragrance.service"
 import Image from "next/image"
 import { notFound } from "next/navigation"
-import { ShoppingBag,HeartIcon } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import ProductButtons from "@/components/ProductButtons"
 
 interface pageProps {
     params: Promise<{ slug: string }>
@@ -40,14 +39,7 @@ export default async function fragranceDetailsPage({ params }: pageProps) {
                     <p className="px-4 font-bold text-sm">Concentration: {product.concentration}</p>
                     <p className="px-4 font-space">Price:UGX{product.price.toLocaleString()}</p>
                     <div className="flex flex-col gap-2 sticky bottom-0">
-                    <Button size="lg" variant="default" className="bg-(--primary-color) sticky bottom-0 h-12 px-8 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 rounded-none">
-                        Add to cart
-                        <ShoppingBag/>
-                    </Button>
-                    <Button size="lg" variant="outline" className="h-12 px-8 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 rounded-none">
-                        Add to wishlist
-                        <HeartIcon/>
-                    </Button>
+                    <ProductButtons product={product}/>
                     </div>
                     <h2 className="px-4 text-md font-bold font-sans">Product Description:</h2>
                     <p className="px-4 font-sans">Product{product.description}</p>

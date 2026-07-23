@@ -5,12 +5,13 @@ import {ShoppingBag,Menu,X,UserRound,ChevronDown,ChevronRight,Play,BookOpenText,
 import {LuUserRoundCheck} from 'react-icons/lu'
 import {GiDelicatePerfume} from 'react-icons/gi'
 import {useState,useEffect,useRef} from 'react'
+import { useCart } from "@/hooks/useCart"
 
 const Header = () => {
 
   const [openMenu,setCloseMenu] = useState(false)
   const dropdownRef = useRef<HTMLElement>(null)
-
+  const {cart} = useCart()
   const {sessionId} = useAuth()
   const handleClick = () => {
     console.log('clicked')
@@ -64,7 +65,10 @@ const Header = () => {
               </Link>
             </Show>
             <Link href="/cart">
-              <ShoppingBag/>
+              <div className="relative">
+                <ShoppingBag/>
+                {cart.length > 0 ? <div className="absolute -top-2 -right-2 bg-(--primary-color) text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">{cart.length}</div>:null}
+              </div>
             </Link>
           </div>
         </div>

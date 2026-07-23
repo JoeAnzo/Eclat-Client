@@ -8,6 +8,19 @@ export interface Product {
     inventory?:number;
     scentFamily?:string;
     thumbnailUrl: string;
-    price: string;
+    price: number;
 }
 
+export interface CartItem extends Product {
+    quantity:number;
+}
+
+export interface CartState {
+    cart:CartItem[];
+    totalItems:number;
+    totalPrice:number;
+    addToCart: (product:Product) => void;
+    removeFromCart:(productId:string) => void;
+    updateQuantity:(productId:string,quantity:number) => void;
+    clearCart:() => void;
+}
