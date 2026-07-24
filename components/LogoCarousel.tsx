@@ -40,16 +40,16 @@ export default function LogoCarousel() {
 <div className="w-full flex justify-center items-center my-6 md:my-12">
     
     {/* 2. Constrained Ticker Wrapper: Enforces maximum size and hides overflowing elements */}
-    <div className="relative w-full max-w-full md:max-w-[760px] px-2 min-h-32 flex items-center overflow-hidden bg-background">
+    <div className="relative w-full max-w-full md:max-w-190 px-2 min-h-32 flex items-center overflow-hidden bg-background">
         
         {/* Left-side fade layer */}
-        <div className="absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-background to-transparent pointer-events-none" />
+        <div className="absolute inset-y-0 left-0 z-10 w-20 bg-linear-to-r from-background to-transparent pointer-events-none" />
         
         {/* Right-side fade layer */}
-        <div className="absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-background to-transparent pointer-events-none" />
+        <div className="absolute inset-y-0 right-0 z-10 w-20 bg-linear-to-l from-background to-transparent pointer-events-none" />
         
         {/* Infinite scrolling strip */}
-        <div className="flex w-max items-center gap-16 animate-scroll hover:[animation-play-state:paused]">
+        <div className="flex w-max items-center gap-16 animate-scroll hover:paused">
             {duplicatedLogos.map((logo, index) => (
                 <div key={index} className="flex items-center justify-center w-32 h-12 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
                     <Image
