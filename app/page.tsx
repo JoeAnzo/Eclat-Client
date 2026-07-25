@@ -10,7 +10,6 @@ import HowItWorksCard from "@/components/HowItWorksCard"
 import Animation from "@/components/Animation"
 import LogoCarousel from "@/components/LogoCarousel"
 import Link from "next/link"
-import Location from "@/components/Location"
 import Image from "next/image"
 import type { Metadata } from "next"
 
