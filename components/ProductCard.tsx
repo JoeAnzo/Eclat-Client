@@ -5,8 +5,9 @@ import { ShoppingBag,HeartIcon } from "lucide-react"
 import Animation from "./Animation"
 import Link from "next/link"
 
+type productCard = Omit<Product,'id'>
 
-function ProductCard({name,thumbnailUrl,price,slug,gender}:Product) {
+function ProductCard({name,thumbnailUrl,price,slug,gender}:productCard) {
   type genderFormat = 'Men' | 'Women' | 'Unisex'
   let genderFormat:genderFormat
   if (gender === 'MALE'){

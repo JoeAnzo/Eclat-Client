@@ -73,10 +73,15 @@ export default function TestimonialCarousel() {
       >
         {reviews.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="relative p-6 rounded-2xl h-[400px] overflow-hidden shadow-sm flex flex-col justify-between bg-white h-full min-h-55">
+            <div className="relative p-6 h-[400px] overflow-hidden shadow-sm flex flex-col justify-between bg-white h-full min-h-55">
                 <div className='absolute right-8 top-8'>
                   <Quote size={30} className="text-(--secondary-color)"/>
                 </div>
+                <p className={`text-(--text) italic text-base transition-all duration-300 leading-relaxed my-6 ${isExpanded ? '':'line-clamp-3'}`}>
+                    "{
+                        item.review
+                    }"
+                </p>
                 <div className="relative w-16 h-16 over-flow-hidden rounded-full shrink-0 ">
                     <Image
                     src={item.userPicture}
@@ -92,12 +97,6 @@ export default function TestimonialCarousel() {
                     }
                 </h4>
                 <StarRating rating={item.rating}/>
-
-                <p className={`text-(--text) italic text-base transition-all duration-300 leading-relaxed my-6 ${isExpanded ? '':'line-clamp-3'}`}>
-                    "{
-                        item.review
-                    }"
-                </p>
                 <Button onClick={() => setIsExpanded(!isExpanded)} size="lg" variant="default" className="bg-(--primary-color) h-12 px-8 font-semibold text-sm focus:outline-none text-white mb-6 rounded-none">
                     {isExpanded ? 'Read Less':'Read More'}
                 </Button>
