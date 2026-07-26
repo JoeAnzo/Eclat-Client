@@ -32,7 +32,7 @@ function ProductCard({name,thumbnailUrl,price,slug,gender}:productCard) {
             <div className="pb-4 rounded-b-lg flex flex-col items-start">
               <p className="py-2 font-bold font-playfair">{name}</p>
               <p className="pb-2 font-space">UGX {price.toLocaleString()}</p>
-              <p className="py-2 font-bold">{genderFormat}</p>
+              <Button className="rounded-none text-white p-2 bg-(--primary-color)" variant="default">Add to cart</Button>
             </div>
           </div>
         </Animation>

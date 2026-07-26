@@ -74,8 +74,8 @@ export default function TestimonialCarousel() {
         {reviews.map((item) => (
           <SwiperSlide key={item.id}>
             <div className="relative p-6 h-[400px] overflow-hidden shadow-sm flex flex-col justify-between bg-white h-full min-h-55">
-                <div className='absolute right-8 top-8'>
-                  <Quote size={30} className="text-(--secondary-color)"/>
+                <div className='absolute right-2.5 top-2.5'>
+                  <Quote size={30} className="text-amber-400"/>
                 </div>
                 <p className={`text-(--text) italic text-base transition-all duration-300 leading-relaxed my-6 ${isExpanded ? '':'line-clamp-3'}`}>
                     "{

@@ -53,7 +53,7 @@ export default function Home() {
   ]
   return (
     <main className="relative">
-      <div className="fixed bottom-5 right-5 h-15 w-15 rounded-full bg-[#25D366] flex items-center justify-center z-150">
+      <div className="fixed bottom-5 right-5 h-15 w-15 rounded-full bg-[#25D366] flex items-center justify-center z-150 transition-transform duration-200 ">
         <FaWhatsapp color="white" size={30}/>
       </div>
       <section className="relative h-screen sm:h-[80vh]">

@@ -29,17 +29,15 @@ export default function Cart() {
           {
             cart.map((item:CartItem) => {
               return <div key={item.id} className="flex gap-2 bg-[#F5F5F5]">
-                <div className="w-[400px] h-[400px]">
+                <div>
                   <Image src={item.thumbnailUrl} alt={item.name} className="max-w-full h-auto"/>
                 </div>
-                <div className="p-2">
+                <div className="flex flex-col p-2">
                   <h2 className="font-playfair font-semibold text-md">{item.name}</h2>
                   <p className="font-space">UGX {item.price.toLocaleString()}</p>
                   <div className="flex gap-2">
                     <QuantityButtons item={item} updateQuantity={updateQuantity}/>
-                     <Button onClick={() => removeFromCart(item.id)} size="lg" variant="default" className="bg-transparent px-4 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 rounded-none">
-                      remove <Trash/>
-                    </Button>
+                    <p onClick={() => removeFromCart(item.id)} className="text-[--primary-color]">Remove item <Trash/></p>
                   </div>
                 </div>
               </div>
