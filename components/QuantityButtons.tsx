@@ -20,7 +20,7 @@ export default function QuantityButtons({item,updateQuantity}:QuantityButtonProp
         updateQuantity(item.id,quantity)
     }
     return(
-        <>
+        <div className="flex items-center gap-2 justify-center">
             <Button onClick={addQuantity} size="lg" variant="default" className="bg-(--primary-color) px-4 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 rounded-none">
                 +
             </Button>
@@ -28,6 +28,6 @@ export default function QuantityButtons({item,updateQuantity}:QuantityButtonProp
             <Button onClick={subtractQuantity} size="lg" variant="default" className="bg-(--primary-color) px-4 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 rounded-none">
                 -
             </Button>
-        </>
+        </div>
     )
 }

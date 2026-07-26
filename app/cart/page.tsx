@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import {useCart} from "@/hooks/useCart"
 import { CartItem } from "../Interfaces/product.interface"
 import QuantityButtons from "@/components/QuantityButtons"
+import Link from "next/link"
 
 export default function Cart() {
 
@@ -13,16 +14,18 @@ export default function Cart() {
     <section className="min-h-screen">
       {
         cart.length === 0 ? 
-        <div className="flex flex-col items-center justify-center h-full gap-2 bg-red-100">
+        <div className="flex flex-col items-center justify-center h-screen gap-2 bg-red-100">
           <ShoppingBag/>
           <h2 className="text-xl font-semibold font-playfair">Cart is empty</h2>
-          <Button size="lg" variant="default" className="bg-(--primary-color) h-12 px-8 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 rounded-none">
-          Continue Shopping
-          <ArrowRight/>
-          </Button>
+          <Link href="/shop">
+            <Button size="lg" variant="default" className="bg-(--primary-color) h-12 px-8 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 rounded-none">
+              Continue Shopping
+              <ArrowRight/>
+            </Button>
+          </Link>
         </div>
         :
-        <div className="flex flex-col gap-2 pt-8">
+        <div className="flex flex-col gap-2 pt-15">
           <h2 className="text-xl pl-8 font-semi-bold font-sans">Cart Summary</h2>
           <p className="font-space pl-8">Cart: ({totalItems})</p>
           <p className="font-space pl-8">Sub Total:{totalPrice}</p>

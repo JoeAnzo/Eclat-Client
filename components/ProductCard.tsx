@@ -20,7 +20,7 @@ function ProductCard({name,thumbnailUrl,price,slug,gender}:productCard) {
   } else {
     genderFormat = 'Unisex'
   }
-  
+
   return (
     <Animation variant="slideUp">
       <Link href={`/shop/${slug}`}>
@@ -39,7 +39,7 @@ function ProductCard({name,thumbnailUrl,price,slug,gender}:productCard) {
             <div className="pb-4 rounded-b-lg flex flex-col items-start">
               <p className="py-2 font-bold font-playfair">{name}</p>
               <p className="pb-2 font-space">UGX {price.toLocaleString()}</p>
-              <Button className="rounded-none text-white p-2.5 w-full bg-(--primary-color)" variant="default">Add to cart <ShoppingBag/></Button>
+              <Button className="rounded-none text-white px-2.5 py-3.5 w-full bg-(--primary-color)" variant="default">Add to cart <ShoppingBag/></Button>
             </div>
           </div>
         </Animation>

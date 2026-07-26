@@ -152,6 +152,7 @@ export function LoginForm({
                 </Button>
                 <Button
                   size="lg"
+                  type="button"
                   variant="outline"
                   className="h-10 rounded-none flex gap-2"
                   disabled={isSubmitting}
