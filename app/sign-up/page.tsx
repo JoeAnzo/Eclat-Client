@@ -25,7 +25,7 @@ const signUpSchema = z.object({
 
 type SignUpFormValues = z.infer<typeof signUpSchema>
 
-export function SignUpForm({ className, ...props }: React.ComponentProps<"div">) {
+export default function SignUpForm({ className, ...props }: React.ComponentProps<"div">) {
   const [globalError, setGlobalError] = useState("")
   const [pendingVerification, setPendingVerification] = useState(false)
   const [verificationCode, setVerificationCode] = useState("")
