@@ -65,23 +65,23 @@ export default function Home() {
           <Animation variant="slideUp">
             <p className="text-white text-md sm:text-2xl font-inter leading-relaxed  max-w-prose mb-5">Find the scent that speaks your language and defines your everyday moments </p>
           </Animation>
-          <Animation variant="slideUp">
-            <div className="flex flex-col sm:flex-row gap-4 justify-start items-left">
-              <Link href='/shop'>
-              <Button size="lg" variant="default" className="bg-(--primary-color) h-12 px-8 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 rounded-none">
+        <Animation variant="slideUp">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start items-center w-full max-w-md mx-auto sm:mx-0">
+            <Link href='/shop' className="w-full sm:w-auto">
+              <Button size="lg" variant="default" className="bg-[var(--primary-color)] h-12 w-full sm:w-48 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 justify-center items-center rounded-none">
                 Shop now
                 <ArrowRight/>
               </Button>
-              </Link>
-              <Link href="/how-it-works">
-                <Button variant="outline" size="lg" className="px-8 font-semibold text-lg shadow-lg tracking-wide h-12  flex gap-2 rounded-none">
-                  How it works
-                  <Play/>
-                </Button>
-              </Link>
-            </div>
-          </Animation>
-           
+            </Link>
+            <Link href="/how-it-works" className="w-full sm:w-auto">
+              
+              <Button variant="outline" size="lg" className="h-12 w-full sm:w-48 font-semibold text-lg shadow-lg tracking-wide flex gap-2 justify-center items-center rounded-none">
+                How it works
+                <Play/>
+              </Button>
+            </Link>
+          </div>
+        </Animation>
         </div>
       </section> 
       <section className="py-8 bg-[#F5F5F5]">

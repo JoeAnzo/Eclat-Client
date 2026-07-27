@@ -96,7 +96,7 @@ export function LoginForm({
 
   return (
     <div className={cn("flex flex-col gap-6 border-none", className)} {...props}>
-      <Card className="border-none">
+      <Card className="border-0 shadow-none">
         <CardHeader>
           <CardTitle className="text-center text-lg">Login to your account</CardTitle>
           <CardDescription>
@@ -111,8 +111,8 @@ export function LoginForm({
                 <Input
                   id="email"
                   type="email"
-                  placeholder="alex@example.com"
-                  className="rounded-none h-10"
+                  placeholder="Email"
+                  className="rounded-none h-10 border-0 bg-neutral-100"
                   {...register("email")}
                 />
                 {errors.email ? (
@@ -133,7 +133,8 @@ export function LoginForm({
                 <Input
                   id="password"
                   type="password"
-                  className="rounded-none h-10"
+                  className="rounded-none h-10 border-0 bg-neutral-100"
+                  placeholder="password"
                   {...register("password")}
                 />
                 {errors.password ? (

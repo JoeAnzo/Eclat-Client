@@ -34,12 +34,12 @@ export default async function fragranceDetailsPage({ params }: pageProps) {
                     />
                 </div>
                 <div className="flex flex-col gap-2 justify-center items-left">
-                    <h1 className="px-8 font-bold font-playfair text-xl">{product.name}</h1>
-                    <h2 className="px-8 text-md">Size: {product.volume}</h2>
-                    <p className="px-8 text-md">Concentration: {product.concentration}</p>
-                    <p className="px-8 font-space">Price:UGX{product.price.toLocaleString()}</p>
-                    <h2 className="px-8 text-md font-bold font-sans">Product Description:</h2>
-                    <p className="px-8 font-sans">Product{product.description}</p>
+                    <h1 className="md:px-8 px-[20px] font-bold font-playfair text-xl">{product.name}</h1>
+                    <h2 className="md:px-8 px-[20px]  text-md">Size: {product.volume}</h2>
+                    <p className="md:px-8 px-[20px] px-[20px] text-md">Concentration: {product.concentration}</p>
+                    <p className="md:px-8 px-[20px] font-space">Price:UGX{product.price.toLocaleString()}</p>
+                    <h2 className="md:px-8 px-[20px] text-md font-bold font-sans">Product Description:</h2>
+                    <p className="md:px-8 px-[20px] font-sans">Product{product.description}</p>
                     <div className="flex flex-col gap-2.5 sticky bottom-0 px-4">
                     <ProductButtons product={product}/>
                     </div>

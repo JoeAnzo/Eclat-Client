@@ -50,7 +50,6 @@ export default function SignUpForm({ className, ...props }: React.ComponentProps
     const result = await signUp.create({
       username: values.username,
       emailAddress: values.email,
-      phoneNumber: values.phoneNumber,
       password: values.password,
     })
 
@@ -96,8 +95,8 @@ export default function SignUpForm({ className, ...props }: React.ComponentProps
   }
 
   return (
-    <div className={cn("flex flex-col gap-6 border-none", className)} {...props}>
-      <Card className="border-none">
+    <div className={cn("flex flex-col gap-6 border-none pt-12", className)} {...props}>
+      <Card className="border-none max-w-[340px]">
         <CardHeader>
           <CardTitle className="text-center text-lg">
             {pendingVerification ? "Verify your Email" : "Create your account"}
@@ -117,19 +116,11 @@ export default function SignUpForm({ className, ...props }: React.ComponentProps
                   <Input id="username" placeholder="johndoe" className="rounded-none h-10" {...register("username")} />
                   {errors.username && <p className="mt-1 text-sm text-red-500">{errors.username.message}</p>}
                 </Field>
-
                 <Field>
                   <FieldLabel htmlFor="email">Email</FieldLabel>
                   <Input id="email" type="email" placeholder="alex@example.com" className="rounded-none h-10" {...register("email")} />
                   {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>}
                 </Field>
-
-                <Field>
-                  <FieldLabel htmlFor="phoneNumber">Phone Number</FieldLabel>
-                  <Input id="phoneNumber" type="tel" placeholder="+1234567890" className="rounded-none h-10" {...register("phoneNumber")} />
-                  {errors.phoneNumber && <p className="mt-1 text-sm text-red-500">{errors.phoneNumber.message}</p>}
-                </Field>
-
                 <Field>
                   <FieldLabel htmlFor="password">Password</FieldLabel>
                   <Input id="password" type="password" className="rounded-none h-10" {...register("password")} />

@@ -31,7 +31,7 @@ const Header = () => {
   },[])
 
   return (
-    <header className={`fixed px-[32px] z-10 top-0 left-0 right-0 flex justify-between items-center bg-white/30 backdrop-blur-xl backdrop-filter py-4 px-2`}>
+    <header className={`fixed px-[20px] md:px-[32px] z-10 top-0 left-0 right-0 flex justify-between items-center bg-white/30 backdrop-blur-xl backdrop-filter py-4 px-2`}>
           <div className="md:hidden" onClick={handleClick}>
             {openMenu ? <X/>:<Menu/>}
           </div>
