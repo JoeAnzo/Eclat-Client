@@ -63,14 +63,14 @@ export default function Footer(){
                 <div>
                     <div className="flex flex-col">
                         <Animation variant="none">
-                            <h3 className="text-2xl font-playfair text-(--secondary-color) my-4">Legal</h3>
+                            <h3 className="text-2xl font-playfair text-(--secondary-color) my-4">Shop</h3>
                         </Animation>
                         <Animation variant="none">
                             <div className="flex flex-col">
-                                <Link className="py-2 text-white sm:border-none font-inter hover:text-(--secondary-color)" href="/privacy-policy">Privacy Policy</Link>
-                                <Link className="py-2 text-white sm:border-none font-inter hover:text-(--secondary-color)" href="/contact-us">Contact and FAQs</Link>
-                                <Link className="py-2 text-white sm:border-none font-inter hover:text-(--secondary-color)" href="/terms-and-conditions">Terms and Conditions</Link>
-                                <Link className="py-2 text-white sm:border-none font-inter hover:text-(--secondary-color)" href="/refund-and-return">Shipping and Return Policy</Link>
+                                <Link className="py-2 text-white sm:border-none font-inter hover:text-(--secondary-color)" href="/privacy-policy">Men</Link>
+                                <Link className="py-2 text-white sm:border-none font-inter hover:text-(--secondary-color)" href="/contact-us">Women</Link>
+                                <Link className="py-2 text-white sm:border-none font-inter hover:text-(--secondary-color)" href="/terms-and-conditions">Best Sellers</Link>
+                                <Link className="py-2 text-white sm:border-none font-inter hover:text-(--secondary-color)" href="/refund-and-return">New Arrivals</Link>
                             </div>
                         </Animation>        
                     </div>
@@ -78,23 +78,31 @@ export default function Footer(){
                 <div>
                     <div>
                         <Animation variant="none">
-                            <h3 className="text-2xl font-playfair text-(--secondary-color) my-4">Brands We Deal In</h3>
+                            <h3 className="text-2xl font-playfair text-(--secondary-color) my-4">About</h3>
                         </Animation>
                         <Animation variant="none">
-                            <p className="text-white mb-2 font-inter">Dior</p>
-                            <p className="text-white mb-2 font-inter">Chanel</p>
-                            <p className="text-white mb-2 font-inter">Yves Saint Laurent</p>
-                            <p className="text-white mb-2 font-inter">Giorgio Armani</p>
-                            <p className="text-white mb-2 font-inter">Carolina Herrera</p>
+                            <Link href="#">Our Story</Link>
+                            <Link href="#">Reviews</Link>
+                            <Link href="#">Contact</Link>
                         </Animation>
                     </div>
                 </div>
             </div>
             <div>
                     <Animation variant="none">
-                        <p className="text-center pt-2 border-t font-inter border-gray-300 text-white">© copyright {new Date().getFullYear()} eclat eccense.shop.All rights reserved.<br/>
-                            Last Updated May 26, 2026
-                        </p>
+                        <div className="flex flex-col">
+                            <div>
+                                <p>payment methods:MTN AIRTEL VISA&MASTERCARD</p>
+                            </div>
+                            <p className="text-center pt-2 border-t font-inter border-gray-300 text-white">© copyright {new Date().getFullYear()} eclat eccense.shop.All rights reserved.</p>
+                            <div className="flex items-center justify-center gap-2">
+                                <Link href="#">TERMS & CONDITIONS</Link>
+                                <Link href="#">PRIVACY POLICY</Link>
+                                <Link href="#">RETURNS</Link>
+                            </div>
+                            
+                        </div>
+                        
                     </Animation>
             </div>
         </footer>

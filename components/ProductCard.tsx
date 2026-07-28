@@ -25,9 +25,6 @@ function ProductCard({name,thumbnailUrl,price,slug,gender}:productCard) {
     <Animation variant="slideUp">
       <Link href={`/shop/${slug}`}>
         <div className="rounded-lg shadow-md max-w-85  relative">
-        <div className="absolute z-100 top-2 left-2 flex items-center justify-center bg-[#F5F5F5] h-8 w-8 rounded-full">
-          <h2 className="font-playfair font-semibold text-md">{genderFormat}</h2>
-        </div>
         <div className="relative h-80 w-full overflow-hidden">
           <Image src={thumbnailUrl} alt={name} fill sizes="(max-width:768px) 100vw, 320px" className="max-w-full rounded-t-lg h-auto object-cover"/>
           <div className="absolute z-100 right-2 bottom-2 flex items-center justify-center bg-[#F5F5F5] h-8 w-8 rounded-full">
@@ -39,7 +36,6 @@ function ProductCard({name,thumbnailUrl,price,slug,gender}:productCard) {
             <div className="pb-4 rounded-b-lg flex flex-col items-start">
               <p className="py-2 font-bold font-playfair">{name}</p>
               <p className="pb-2 font-space">UGX {price.toLocaleString()}</p>
-              <Button className="rounded-none text-white px-2.5 py-3.5 w-full bg-(--primary-color)" variant="default">Add to cart <ShoppingBag/></Button>
             </div>
           </div>
         </Animation>

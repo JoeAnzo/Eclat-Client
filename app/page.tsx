@@ -86,7 +86,7 @@ export default function Home() {
       </section> 
       <section className="py-8 bg-[#F5F5F5]">
         <div className="flex flex-col justify-center items-center">
-          <Animation variant="slideRight">
+          <Animation variant="slideUp">
               <p className="text-(--text) font-inter text-center my-2">Best Sellers</p>
           </Animation>
           <div className="h-1 bg-(--secondary-color) rounded-md w-20"></div>
@@ -100,7 +100,7 @@ export default function Home() {
       </section>
       <section id="how-it-works" className="py-8">
         <div className="flex flex-col justify-center items-center">
-          <Animation variant="slideRight">
+          <Animation variant="slideUp">
             <p className="font-inter text-(--text) text-center my-4">How it works</p>
           </Animation>
           <div className="h-1 mb-4 bg-(--secondary-color) rounded-md w-20"></div>
@@ -135,7 +135,8 @@ export default function Home() {
       </section>
       <section className="py-8 bg-(--primary-color)">
         <div className="flex flex-col justify-center items-center">
-          <Animation variant="slideRight">
+          <Animation variant="slideUp">
+    
             <h2 className="text-white text-center my-2">Testimonials</h2>
           </Animation>
           <div className="h-1 mb-2 bg-white rounded-md w-20"></div>
@@ -143,18 +144,18 @@ export default function Home() {
         <Animation variant="slideUp">
           <h2 className="px-2 font-playfair text-white text-3xl text-center my-6">What Our Customers have to say</h2>
         </Animation>
-        <Animation variant="slideDown">
+        <Animation variant="slideUp">
           <TestimonialCarousel/>
         </Animation>
       </section>
       <section className="py-8 flex flex-col gap-2 items-center justify-center">
         <div className="flex flex-col justify-center items-center">
-          <Animation variant="slideRight">
+          <Animation variant="slideUp">
             <h2 className="text-(--text) text-center my-2">Quiz</h2>
           </Animation>
           <div className="h-1 mb-2 bg-(--secondary-color) rounded-md w-20"></div>
         </div>
-        <Animation variant="slideDown">
+        <Animation variant="slideUp">
           <Image src="/images/quiz.jpg" width={1200} height={800} sizes="100vw" style={{width:'100%',height:'auto'}} alt="girl holding perfume"/>
         </Animation>
         <Animation variant="slideUp">
@@ -167,7 +168,7 @@ export default function Home() {
       </section>
       <section id="contact" className="py-8 p-4">
         <div>
-          <Animation variant="slideRight">
+          <Animation variant="slideUp">
           <div className="flex flex-col justify-center items-center">
             <Animation variant="slideRight">
               <p className="text-(--text) text-center my-6">Get In Touch</p>

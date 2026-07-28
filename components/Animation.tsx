@@ -35,7 +35,7 @@ export default function Animation({ children, variant="none"}: AnimationProps) {
 
     }
     return (
-        <div ref={domRef} className={`transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0 translate-x-0':variantStyles[variant]}`}>
+        <div ref={domRef} className={`transition-all duration-1000 delay-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0 translate-x-0':variantStyles[variant]}`}>
             {children}
         </div>
     )

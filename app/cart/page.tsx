@@ -1,5 +1,5 @@
 "use client"
-import { ShoppingBag,ArrowRight,Trash } from "lucide-react"
+import { ShoppingBag,ArrowRight,Trash,ChevronDown } from "lucide-react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import {useCart} from "@/hooks/useCart"
@@ -26,9 +26,14 @@ export default function Cart() {
         </div>
         :
         <div className="flex flex-col gap-2 pt-15">
-          <h2 className="text-xl pl-8 font-semi-bold font-sans">Cart Summary</h2>
-          <p className="font-space pl-8">Cart: ({totalItems})</p>
-          <p className="font-space pl-8">SubTotal:UGX {totalPrice}</p>
+          <div className="flex justify-between items-center px-[20px] border-b">
+            <h2 className="text-xl font-semi-bold font-sans">Cart Summary</h2>
+            <ChevronDown/>
+          </div>
+          <div>
+            <p className="font-space">Cart: ({totalItems})</p>
+            <p className="font-space">SubTotal:UGX {totalPrice.toLocaleString()}</p>
+          </div>
           {
             cart.map((item:CartItem) => {
               return <div key={item.id} className="flex gap-2 bg-[#F5F5F5]">
@@ -40,7 +45,7 @@ export default function Cart() {
                   <p className="font-space">UGX {item.price.toLocaleString()}</p>
                   <div className="flex flex-col gap-2">
                     <QuantityButtons item={item} updateQuantity={updateQuantity}/>
-                    <p onClick={() => removeFromCart(item.id)} className="text-(--primary-color) flex items-center justify-center">Remove item <Trash/></p>
+                    <p onClick={() => removeFromCart(item.id)} className="text-(--primary-color) flex items-center justify-center">Remove<Trash/></p>
                   </div>
                 </div>
               </div>

@@ -95,7 +95,7 @@ export default function SignUpForm({ className, ...props }: React.ComponentProps
   }
 
   return (
-    <div className={cn("flex flex-col gap-6 border-none pt-12", className)} {...props}>
+    <div className={cn("flex flex-col justify-center items-center gap-6 border-none pt-12", className)} {...props}>
       <Card className="border-none max-w-[340px]">
         <CardHeader>
           <CardTitle className="text-center text-lg">
