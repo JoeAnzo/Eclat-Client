@@ -7,7 +7,7 @@ import SearchAndFilter from "@/components/SearchAndFilter"
 export default async function ShopPage() {
   const fragranceResponse = await fragranceService.getFragrances({limit:7})
   const brandsResponse = await fragranceService.getFragranceBrands()
-  const brands = brandsResponse.data
+  const brands = brandsResponse.available
   const products = fragranceResponse.data
   return (
     <section className="pt-20">
