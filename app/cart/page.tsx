@@ -30,13 +30,13 @@ export default function Cart() {
             <h2 className="text-xl font-semi-bold font-sans">Cart Summary</h2>
             <ChevronDown/>
           </div>
-          <div>
+          <div className="px-[20px]">
             <p className="font-space">Cart: ({totalItems})</p>
             <p className="font-space">SubTotal:UGX {totalPrice.toLocaleString()}</p>
           </div>
           {
             cart.map((item:CartItem) => {
-              return <div key={item.id} className="flex gap-2 bg-[#F5F5F5]">
+              return <div key={item.id} className="flex gap-2 bg-[#F5F5F5] px-[20px]">
                 <div>
                   <Image src={item.thumbnailUrl} alt={item.name} className="max-w-[110px] object-cover h-auto"/>
                 </div>
