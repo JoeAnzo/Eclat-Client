@@ -81,9 +81,11 @@ export default function Footer(){
                             <h3 className="text-2xl font-playfair text-(--secondary-color) my-4">About</h3>
                         </Animation>
                         <Animation variant="none">
-                            <Link href="#">Our Story</Link>
-                            <Link href="#">Reviews</Link>
-                            <Link href="#">Contact</Link>
+                            <div className="flex flex-col text-white gap-2">
+                                <Link href="#">Our Story</Link>
+                                <Link href="#">Reviews</Link>
+                                <Link href="#">Contact</Link>
+                            </div>
                         </Animation>
                     </div>
                 </div>
