@@ -14,7 +14,7 @@ export default function Cart() {
     <section className="min-h-screen">
       {
         cart.length === 0 ? 
-        <div className="flex flex-col items-center justify-center h-screen gap-2">
+        <div className="flex flex-col items-center justify-center h-screen gap-2 m max-w-[760px]">
           <ShoppingBag size={30}/>
           <h2 className="text-xl font-semibold font-playfair">Your Cart is empty</h2>
           <Link href="/shop">
@@ -25,7 +25,7 @@ export default function Cart() {
           </Link>
         </div>
         :
-        <div className="flex flex-col gap-2 pt-15">
+        <div className="flex flex-col gap-2 pt-25">
           <div className="flex justify-between items-center px-[20px] border-b">
             <h2 className="text-xl font-semi-bold font-sans">Cart Summary</h2>
             <ChevronDown/>
@@ -36,7 +36,7 @@ export default function Cart() {
           </div>
           {
             cart.map((item:CartItem) => {
-              return <div key={item.id} className="flex gap-2 bg-[#F5F5F5] px-[20px]">
+              return <div key={item.id} className="flex gap-2 bg-[#F5F5F5] px-[20px] max-w-[760px]">
                 <div>
                   <Image src={item.thumbnailUrl} alt={item.name} className="max-w-[110px] object-cover h-auto"/>
                 </div>
