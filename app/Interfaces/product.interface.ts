@@ -24,3 +24,8 @@ export interface CartState {
     updateQuantity:(productId:string,quantity:number) => void;
     clearCart:() => void;
 }
+
+export interface brand {
+  name:string;
+  logoUrl:string;
+}
