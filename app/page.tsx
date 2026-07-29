@@ -14,15 +14,35 @@ import Image from "next/image"
 import type { Metadata } from "next"
 
 
-export const metadata:Metadata = {
-  title: "Authentic Perfumes & Fragrances in Uganda | Eclat Essence",
-  description: "Buy authentic designer perfumes in Uganda at [YourBrandName]. Shop long-lasting premium fragrances, colognes, and luxury scents in Kampala with fast, reliable delivery.",
-  keywords: ["perfumes Uganda", "buy cologne Kampala", "original perfumes Kampala", "designer fragrances Uganda"],
+export const metadata: Metadata = {
+  title: "Authentic Perfumes & Fragrances in Uganda | Eclat Perfumes",
+  description: "Buy authentic designer perfumes in Uganda at Eclat Perfumes. Shop long-lasting premium fragrances, colognes, and luxury scents in Kampala with fast, reliable delivery.",
+  keywords: ["perfumes Uganda", "buy cologne Kampala", "original perfumes Kampala", "designer fragrances Uganda", "Eclat Perfumes"],
   openGraph: {
-    title: "Authentic Perfumes & Fragrances in Uganda | Eclat Essence",
-    description: "Shop long-lasting premium designer fragrances and colognes in Kampala with fast delivery.",
+    title: "Authentic Perfumes & Fragrances in Uganda | Eclat Perfumes",
+    description: "Shop long-lasting premium designer fragrances and colognes in Kampala with fast delivery from Eclat Perfumes.",
+    url: "https://eclatperfumes.com", // Replace with actual home page URL
+    siteName: "Eclat Perfumes",
+    images: [
+      {
+        url: "https://eclatperfumes.com/og-home.jpg", // Replace with a relevant image for home page
+        width: 1200,
+        height: 630,
+        alt: "Eclat Perfumes Home Page",
+      },
+    ],
+    locale: "en_US",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Authentic Perfumes & Fragrances in Uganda | Eclat Perfumes",
+    description: "Shop long-lasting premium designer fragrances and colognes in Kampala with fast delivery from Eclat Perfumes.",
+    creator: "@EclatPerfumes", // Replace with your Twitter handle
+    images: ["https://eclatperfumes.com/twitter-home.jpg"], // Replace with a relevant image for home page
+  },
+  // Add canonical URL if this page has a preferred version
+  // canonical: "https://eclatperfumes.com",
 };
 
 

@@ -17,7 +17,7 @@ export default function SearchAndFilter({brands}:searchAndFilterProps){
           <select className="border-(--primary-color) p-2 font-semibold">
             <option value="">Brands</option>
             {
-              brands.map((item:brand,index:number) => {
+              brands?.map((item:brand,index:number) => {
                 return <option key={index} value={`${item.name}`}>{item.name}</option>
               })
             }

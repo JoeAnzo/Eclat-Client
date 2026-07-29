@@ -54,9 +54,7 @@ export default function Cart() {
           <div className="sticky py-1.5 bottom-0 flex flex-col gap-2 items-center justify-center bg-white px-8">
               <Button size="lg" variant="default" className="bg-(--primary-color) h-12 w-full px-8 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 rounded-none">
                 CheckOut (UGX {totalPrice.toLocaleString()})
-              </Button>
-              <Button onClick={() => clearCart()} size="lg" variant="default" className="bg-(--primary-color) w-full h-12 px-8 font-semibold text-lg shadow-lg tracking-wide text-white flex gap-2 rounded-none">
-                Clear Cart
+                <ArrowRight/>
               </Button>
           </div>
         </div>
