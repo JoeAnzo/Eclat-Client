@@ -19,12 +19,12 @@ export default function SearchAndFilter({brands}:searchAndFilterProps){
     const currentTopSpace = element.getBoundingClientRect().top;
     element.style.top = `${currentTopSpace}px`
   },[])
-  
+
     return(
-    <div ref={stickyRef} className="flex flex-col sticky z-160 md:flex-row gap-2.5 items-center justify-center">
+    <div ref={stickyRef} className="flex flex-col sticky z-160 md:flex-row gap-2.5 items-center bg-white justify-center">
       <div className="flex items-center justify-center px-[20px] gap-2 relative">
         <input type="text" className="bg-[#F5F5F5] w-full md:max-w-[760px] h-10 placeholder:font-sans" placeholder="search fragrances,brands&categories"/>
-        <Search className="absolute top-[50%] translate-y-[-50%] left-1.5"/>
+        <Search className="absolute top-[50%] translate-y-[-50%] right-1.5"/>
       </div>
       <div className="flex gap-2 flex-wrap px-[20px]">
           <select className="border border-(--primary-color) p-2 font-semibold">

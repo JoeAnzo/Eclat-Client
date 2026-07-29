@@ -25,7 +25,7 @@ export default function Cart() {
           </Link>
         </div>
         :
-        <div className="flex flex-col gap-2 pt-25">
+        <div className="flex flex-col md:flex-row flex-wrap gap-2 pt-25">
           <div className="flex justify-between items-center px-[20px] border-b">
             <h2 className="text-xl font-semi-bold font-sans">Cart Summary</h2>
             <ChevronDown/>
