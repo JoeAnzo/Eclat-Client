@@ -97,7 +97,7 @@ export default function Footer(){
                                 <p>payment methods:MTN AIRTEL VISA&MASTERCARD</p>
                             </div>
                             <p className="text-center pt-2 border-t font-inter border-gray-300 text-white">© copyright {new Date().getFullYear()} eclat eccense.shop.All rights reserved.</p>
-                            <div className="flex items-center justify-center gap-2">
+                            <div className="flex items-center justify-center gap-2 text-white">
                                 <Link href="#">TERMS & CONDITIONS</Link>
                                 <Link href="#">PRIVACY POLICY</Link>
                                 <Link href="#">RETURNS</Link>
