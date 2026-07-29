@@ -10,7 +10,7 @@ export default async function ShopPage() {
   const brands = brandsResponse.available
   const products = fragranceResponse.data
   return (
-    <section className="pt-20">
+    <section className="pt-25">
     <SearchAndFilter brands={brands}/>
     <div className="px-2 grid grid-cols-2 gap-2 max-w-180 mx-auto">
       {
