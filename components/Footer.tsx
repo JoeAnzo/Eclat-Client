@@ -3,6 +3,7 @@ import { Button } from "./ui/button"
 import {PhoneCall,Mail} from 'lucide-react'
 import {FaInstagram,FaTwitter,FaFacebook,FaTiktok} from "react-icons/fa"
 import Animation from "@/components/Animation"
+import Image from "next/image"
 
 export default function Footer(){
     return(
@@ -45,7 +46,7 @@ export default function Footer(){
                     </div>
                 </div>
                 <div>
-                        <div className="space-y-2">
+                        <div>
                             <Animation variant="none">
                                 <h3 className="text-2xl font-playfair text-(--secondary-color) my-4">Reach Out To Us</h3>
                             </Animation>
@@ -93,11 +94,15 @@ export default function Footer(){
             <div>
                     <Animation variant="none">
                         <div className="flex flex-col">
-                            <div>
-                                <p>payment methods:MTN AIRTEL VISA&MASTERCARD</p>
+                            <div className="flex gap-2">
+                                <p className="text-white font-inter">Payment methods:</p>
+                                <Image src="/images/Payments/Airtel.jpg" width={24} height={24} alt="Airtel Money"/>
+                                <Image src="/images/Payments/MasterCard.png" width={24} height={24} alt="MasterCard"/>
+                                <Image src="/images/Payments/MTN.png" width={24} height={24} alt="Mtn mobile money"/>
+                                <Image src="/images/Payments/Visa.png" width={24} height={24} alt="Visa"/>
                             </div>
                             <p className="text-center pt-2 border-t font-inter border-gray-300 text-white">© copyright {new Date().getFullYear()} eclat eccense.shop.All rights reserved.</p>
-                            <div className="flex items-center justify-center gap-2 text-white">
+                            <div className="flex items-center justify-center gap-2 text-white my-2">
                                 <Link href="#">TERMS & CONDITIONS</Link>
                                 <Link href="#">PRIVACY POLICY</Link>
                                 <Link href="#">RETURNS</Link>

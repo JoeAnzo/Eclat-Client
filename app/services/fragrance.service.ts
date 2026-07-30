@@ -10,8 +10,20 @@ export const fragranceService = {
         const response = await apiClient.get(`/v1/api/fragrances/slugs/${slug}`)
         return response.data
     },
-    getFragranceBrands:async () => {
-        const response = await apiClient.get('/v1/api/fragrances/brands')
+    getAvailableBrands:async () => {
+        const response = await apiClient.get(`v1/api/fragrances/brands`)
+        return response.data    
+    },
+    getAvailableFragranceByBrand:async (brand:string | undefined) => {
+        const response = await apiClient.get(`/v1/api/fragrances?brands=${brand}`)
+        return response.data
+    },
+    getFragrancesByGender:async (gender:string) => {
+        const response = await apiClient.get(`/v1/api/fragrances?gender=${gender}`)
+        return response.data
+    },
+    searchForFragrance:async (query:string) => {
+        const response = await apiClient.get(`/v1/api/fragrances/search=${query}`)
         return response.data
     }
 }
