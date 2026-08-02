@@ -95,8 +95,9 @@ export default function SignUpForm({ className, ...props }: React.ComponentProps
   }
 
   return (
-    <div className={cn("flex flex-col justify-center items-center gap-6 border-none pt-12", className)} {...props}>
-      <Card className="border-none max-w-[340px]">
+    <div className={cn("flex flex-col justify-center items-center gap-6 pt-12 px-4 sm:px-0", className)} {...props}>
+      {/* Make the card full-width on small screens and remove borders/shadows */}
+      <Card className="border-none shadow-none max-w-md w-full sm:max-w-[420px]">
         <CardHeader>
           <CardTitle className="text-center text-lg">
             {pendingVerification ? "Verify your Email" : "Create your account"}
@@ -113,23 +114,23 @@ export default function SignUpForm({ className, ...props }: React.ComponentProps
               <FieldGroup>
                 <Field>
                   <FieldLabel htmlFor="username">Username</FieldLabel>
-                  <Input id="username" placeholder="johndoe" className="rounded-none h-10" {...register("username")} />
+                  <Input id="username" placeholder="johndoe" className="rounded-none h-10 border-none ring-0 focus:ring-0 focus:border-none" {...register("username")} />
                   {errors.username && <p className="mt-1 text-sm text-red-500">{errors.username.message}</p>}
                 </Field>
                 <Field>
                   <FieldLabel htmlFor="email">Email</FieldLabel>
-                  <Input id="email" type="email" placeholder="alex@example.com" className="rounded-none h-10" {...register("email")} />
+                  <Input id="email" type="email" placeholder="alex@example.com" className="rounded-none h-10 border-none ring-0 focus:ring-0 focus:border-none" {...register("email")} />
                   {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>}
                 </Field>
                 <Field>
                   <FieldLabel htmlFor="password">Password</FieldLabel>
-                  <Input id="password" type="password" className="rounded-none h-10" {...register("password")} />
+                  <Input id="password" type="password" className="rounded-none h-10 border-none ring-0 focus:ring-0 focus:border-none" {...register("password")} />
                   {errors.password && <p className="mt-1 text-sm text-red-500">{errors.password.message}</p>}
                 </Field>
 
                 <Field>
                   <FieldLabel htmlFor="confirmPassword">Confirm Password</FieldLabel>
-                  <Input id="confirmPassword" type="password" className="rounded-none h-10" {...register("confirmPassword")} />
+                  <Input id="confirmPassword" type="password" className="rounded-none h-10 border-none ring-0 focus:ring-0 focus:border-none" {...register("confirmPassword")} />
                   {errors.confirmPassword && <p className="mt-1 text-sm text-red-500">{errors.confirmPassword.message}</p>}
                 </Field>
 
@@ -150,7 +151,7 @@ export default function SignUpForm({ className, ...props }: React.ComponentProps
                     id="code" 
                     type="text" 
                     placeholder="123456" 
-                    className="rounded-none h-10" 
+                    className="rounded-none h-10 border-none ring-0 focus:ring-0 focus:border-none" 
                     value={verificationCode} 
                     onChange={(e) => setVerificationCode(e.target.value)}
                     required
